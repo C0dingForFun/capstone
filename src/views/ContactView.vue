@@ -3,7 +3,6 @@
         <div class="bannertxt">
             <h1>Contact</h1>
             <h4>Home  <span> > </span> Contact</h4>
-            
         </div>
     </div>
     <div class="contact">
@@ -34,7 +33,7 @@ export default {
     }
     .contact{
         position: relative;
-        background-color:cornflowerblue;
+        background-color:#93C572;
         width: 100vw;
         height:80vh;
     }
