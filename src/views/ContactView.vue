@@ -23,8 +23,8 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div>
-                    <p>(+21)21 009 8072</p>
+                <div  class="contact-info">
+                    <p>(+27) 21 009 8072</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-2 col-sm-12 info mt-2">
@@ -35,10 +35,10 @@
                     <h4><b>Send an Email</b></h4>
                 </div>
                 <div>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div>
-                    <p></p>
+                <div class="contact-info">
+                    <p>support@coastalgetaway.co.za</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-2 col-sm-12 info mt-2">
@@ -50,6 +50,9 @@
                 </div>
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div  class="contact-info">
+                    <p>(+27) 021 457 7890</p>
                 </div>
             </div>
         </div>
@@ -82,7 +85,8 @@ export default {
     }
     .contact{
         position: relative;
-        /* background-color:#93C572; */
+        background-image:url('https://c0dingforfun.github.io/capstone-images/Contact/myBackground.png');
+        background-size: cover;
         width: 100%;
         height:80vh;
     }
@@ -104,5 +108,8 @@ export default {
         background-color:#93C572;
         box-shadow:10px 10px 10px #bae39e;
         color:white;
+    }
+    .contact-info{
+        color:#51b112;
     }
 </style>
