@@ -13,16 +13,16 @@
                       <div class="offcanvas-body text-center">                   
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 p-3 f-3">                     
                           <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" to="/"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-home"></i>Home</button></router-link>
+                            <router-link class="nav-link" aria-current="page" to="/"><button data-bs-dismiss="offcanvas" aria-label="Close">Home</button></router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/about" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-users"></i>About</button></router-link>
+                            <router-link class="nav-link" to="/about" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">About</button></router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/activities" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-store-alt"></i>Activities</button></router-link>
+                            <router-link class="nav-link" to="/activities" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Activities</button></router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/contact" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-phone-square"></i>Contact</button></router-link>
+                            <router-link class="nav-link" to="/contact" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Contact</button></router-link>
                           </li>
                         </ul>                       
                         <ul class="navbar-nav justify-content-end flex-grow-1 p-3 f-3 px-2">                     
@@ -52,21 +52,24 @@ export default {
       background-color: transparent;
       border:none;
       font-weight: bold;
-      font-size:18px;
-      color:#403a3a;
+      font-size:23px;
+      color:whitesmoke;
+      text-shadow: 1px 1px black;
       text-decoration: none;
       font-weight: 200;
       transition: 1s;
     }
-    nav button:hover{
+    nav .nav-item button:hover{
         color:#93C572;
-        /* text-shadow:4px 4px #a4d414; */
+        
     }
     nav button i{
+      color:whitesmoke;
       transition: 1s;
+      /* text-shadow:1px 1px black; */
     }
     nav button i:hover{
-      color:#93C572;
+      color: #93C572;
     }
     #nav .logo{
       width:140px;
@@ -82,6 +85,7 @@ export default {
     }
     h1{
       color:#93C572;
+      text-shadow: 1px 1px black;
     }
 
 </style>
