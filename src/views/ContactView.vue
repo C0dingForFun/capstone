@@ -88,7 +88,7 @@ export default {
         background-image:url('https://c0dingforfun.github.io/capstone-images/Contact/myBackground.png');
         background-size: cover;
         width: 100%;
-        height:80vh;
+        /* height:80vh; */
     }
     .contact i{
         position: relative;
