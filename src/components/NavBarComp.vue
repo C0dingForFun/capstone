@@ -53,7 +53,7 @@ export default {
       border:none;
       font-weight: bold;
       font-size:18px;
-      color:#696969;
+      color:#403a3a;
       text-decoration: none;
       font-weight: 200;
       transition: 1s;

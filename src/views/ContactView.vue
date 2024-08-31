@@ -16,12 +16,15 @@ export default {
 </script>
 <style scoped>
     .banner{
+        background-image:url('https://c0dingforfun.github.io/capstone-images/Contact/contact.jpg');
+        background-size: cover;
+        backdrop-filter: blur(4px);
+        background-position: center;
         display:flex;
         justify-content: center;
         align-items: center;
         width:100vw;
-        height:55vh;
-        background-color: gray;
+        height:60vh;
         color:whitesmoke;
     }
     .bannertxt{
