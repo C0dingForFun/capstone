@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        
+        This is the rooms page.
     </div>
 </template>
 <script>
