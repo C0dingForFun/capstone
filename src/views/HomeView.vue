@@ -19,7 +19,7 @@ export default {
 	align-items: center;
 	position:absolute;
 	width:100vw;
-	height:80vh;
+	/* height:80vh; */
 	background-color: gray;
 	
 	z-index:0;
@@ -31,7 +31,7 @@ export default {
 	/*animation for background-images*/ 
   	background-image: url("https://c0dingforfun.github.io/node-images/Images/Footer/background.jpg");
 	animation-name:slideshow;
-	animation-duration:5s;
+	animation-duration:10s;
 	animation-timing-function:ease-in-out;
 	animation-iteration-count:infinite;
 }

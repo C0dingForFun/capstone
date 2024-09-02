@@ -1,6 +1,5 @@
 <template>
-  <NavBarComp>
-  </NavBarComp>
+  <NavBarComp/>
   <router-view/>
 </template>
 <script>
