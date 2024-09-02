@@ -19,7 +19,7 @@ export default {
 	align-items: center;
 	position:absolute;
 	width:100vw;
-	/* height:80vh; */
+	height:80vh;
 	background-color: gray;
 	
 	z-index:0;
@@ -40,27 +40,22 @@ export default {
 @keyframes slideshow{
 	0%{
 		background-image: url("https://c0dingforfun.github.io/node-images/Images/Footer/background.jpg");
-    	height:80vh;
+    	/* height:80vh; */
 	}
 	
 	25%{
 		background-image: url("https://c0dingforfun.github.io/node-images/Images/Home/Carousel/One/one.jpg");
-    	height:80vh;
+    	/* height:80vh; */
 	}	
 	
 	50%{
-		background-image: url("https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Two/Two.jpg");
-    	height:80vh;
-	}	
-	
-	75%{
-		background-image: url("https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Two/Two.jpg");
-    	height:80vh;
+		background-image: url("https://c0dingforfun.github.io/capstone-images/Contact/contact.jpg");
+    	/* height:80vh; */
 	}
 	
 	100%{
 		background-image: url("https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Five/five.jpg");
-    	height:80vh;
+    	/* height:80vh; */
 	}
 }
 
