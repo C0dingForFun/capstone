@@ -65,7 +65,6 @@ export default {
     nav button i{
       color:whitesmoke;
       transition: 1s;
-      /* text-shadow:1px 1px black; */
     }
     nav button i:hover{
       color: #93C572;

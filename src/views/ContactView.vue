@@ -57,6 +57,30 @@
             </div>
         </div>
     </div>
+    <div class="p-5 mt-5" id="form">
+        <div class="mx-auto">
+            <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto my-auto">
+                <h1 class="text-center text-white"><b>Reach Us Here:</b></h1>
+                      <div class="row text">
+                        <div class="col-md-6 form-group">
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="name">
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                          <input type="text" name="surname" class="form-control" id="surname" placeholder="Your Surname" v-model="surname">
+                        </div>
+                      </div>
+                      <div class="form-group mt-3">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" v-model="email">
+                      </div>
+                      <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message" v-model="message"></textarea>
+                      </div>
+                      <div class="text-center mt-4 send">
+                        <button type="submit" @click="check()">Send Message</button> <br>
+                      </div>
+            </form>
+        </div>
+    </div>
 </template>
 <script>
 export default {
@@ -112,5 +136,20 @@ export default {
     }
     .contact-info{
         color:#51b112;
+    }
+    #form{
+        margin: auto;
+        width:60vw;
+        height:auto;
+        background-color: #bae39e;
+    }
+    #form button{
+        background-color: whitesmoke;
+        color:black;
+        transition: 1s;
+    }
+    #form button:hover{
+        background-color: #93C572;
+        color:whitesmoke;
     }
 </style>
