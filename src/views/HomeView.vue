@@ -107,9 +107,10 @@ export default {
 	color:whitesmoke;
 	background-color: #bae39e;
 	color:black;
-	transition:0.8s;
+	transition:0.5s;
 }
 .book button:hover{
+	box-shadow:2px 2px 2px #bae39e;
 	background-color: #93C572;
 	color: whitesmoke;
 }
