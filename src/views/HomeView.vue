@@ -43,17 +43,37 @@
 	</div>
 </div>
 <div class="banner2 mt-5">
-	<img src='https://cdn.encoreglobal.com/wp-content/uploads/sites/2/2020/10/06204130/Omni_Cancun_2012-601.jpg'/>
 </div>
-<div class="row" id="events">
-	<div class="col-lg-4 col-md-4 col-sm-12">
-		
+<div class="row mt-3 d-flex align-items-center" id="events">
+	<div class="col-lg-4 col-md-4 col-sm-12 mt-2">
+		<div class="card" style="width: 18rem;">
+			<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
 	</div>
-	<div class="col-lg-4 col-md-4 col-sm-12">
-
+	<div class="col-lg-4 col-md-4 col-sm-12 mt-2">
+		<div class="card" style="width: 18rem;">
+			<img src="https://c0dingforfun.github.io/capstone-images/Home/christmas.jpg" class="card-img-top" alt="..." loading="lazy">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
 	</div>
-	<div class="col-lg-4 col-md-4 col-sm-12">
-
+	<div class="col-lg-4 col-md-4 col-sm-12 mt-2">
+		<div class="card" style="width: 18rem;">
+			<img src="https://c0dingforfun.github.io/capstone-images/Home/conference.jpg" class="card-img-top" alt="..." loading="lazy">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<router-link class="btn btn-primary" to="/activities">Go somewhere</router-link>
+			</div>
+		</div>
 	</div>
 </div>
 </template>
@@ -150,10 +170,20 @@ export default {
 .banner2{
 	position: relative;
 	width:100vw;
+	height:60vh;
+	background-image: url('https://c0dingforfun.github.io/capstone-images/Home/banner.png');
+	background-size: cover;
+	background-attachment: fixed;
 }
-.banner2 img{
-	width:99vw;
-	height:55vh;
-	border-radius:20px;
+#events{
+	width: 100vw;
+	margin: auto;
+}
+.card{
+	border:none !important;
+}
+.card img{
+	height:30vh;
+	border-radius:50% 50% 0 0;
 }
 </style>
