@@ -44,7 +44,7 @@
 </div>
 <div class="banner2 mt-5">
 </div>
-<div class="row mt-3 d-flex align-items-center" id="events">
+<div class="row mt-3">
 	<div class="col-lg-4 col-md-4 col-sm-12 mt-2">
 		<div class="card" style="width: 18rem;">
 			<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
@@ -177,7 +177,7 @@ export default {
 }
 #events{
 	width: 100vw;
-	margin: auto;
+	margin: auto !important;
 }
 .card{
 	border:none !important;
