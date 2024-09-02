@@ -67,17 +67,18 @@ export default {
     .banner{
         background-image:url('https://c0dingforfun.github.io/capstone-images/Contact/contact.jpg');
         background-size: cover;
+        background-attachment: fixed;
         background-position: center;
         display:flex;
         justify-content: center;
         align-items: center;
         width:100%;
-        height:60vh;
+        height:70vh;
         color:whitesmoke;
     }
     .bannertxt{
         position: relative;
-        padding-top: 3vh;
+        padding-top: 4vh;
         text-shadow:1px 1px black;
     }
     span{

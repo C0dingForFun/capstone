@@ -45,7 +45,6 @@ export default {
 </script>
 <style scoped>
     nav {
-      /* background: rgb(236, 233, 233); */
       background-color: transparent;
     }
     nav button {
