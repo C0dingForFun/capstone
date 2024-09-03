@@ -149,7 +149,6 @@ export default {
         border-radius:20px;
         color:black;
         background-color: #bae39e;
-        color:black;
         transition:0.6s;
     }
     #form button:hover{
