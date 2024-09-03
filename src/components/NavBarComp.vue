@@ -43,7 +43,22 @@
 </template>
 <script>
 export default {
-  
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeMount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const nav = document.getElementsByClassName('navbar')[0];
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+  }
 }
 </script>
 <style scoped>
@@ -62,7 +77,7 @@ export default {
       transition: 1s;
     }
     nav .nav-item button:hover{
-        color:#93C572;
+      color:#93C572;
         
     }
     nav button i{
@@ -71,6 +86,10 @@ export default {
     }
     nav button i:hover{
       color: #93C572;
+    }
+    .navbar.scrolled{
+      background-color: #93C572;
+      transition: 0.8s;
     }
     #nav .logo{
       width:140px;

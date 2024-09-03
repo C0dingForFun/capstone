@@ -146,14 +146,15 @@ export default {
         height:auto;
     }
     #form button{
-        padding:1vh;
-        background-color: whitesmoke;
-        color:black;
-        transition: 1s;
         border-radius:20px;
+        color:black;
+        background-color: #bae39e;
+        color:black;
+        transition:0.6s;
     }
     #form button:hover{
-        background-color: #51b112;
-        color:whitesmoke;
+        box-shadow:5px 5px 5px #93C572;
+        background-color: #93C572;
+        color: whitesmoke;
     }
 </style>
