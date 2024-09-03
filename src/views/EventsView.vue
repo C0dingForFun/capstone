@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="mt-4 row">
-            <div class="col-lg-6 col-md-6 col-sm-12 my-auto chris">
+            <div class="col-lg-6 col-md-6 col-sm-12 chris">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nobis exercitationem esse rem voluptatem cum aperiam consequuntur debitis sapiente illum, atque vero quidem cupiditate, adipisci assumenda velit laborum dolor laudantium.
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
