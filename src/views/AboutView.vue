@@ -2,7 +2,7 @@
   <div class="about-banner d-flex align-items-center justify-content-center">
       <h1 class="text-white">Home > About</h1>
   </div>
-  <section>
+  <section class="row packages">
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h2>Single Package</h2>
     </div>
@@ -11,6 +11,16 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h2>Family Package</h2>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        
+      </div>
     </div>
   </section>
 </template>
@@ -24,5 +34,12 @@
 }
 .about-banner h1{
   text-shadow: 2px 2px black;
+}
+.packages{
+  display:flex;
+  align-items: center;
+  width:100vw;
+  height:40vh;
+  background-color: black;
 }
 </style>
