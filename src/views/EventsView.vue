@@ -1,8 +1,8 @@
 <template lang="">
     <div class="activities-banner">
         <div class="bannertxt">
-            <h1>Events</h1>
-            <h4>Home <span> > </span>  Events</h4>
+            <h1 data-aos="fade-up" data-aos-delay="400">Events</h1>
+            <h4 data-aos="fade-up" data-aos-delay="600">Home <span> > </span>  Events</h4>
         </div>
     </div>
     <section id="events">
@@ -78,7 +78,7 @@ export default {
         background-image:url('https://c0dingforfun.github.io/capstone-images/Events/Conference.png');
         background-size: cover;
         background-attachment: fixed;
-        background-position:left;
+        background-position:center;
         height:30vh;
     }
 </style>

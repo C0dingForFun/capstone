@@ -52,7 +52,7 @@
 		<div class="col-lg-6 col-md-6 col-sm-12"></div>
 	</div>
 </div>
-<div id="events">
+<div id="event">
 	<div class="mt-3 events">
 		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mx-1 mt-2">
 			<div class="card" style="width: 18rem;">
@@ -199,9 +199,9 @@ export default {
 	padding-right:2vw ;
 	font-size:50px;
 }
-#events .events{
+#event .events{
 	width: 98vw;
-	margin: auto;
+	/* margin: auto; */
 	display:grid;
 	grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
 	place-items:center;
