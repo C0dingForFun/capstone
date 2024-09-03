@@ -2,9 +2,17 @@
   <div class="about-banner d-flex align-items-center justify-content-center">
       <h1 class="text-white">Home > About</h1>
   </div>
-  <div>
-    
-  </div>
+  <section>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h2>Single Package</h2>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h2>Couple Package</h2>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h2>Family Package</h2>
+    </div>
+  </section>
 </template>
 <style scoped>
 .about-banner {
