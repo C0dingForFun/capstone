@@ -1,5 +1,20 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about-banner d-flex align-items-center justify-content-center">
+      <h1 class="text-white">Home > About</h1>
+  </div>
+  <div>
+    
   </div>
 </template>
+<style scoped>
+.about-banner {
+  width: 100vw;
+  height:70vh;
+  background-image: url('https://c0dingforfun.github.io/capstone-images/Home/Slide1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about-banner h1{
+  text-shadow: 2px 2px black;
+}
+</style>

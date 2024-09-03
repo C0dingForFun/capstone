@@ -201,7 +201,7 @@ export default {
 }
 #events .events{
 	width: 98vw;
-	/* margin: auto; */
+	margin: auto;
 	display:grid;
 	grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
 	place-items:center;
