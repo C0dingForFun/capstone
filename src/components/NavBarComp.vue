@@ -22,7 +22,7 @@
                             <router-link class="nav-link" to="/rooms" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Rooms</button></router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/activities" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Activities</button></router-link>
+                            <router-link class="nav-link" to="/events" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Events</button></router-link>
                           </li>
                           <li class="nav-item">
                             <router-link class="nav-link" to="/contact" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Contact</button></router-link>

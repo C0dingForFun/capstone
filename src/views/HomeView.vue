@@ -60,7 +60,7 @@
 				<div class="card-body">
 					<h5 class="card-title">News Years Eve Event</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<router-link class="btn btn-primary" to="/activities">See More</router-link>
+					<router-link class="btn btn-primary" to="/events">See More</router-link>
 				</div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 				<div class="card-body">
 					<h5 class="card-title">Christmas Party</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<router-link class="btn btn-primary" to="/activities">See More</router-link>
+					<router-link class="btn btn-primary" to="/events">See More</router-link>
 				</div>
 			</div>
 		</div>
@@ -80,7 +80,7 @@
 				<div class="card-body">
 					<h5 class="card-title">Conference events</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<router-link class="btn btn-primary" to="/activities">See More</router-link>
+					<router-link class="btn btn-primary" to="/events">See More</router-link>
 				</div>
 			</div>
 		</div>
