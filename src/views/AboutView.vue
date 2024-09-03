@@ -16,9 +16,31 @@
   <section>
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12">
-
+        knnn
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12">
+        <h3>Why Choose Us</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+          <div class="col">
+            ewjjfbw
+          </div>
+          <div class="col">
+            oib
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
         
       </div>
     </div>
