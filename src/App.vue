@@ -20,16 +20,19 @@ export default{
   overflow-x: hidden;
 }
 
-nav {
-  padding: 30px;
+.bannertxt{
+  position: relative;
+  padding-top: 4vh;
+  text-shadow:1px 1px black;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+span{
+  font-size:22px;
 }
-
-nav a.router-link-exact-active {
-  color: blue;
+@media screen and (max-width:600px) {
+  #events img{
+        width: 95vw !important;
+        height:40vh;
+        margin: auto;
+    }
 }
 </style>
