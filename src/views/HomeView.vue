@@ -32,13 +32,13 @@
 	<h2>Popular Rooms & Suites:</h2>
 	<div class="row justify-content-around pt-5">
 		<div class="col-lg-4 col-md-4 col-sm-12 mt-2" style="width:300px; height:300px;background-color:green">
-			kjfbrk
+			hello
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12 mt-2" style="width:300px; height:300px; background-color:green">
-			lb
+			hey
   		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12 mt-2" style="width:300px; height:300px; background-color:green">v                                                                                                                                                 7
-			ljjvvk
+			hi
 		</div>
 	</div>
 </div>
