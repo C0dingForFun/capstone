@@ -7,11 +7,11 @@
 			  <div class="book row">
 				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
 					  <label>Check in:</label><br>
-					  <input type="date">
+					  <input type="datetime-local">
 				  </div>
 				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
 					  <label>Check out:</label><br>
-					  <input type="date">
+					  <input type="datetime-local">
 				  </div>
 				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
 					  <label>Adult(s):</label><br>
@@ -54,7 +54,7 @@
 </div>
 <div id="event">
 	<div class="mt-3 events">
-		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mx-1 mt-2">
+		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
 			<div class="card" style="width: 18rem;">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mx-1 mt-2">
+		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
 			<div class="card" style="width: 18rem;">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/christmas.jpg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mx-1 mt-2">
+		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
 			<div class="card" style="width: 18rem;">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/conference.jpg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">
@@ -200,9 +200,12 @@ export default {
 	font-size:50px;
 }
 #event .events{
-	width: 98vw;
-	/* margin: auto; */
+	width: 100vw;
+	margin: auto;
 	display:grid;
+	/* margin-left:50px; */
+	/* margin-top:50px; */
+	/* gap:0.1em; */
 	grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
 	place-items:center;
 }
