@@ -1,6 +1,6 @@
 <template lang="">
 <div>
-        <div class="mx-auto my-auto">
+        <form role="form" class="mx-auto my-auto">
             <h1 class="text-center text-white"><b>Reach Us Here:</b></h1>
                 <div class="row text">
                     <div class="col-md-6 form-group">
@@ -10,7 +10,7 @@
                         <input type="text" name="surname" class="form-control px-2" placeholder="Your Password" v-model="password">
                     </div>
                 </div>
-            </div>
+        </form>
     </div>
 </template>
 <script>
