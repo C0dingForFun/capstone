@@ -22,7 +22,7 @@
 					  <input type="number" placeholder="1">
 				  </div>
 				  <div class="col-lg-2 col-md-2 col-sm-12 align-content-center pt-1" >
-					  <button class="btn">Book Now</button>
+					  <button>Book Now</button>
 				  </div>
 			  </div>
 		  </div>
@@ -60,7 +60,7 @@
 				<div class="card-body">
 					<h5 class="card-title">News Years Eve Event</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<router-link class="btn btn-primary" to="/events">See More</router-link>
+					<router-link to="/events"><button>See More</button></router-link>
 				</div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 				<div class="card-body">
 					<h5 class="card-title">Christmas Party</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<router-link class="btn btn-primary" to="/events">See More</router-link>
+					<router-link to="/events"><button>See More</button></router-link>
 				</div>
 			</div>
 		</div>
@@ -80,7 +80,7 @@
 				<div class="card-body">
 					<h5 class="card-title">Conference events</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<router-link class="btn btn-primary" to="/events">See More</router-link>
+					<router-link to="/events"><button>See More</button></router-link>
 				</div>
 			</div>
 		</div>
@@ -138,7 +138,7 @@ export default {
 .bannertxt{
 	position: relative;
 	color:whitesmoke;
-	text-shadow: 3px 3px black;
+	text-shadow: 1px 1px black;
 }
 
 .bannertxt h3{
@@ -155,7 +155,7 @@ export default {
 	display:flex;
 	position: relative;
 	justify-content: space-around;
-	background-color: #51b112;
+	background-color: #96e065;
 }
 .book input{
 	width:150px;
@@ -208,6 +208,19 @@ export default {
 	/* gap:0.1em; */
 	grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
 	place-items:center;
+}
+#event button{
+	padding: 0.7em;
+	border-radius:20px;
+	color:whitesmoke;
+	background-color: #bae39e;
+	color:black;
+	transition:0.5s;
+}
+#event button:hover{
+	box-shadow:2px 2px 2px #bae39e;
+	background-color: #93C572;
+	color: whitesmoke;
 }
 .card{
 	border:none !important;
