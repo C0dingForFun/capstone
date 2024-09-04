@@ -33,7 +33,7 @@
                             <router-link class="nav-link" aria-current="page" to="/search"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-search"></i></button></router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/users" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-user"></i></button></router-link>
+                            <router-link class="nav-link" to="/login" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-user"></i></button></router-link>
                           </li>
                         </ul>                    
                       </div>
