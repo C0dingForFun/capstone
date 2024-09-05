@@ -29,6 +29,7 @@ export default{
 span{
   font-size:22px;
 }
+
 @media screen and (max-width:600px) {
   #events img{
         width: 95vw !important;
