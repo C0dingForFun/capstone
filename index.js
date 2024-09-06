@@ -18,6 +18,3 @@ const port = process.env.PORT || 3005
 app.listen(port, ()=>{
     console.log(`http://localhost:${port}`);
 })
-
-//editing without password hashing
-//only backend
