@@ -19,12 +19,12 @@ const insertUserDB = async(user_name, user_surname, age, user_role, username, pa
     )
 }
 
-const deleteUserDB = async(id)=>{
-    await pool.query(`DELETE FROM users WHERE id = ?`,[id])
+const deleteUserDB = async(user_id)=>{
+    await pool.query(`DELETE FROM users WHERE user_id = ?`,[user_id])
 }
 
-const updateUserDB = async(user_name, user_surname, age, user_role, username, password, image,id )=>{
-    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE id = ?`,[user_name, user_surname, age, user_role, username, password, image,id])
+const updateUserDB = async(user_name, user_surname, age, user_role, username, password, image,user_id )=>{
+    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE id = ?`,[user_name, user_surname, age, user_role, username, password, image,user_id])
 }
 
 export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB}
