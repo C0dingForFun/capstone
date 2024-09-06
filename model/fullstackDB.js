@@ -6,8 +6,8 @@ const getUsersDB = async (req,res)=>{
     return data;
 }
 
-const getUserDB = async (username)=>{
-    let [[data]] = await pool.query('SELECT * FROM users WHERE username = ?', [username]);
+const getUserDB = async (user_id)=>{
+    let [[data]] = await pool.query('SELECT * FROM users WHERE user_id = ?', [user_id]);
     return data;
 }
 
@@ -24,7 +24,7 @@ const deleteUserDB = async(user_id)=>{
 }
 
 const updateUserDB = async(user_name, user_surname, age, user_role, username, password, image,user_id )=>{
-    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE id = ?`,[user_name, user_surname, age, user_role, username, password, image,user_id])
+    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE user_id = ?`,[user_name, user_surname, age, user_role, username, password, image,user_id])
 }
 
 export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB}

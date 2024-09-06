@@ -13,7 +13,7 @@ const insertUser =  async(req,res)=>{
     let {user_id, user_name, user_surname, age, user_role, username, password, image} = req.body;
     let hashedP = await hash(password,10);
     if (hashedP.stack) throw (hashedP);
-    await insertUserDB(user_id, user_name, user_surname, age, user_role, username, hashedP, image);
+    await insertUserDB(user_name, user_surname, age, user_role, username, hashedP, image);
     res.send('User was inserted successfully.');
 }
 
@@ -26,12 +26,13 @@ const updateUser =  async(req,res)=>{
     let {user_name, user_surname, age, user_role, username, password, image} = req.body
     let users = await getUserDB(req.params.id)
 
-    name?name = name:name = users.name;
-    surname?surname = surname:surname = users.surname;
+    user_name?user_name = user_name:user_name = users.user_name;
+    user_surname?user_surname = user_surname:user_surname = users.user_surname;
     age?age = age:age = users.age;
-    fav_coding_lang?fav_coding_lang = fav_coding_lang:fav_coding_lang = users.fav_coding_lang;
-    fav_car?fav_car = fav_car:fav_car = users.fav_car;
-    eye_colour?eye_colour = eye_colour:eye_colour = users.eye_colour;
+    user_role?user_role = user_role:user_role = users.user_role;
+    username?username = username:username = users.username;
+    password?password = password:password = users.password;
+    image?image = image:image = users.image;
 
     await updateUserDB(user_name, user_surname, age, user_role, username, password, image,req.params.id);
     res.send('User has been updated successfully.')

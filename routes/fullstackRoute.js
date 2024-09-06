@@ -16,7 +16,7 @@ usersRouter.post('/insertUser',insertUser)
 // usersRouter.post('/login',checkUser,loginUser );
 
 usersRouter
-    .route('/:id')
+    .route('/:user_id')
         .get(fetchUser)
         .delete(deleteUser)
         .patch(updateUser)
