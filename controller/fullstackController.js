@@ -1,4 +1,4 @@
-import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB } from "../model/fullstackDB.js";
+import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB,getRoomsDB,getRoomDB } from "../model/fullstackDB.js";
 import {hash} from 'bcrypt';
 // <----------------------------------------- Users --------------------------------------------------------------------->
 const fetchUsers = async (req,res)=>{
@@ -42,4 +42,12 @@ const updateUser =  async(req,res)=>{
 //     res.json({message:"User logged in successfully",token:req.body.token})
 // }
 
-export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser}
+// <----------------------------------------- Items --------------------------------------------------------------------->
+const fetchRooms = async (req,res)=>{
+    res.json(await getRoomsDB());
+}
+
+const fetchRoom = async (req, res)=>{
+    res.json(await getRoomDB(req.params.id));
+}
+export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom}

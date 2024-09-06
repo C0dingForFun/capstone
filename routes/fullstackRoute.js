@@ -1,11 +1,12 @@
 import express from 'express';
-import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser } from '../controller/fullstackController.js';
+import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom } from '../controller/fullstackController.js';
 // import { checkUser,verifyAToken } from '../middleware/authenticate.js';
 
 const usersRouter = express.Router();
-// const fruitsRouter = express.Router();
+const roomsRouter = express.Router();
 
 usersRouter.get('/',fetchUsers)
+roomsRouter.get('/',fetchRooms)
 // fruitsRouter.get('/',verifyAToken,fetchFruits)
 
 // fruitsRouter.post('/cart',verifyAToken,addToCart)
@@ -21,10 +22,10 @@ usersRouter
         .delete(deleteUser)
         .patch(updateUser)
 
-// fruitsRouter
-//     .route('/:id')
-//         .get(fetchFruit)
+roomsRouter
+    .route('/:id')
+        .get(fetchRoom)
 //         .delete(deleteFruit)
 //         .patch(updateFruit)
 
-export {usersRouter};
+export {usersRouter,roomsRouter};

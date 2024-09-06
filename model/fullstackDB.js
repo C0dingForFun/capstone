@@ -27,4 +27,14 @@ const updateUserDB = async(user_name, user_surname, age, user_role, username, pa
     await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE user_id = ?`,[user_name, user_surname, age, user_role, username, password, image,user_id])
 }
 
-export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB}
+//Rooms
+const getRoomsDB = async (req,res)=>{
+    let [data] = await pool.query('SELECT * FROM rooms')
+    return data;
+}
+
+const getRoomDB = async (room_id)=>{
+    let [[data]] = await pool.query('SELECT * FROM rooms WHERE room_id = ?', [room_id]);
+    return data;
+}
+export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB}
