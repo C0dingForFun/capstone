@@ -12,19 +12,19 @@
       </div>
         <slot name="products">
             <section>
-                    <div class="row" v-for="product in filterProducts" :key="product.prodID">
+                    <div class="row" v-for="room in filterRooms" :key="room.room_id">
                         <div class="card mt-5" style="width:18rem">
-                            <img :src="product.prodURL" class="card-img-top">
+                            <img :src="room.image" class="card-img-top">
                             <div class="card-body">
                                 <div class="prodName">
-                                    <h5 class="card-title">{{product.prodName}}</h5>
-                                    <h4>{{ product.category }}</h4>
+                                    <h5 class="card-title">{{room.room_name}}</h5>
+                                    <h4>{{ room.room_category }}</h4>
                                 </div>
                                 <div>
-                                    <p class="card-text">Price: R{{product.amount}}</p>
+                                    <p class="card-text">Price: R{{room.amount}}</p>
                                 </div>
                                 <div class="d-flex justify-content-center mt-2 align-content-end">
-                                    <router-link :to="{name:'product',params:{id:product.prodID}}" class="btn text-center">View More</router-link> 
+                                    <router-link :to="{name:'room',params:{id:room.room_id}}" class="btn text-center">View More</router-link> 
                                 </div>
                             </div>
                         </div>
@@ -52,9 +52,9 @@ export default {
     },
     computed: {
         filterProducts() {
-            return this.$store.state.products.filter(product => {
-            return product.prodName.toLowerCase().includes(this.searchQuery) &&
-                (this.searchProduct === '' || product.category === this.searchProduct)
+            return this.$store.state.rooms.filter(room => {
+            return room.room_name.toLowerCase().includes(this.searchQuery) &&
+                (this.searchProduct === '' || room.room_category === this.searchProduct)
             })
         },
         if (category) {
