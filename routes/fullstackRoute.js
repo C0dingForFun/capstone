@@ -1,5 +1,5 @@
 import express from 'express';
-import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom } from '../controller/fullstackController.js';
+import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom } from '../controller/fullstackController.js';
 // import { checkUser,verifyAToken } from '../middleware/authenticate.js';
 
 const usersRouter = express.Router();
@@ -12,7 +12,7 @@ roomsRouter.get('/',fetchRooms)
 // fruitsRouter.post('/cart',verifyAToken,addToCart)
 
 usersRouter.post('/insertUser',insertUser)
-// fruitsRouter.post('/insertFruit',insertFruit)
+roomsRouter.post('/insertRoom',insertRoom)
 
 // usersRouter.post('/login',checkUser,loginUser );
 
@@ -25,7 +25,7 @@ usersRouter
 roomsRouter
     .route('/:id')
         .get(fetchRoom)
-//         .delete(deleteFruit)
-//         .patch(updateFruit)
+        .delete(deleteRoom)
+        .patch(updateRoom)
 
 export {usersRouter,roomsRouter};
