@@ -53,4 +53,14 @@ const deleteRoomDB = async(room_id)=>{
 const updateRoomDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,room_id )=>{
     await pool.query(`UPDATE rooms SET room_name = ?,room_category = ?,room_description = ?,room_package = ?,price = ?,pets = ?,image = ?,subImage1 = ?,subImage2 = ?,subImage3 = ? WHERE room_id = ?`,[room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,room_id])
 }
+
+//Book
+const getBookDB = async (req,res)=>{
+    let [data] = await pool.query('SELECT * FROM book')
+    return data;
+}
+const insertRoomBookDB = async(user_id,room_id, book_id)=>{
+    await pool.query(`UPDATE book SET user_id = ?, room_id = ? WHERE book_id = ?`,[user_id,room_id,book_id])
+}
+
 export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB}

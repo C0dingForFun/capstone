@@ -81,4 +81,5 @@ const updateRoom =  async(req,res)=>{
     res.send('Room has been updated successfully.')
 }
 
+
 export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom}
