@@ -10,7 +10,7 @@
             </option>
           </select> -->
       </div>
-        <slot name="products">
+        <slot name="rooms">
             <section>
                     <div class="row" v-for="room in filterRooms" :key="room.room_id">
                         <div class="card mt-5" style="width:18rem">
@@ -21,7 +21,7 @@
                                     <h4>{{ room.room_category }}</h4>
                                 </div>
                                 <div>
-                                    <p class="card-text">Price: R{{room.amount}}</p>
+                                    <p class="card-text">Price: R{{room.price}}</p>
                                 </div>
                                 <div class="d-flex justify-content-center mt-2 align-content-end">
                                     <router-link :to="{name:'room',params:{id:room.room_id}}" class="btn text-center">View More</router-link> 
@@ -51,7 +51,7 @@ export default {
         },
     },
     computed: {
-        filterProducts() {
+        filterRooms() {
             return this.$store.state.rooms.filter(room => {
             return room.room_name.toLowerCase().includes(this.searchQuery) &&
                 (this.searchProduct === '' || room.room_category === this.searchProduct)

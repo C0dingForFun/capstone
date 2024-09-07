@@ -1,7 +1,7 @@
 <template>
-    <div v-if="products()" class="mb-5">
+    <div v-if="rooms()" class="mb-5">
         <CardComp>
-            <template #products></template>
+            <template #rooms></template>
         </CardComp>
     </div>
     <div v-else>
@@ -21,7 +21,7 @@ export default {
         getRooms(){
             this.$store.dispatch('getRooms');
         },
-        Rooms() {
+        rooms() {
             return this.$store.state.rooms;
         },
         

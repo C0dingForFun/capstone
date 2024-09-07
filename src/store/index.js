@@ -1,5 +1,7 @@
 import { createStore } from 'vuex';
-import axios from 'axios'
+import axios from 'axios';
+import { toast } from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
 
 export default createStore({
   state: {
@@ -30,7 +32,7 @@ export default createStore({
     async getRooms({commit}){
       
       try {
-        let [data] = axios.get('http://localhost:8080/rooms')
+        let {data} = axios.get('http://localhost:8080/rooms')
           commit('setRooms',data)
       }
       catch (error) {
