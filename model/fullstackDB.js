@@ -37,4 +37,20 @@ const getRoomDB = async (room_id)=>{
     let [[data]] = await pool.query('SELECT * FROM rooms WHERE room_id = ?', [room_id]);
     return data;
 }
+
+const insertRoomDB = async(user_name, user_surname, age, user_role, username, password, image)=>{
+    let [data] = await pool.query(`
+        INSERT INTO users (user_name, user_surname, age, user_role, username, password, image)
+        VALUES(?,?,?,?,?,?,?)`,
+        [user_name, user_surname, age, user_role, username, password, image]
+    )
+}
+
+const deleteRoomDB = async(user_id)=>{
+    await pool.query(`DELETE FROM users WHERE user_id = ?`,[user_id])
+}
+
+const updateRoomDB = async(user_name, user_surname, age, user_role, username, password, image,user_id )=>{
+    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE user_id = ?`,[user_name, user_surname, age, user_role, username, password, image,user_id])
+}
 export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB}
