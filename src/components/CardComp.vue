@@ -40,6 +40,9 @@
                                 <h5 class="card-title">{{room.room_name}}</h5>
                                 <h4>{{ room.room_package }}</h4>
                                 <p class="card-text">Price: R{{room.price}}</p>
+                                <div class="d-flex justify-content-center mt-2 align-content-end">
+                                    <router-link :to="{name:'room',params:{id:room.room_id}}" class="btn text-center">View More</router-link> 
+                                </div>
                             </div>
                             </div>
                         </div>

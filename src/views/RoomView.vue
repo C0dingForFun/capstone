@@ -30,7 +30,7 @@ import SpinnerComp from '@/components/SpinnerComp.vue';
 export default{
     methods: {
         getRoom(){
-            this.$store.dispatch('getRooms',this.$route.params.id);
+            this.$store.dispatch('getRoom',this.$route.params.id);
         },
         room() {
             return this.$store.state.room;
