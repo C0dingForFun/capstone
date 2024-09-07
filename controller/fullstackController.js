@@ -6,7 +6,7 @@ const fetchUsers = async (req,res)=>{
     res.json(await getUsersDB());
 }
 
-const fetchUser = async (req, res,username)=>{
+const fetchUser = async (req, res)=>{
     res.json(await getUserDB(req.params.id));
 }
 
