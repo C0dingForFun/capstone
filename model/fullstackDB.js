@@ -56,11 +56,11 @@ const updateRoomDB = async(room_name,room_category,room_description,room_package
 
 //Book
 const getBookDB = async (req,res)=>{
-    let [data] = await pool.query('SELECT * FROM book')
+    let [data] = await pool.query('SELECT * FROM booked')
     return data;
 }
 const insertRoomBookDB = async(user_id,room_id, book_id)=>{
-    await pool.query(`UPDATE book SET user_id = ?, room_id = ? WHERE book_id = ?`,[user_id,room_id,book_id])
+    await pool.query(`UPDATE booked SET user_id = ?, room_id = ? WHERE book_id = ?`,[user_id,room_id,book_id])
 }
 
 export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB}
