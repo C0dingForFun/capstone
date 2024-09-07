@@ -7,7 +7,7 @@ const fetchUsers = async (req,res)=>{
 }
 
 const fetchUser = async (req, res,username)=>{
-    res.json(await getUserDB(username));
+    res.json(await getUserDB(req.params.id));
 }
 
 const insertUser =  async(req,res)=>{
