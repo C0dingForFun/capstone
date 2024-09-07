@@ -16,7 +16,7 @@ bookedRouter.get('/',fetchBooked)
 
 usersRouter.post('/insertUser',insertUser)
 roomsRouter.post('/insertRoom',insertRoom)
-roomsRouter.post('/insertBooked',insertBooked)
+bookedRouter.post('/insertBooked',insertBooked)
 
 // usersRouter.post('/login',checkUser,loginUser );
 
