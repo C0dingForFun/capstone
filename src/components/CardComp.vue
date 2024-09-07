@@ -12,9 +12,9 @@
       </div>
         <slot name="rooms">
             <section>
-                    <div class="row" v-for="room in filterRooms" :key="room.room_id">
+                    <!-- <div class="row" v-for="room in filterRooms" :key="room.room_id">
                         <div class="card mt-5" style="width:18rem">
-                            
+                            <img :src="room.image" class="card-img-top">
                             <div class="card-body">
                                 <div class="prodName">
                                     <h5 class="card-title">{{room.room_name}}</h5>
@@ -28,21 +28,23 @@
                                 </div>
                             </div>
                         </div>
+                    </div> -->
+                    <div class="row" v-for="room in filterRooms" :key="room.room_id">
+                        <div class="card mb-3" style="width: 40rem">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img :src="room.image" class="card-img-top">
+                            </div>
+                            <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{room.room_name}}</h5>
+                                <h4>{{ room.room_package }}</h4>
+                                <p class="card-text">Price: R{{room.price}}</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div> 
                     </div>
-                    <!-- <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img :src="room.image" class="card-img-top">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>  -->
             </section>
         </slot>
     </div>
@@ -85,13 +87,13 @@ export default {
 <style scoped>
     section{
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         place-items: center;
         margin:auto;
     }
-    .card{
+    /* .card{
         height:370px;
-    }
+    } */
     .card img{
         height:200px;
     }
@@ -135,7 +137,7 @@ export default {
     select:hover{
         cursor: pointer;
     }
-    h4{
+    /* h4{
         color:transparent;
-    }
+    } */
 </style>

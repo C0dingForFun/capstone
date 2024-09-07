@@ -21,7 +21,7 @@ export default createStore({
     },
     setRooms(state,payload){
       state.rooms=payload
-    }
+    },
     setRoom(state,payload){
       state.room=payload
     }
@@ -48,8 +48,8 @@ export default createStore({
     },
     async getRoom ({commit},id) {
       try {
-        let {data} = await axios.get(`${apiURL}products/${id}`);        
-        commit('setRoom',data}
+        let {data} = await axios.get(`http://localhost:3005/rooms/${id}`);        
+        commit('setRoom',data)
       }
       catch (error) {
         toast("There has been an error", {
