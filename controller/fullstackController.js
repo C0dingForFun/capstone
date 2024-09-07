@@ -53,7 +53,7 @@ const fetchRoom = async (req, res)=>{
 
 const insertRoom =  async(req,res)=>{
     let {room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3} = req.body;
-    await insertRoomDB(req.body);
+    await insertRoomDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3);
     res.send('Room was inserted successfully.');
 }
 
@@ -66,13 +66,16 @@ const updateRoom =  async(req,res)=>{
     let {room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3} = req.body
     let room = await getRoomDB(req.params.id)
 
-    user_name?user_name = user_name:user_name = room.user_name;
-    user_surname?user_surname = user_surname:user_surname = room.user_surname;
-    age?age = age:age = room.age;
-    user_role?user_role = user_role:user_role = room.user_role;
-    username?username = username:username = room.username;
-    password?password = password:password = room.password;
+    room_name?room_name = room_name:room_name = room.room_name;
+    room_category?room_category = room_category:room_category = room.room_category;
+    room_description?room_description = room_description:room_description = room.room_description;
+    room_package?room_package = room_package:room_package = room.room_package;
+    price?price = price:price = room.price;
+    pets?pets = pets:pets = room.pets;
     image?image = image:image = room.image;
+    subImage1?subImage1 = subImage1:subImage1 = room.subImage1;
+    subImage2?subImage2 = subImage2:subImage2 = room.subImage2;
+    subImage3?subImage3 = subImage3:subImage3 = room.subImage3;
 
     await updateRoomDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,req.params.id);
     res.send('Room has been updated successfully.')
