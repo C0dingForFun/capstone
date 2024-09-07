@@ -10,7 +10,7 @@ const checkUser = async (req,res,next)=>{
     let result = await compare(password, hashedPassword);
     if(result == true){
         let token = jwt.sign({username:username},process.env.SECRET_KEY, {expiresIn:'1h'});
-        console.log(token);
+        // console.log(token);
         req.body.token = token;
         next();
     }else{
@@ -18,20 +18,20 @@ const checkUser = async (req,res,next)=>{
     }
 }
  
-// const verifyAToken = (req,res,next)=>{
-//     let {cookie} = req.headers;
-//     // checks if the token exists first
-//     let token = cookie && cookie.split('=')[1];
-//     // console.log(token);
-//     jwt.verify(token, process.env.SECRET_KEY,(err, decoded)=>{
-//         if(err){
-//             res.json({message:'Token has expired'});
-//             return;
-//         }
-//         req.body.user = decoded.username
-//         // console.log(req.body.username);
-//         next();
-//     } )
-// }
+const verifyAToken = (req,res,next)=>{
+    let {cookie} = req.headers;
+    // checks if the token exists first
+    let token = cookie && cookie.split('=')[1];
+    // console.log(token);
+    jwt.verify(token, process.env.SECRET_KEY,(err, decoded)=>{
+        if(err){
+            res.json({message:'Token has expired'});
+            return;
+        }
+        req.body.user = decoded.username
+        // console.log(req.body.username);
+        next();
+    } )
+}
 
-export {checkUser}
+export {checkUser,verifyAToken}
