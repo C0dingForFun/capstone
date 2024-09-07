@@ -1,4 +1,5 @@
-import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB } from "../model/fullstackDB.js";
+import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB }
+ from "../model/fullstackDB.js";
 import {hash} from 'bcrypt';
 // <----------------------------------------- Users --------------------------------------------------------------------->
 const fetchUsers = async (req,res)=>{
@@ -81,5 +82,42 @@ const updateRoom =  async(req,res)=>{
     res.send('Room has been updated successfully.')
 }
 
+// <----------------------------------------- Booked --------------------------------------------------------------------->
+const fetchBooked = async (req,res)=>{
+    res.json(await getBookedDB());
+}
 
-export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom}
+const fetchSingleBooked = async (req, res)=>{
+    res.json(await getSingleBookedDB(req.params.id));
+}
+
+const insertBooked =  async(req,res)=>{
+    let {room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3} = req.body;
+    await insertBookedDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3);
+    res.send('Booked room was inserted successfully.');
+}
+
+const deleteBooked =  async(req,res)=>{
+    await deleteRoomDB(req.params.id);
+    res.send('Booked room has been deleted successfully');
+}
+
+const updateBooked =  async(req,res)=>{
+    let {room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3} = req.body
+    let room = await getSingleBookedDB(req.params.id)
+
+    room_name?room_name = room_name:room_name = room.room_name;
+    room_category?room_category = room_category:room_category = room.room_category;
+    room_description?room_description = room_description:room_description = room.room_description;
+    room_package?room_package = room_package:room_package = room.room_package;
+    price?price = price:price = room.price;
+    pets?pets = pets:pets = room.pets;
+    image?image = image:image = room.image;
+    subImage1?subImage1 = subImage1:subImage1 = room.subImage1;
+    subImage2?subImage2 = subImage2:subImage2 = room.subImage2;
+    subImage3?subImage3 = subImage3:subImage3 = room.subImage3;
+
+    await updateBookedDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,req.params.id);
+    res.send('Booked room has been updated successfully.')
+}
+export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked}
