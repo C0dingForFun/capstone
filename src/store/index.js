@@ -22,13 +22,13 @@ export default createStore({
   },
   actions: {
     async getUsers({commit}){
-      let users = axios.get()
+      let [data] = axios.get('http://localhost:8080/users')
     },
     async getUsers({commit},id){
-      let user = axios.get()
+      let [data] = axios.get('http://localhost:8080/users',id)
     },
     async getUsers({commit}){
-      let users = axios.get()
+      let [data] = axios.get('http://localhost:8080/rooms')
     },
   },
   modules: {
