@@ -1,5 +1,6 @@
 import express from 'express';
-import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom, } from '../controller/fullstackController.js';
+import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked } 
+from '../controller/fullstackController.js';
 // import { checkUser,verifyAToken } from '../middleware/authenticate.js';
 
 const usersRouter = express.Router();
@@ -8,12 +9,14 @@ const bookedRouter = express.Router();
 
 usersRouter.get('/',fetchUsers)
 roomsRouter.get('/',fetchRooms)
+bookedRouter.get('/',fetchBooked)
 // fruitsRouter.get('/',verifyAToken,fetchFruits)
 
 // fruitsRouter.post('/cart',verifyAToken,addToCart)
 
 usersRouter.post('/insertUser',insertUser)
 roomsRouter.post('/insertRoom',insertRoom)
+roomsRouter.post('/insertBooked',insertBooked)
 
 // usersRouter.post('/login',checkUser,loginUser );
 
@@ -31,8 +34,8 @@ roomsRouter
 
 bookedRouter
     .route('/:id')
-        .get(fetchRoom)
-        .delete(deleteRoom)
-        .patch(updateRoom)
+        .get(fetchSingleBooked)
+        .delete(deleteBooked)
+        .patch(updateBooked)
 
-export {usersRouter,roomsRouter};
+export {usersRouter,roomsRouter,bookedRouter};

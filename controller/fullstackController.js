@@ -112,4 +112,5 @@ const updateBooked =  async(req,res)=>{
     await updateBookedDB(user_id,room_id,req.params.id);
     res.send('Booked room has been updated successfully.')
 }
+
 export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked}

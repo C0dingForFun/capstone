@@ -1,5 +1,5 @@
 import express from 'express';
-import { usersRouter,roomsRouter } from './routes/fullstackRoute.js';
+import { usersRouter,roomsRouter,bookedRouter} from './routes/fullstackRoute.js';
 import cors from 'cors';
 
 const app = express();
@@ -12,6 +12,7 @@ app.use(cors({
 }));
 app.use('/users',usersRouter);
 app.use('/rooms',roomsRouter);
+app.use('/booked',bookedRouter);
 
 const port = process.env.PORT || 3005
 

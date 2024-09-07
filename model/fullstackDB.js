@@ -65,8 +65,10 @@ const getSingleBookedDB = async (booked_id)=>{
     return data;
 }
 
-const insertBookedDB = async(user_id,room_id, booked_id)=>{
-    await pool.query(`UPDATE booked SET user_id = ?, room_id = ? WHERE book_id = ?`,[user_id,room_id,booked_id])
+const insertBookedDB = async(user_id,room_id)=>{
+    let [data] = await pool.query(`
+        INSERT INTO booked (user_id, room_id) VALUES(?,?)`, [user_id,room_id]
+    )
 }
 
 const updateBookedDB = async(user_id,room_id,booked_id )=>{
