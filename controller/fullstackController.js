@@ -92,13 +92,13 @@ const fetchSingleBooked = async (req, res)=>{
 }
 
 const insertBooked =  async(req,res)=>{
-    let {room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3} = req.body;
-    await insertBookedDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3);
+    let {user_id,room_id} = req.body;
+    await insertBookedDB(user_id,room_id);
     res.send('Booked room was inserted successfully.');
 }
 
 const deleteBooked =  async(req,res)=>{
-    await deleteRoomDB(req.params.id);
+    await deleteBookedDB(req.params.id);
     res.send('Booked room has been deleted successfully');
 }
 
@@ -107,15 +107,7 @@ const updateBooked =  async(req,res)=>{
     let room = await getSingleBookedDB(req.params.id)
 
     room_name?room_name = room_name:room_name = room.room_name;
-    room_category?room_category = room_category:room_category = room.room_category;
-    room_description?room_description = room_description:room_description = room.room_description;
-    room_package?room_package = room_package:room_package = room.room_package;
-    price?price = price:price = room.price;
-    pets?pets = pets:pets = room.pets;
-    image?image = image:image = room.image;
-    subImage1?subImage1 = subImage1:subImage1 = room.subImage1;
-    subImage2?subImage2 = subImage2:subImage2 = room.subImage2;
-    subImage3?subImage3 = subImage3:subImage3 = room.subImage3;
+    
 
     await updateBookedDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,req.params.id);
     res.send('Booked room has been updated successfully.')
