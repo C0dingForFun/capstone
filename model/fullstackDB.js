@@ -11,11 +11,11 @@ const getUserDB = async (user_id)=>{
     return data;
 }
 
-const insertUserDB = async(user_name, user_surname, age, user_role, username, password, image)=>{
+const insertUserDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)=>{
     let [data] = await pool.query(`
-        INSERT INTO users (user_name, user_surname, age, user_role, username, password, image)
+        INSERT INTO users (room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)
         VALUES(?,?,?,?,?,?,?)`,
-        [user_name, user_surname, age, user_role, username, password, image]
+        [room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3]
     )
 }
 
@@ -23,8 +23,8 @@ const deleteUserDB = async(user_id)=>{
     await pool.query(`DELETE FROM users WHERE user_id = ?`,[user_id])
 }
 
-const updateUserDB = async(user_name, user_surname, age, user_role, username, password, image,user_id )=>{
-    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE user_id = ?`,[user_name, user_surname, age, user_role, username, password, image,user_id])
+const updateUserDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,user_id )=>{
+    await pool.query(`UPDATE users SET user_name = ?, user_surname = ?, age = ?, user_role = ?, username = ?, password = ?, image = ? WHERE user_id = ?`,[room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,user_id])
 }
 
 //Rooms
