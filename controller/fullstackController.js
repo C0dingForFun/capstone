@@ -6,8 +6,8 @@ const fetchUsers = async (req,res)=>{
     res.json(await getUsersDB());
 }
 
-const fetchUser = async (req, res)=>{
-    res.json(await getUserDB(req.params.id));
+const fetchUser = async (req, res,username)=>{
+    res.json(await getUserDB(username));
 }
 
 const insertUser =  async(req,res)=>{
@@ -39,9 +39,9 @@ const updateUser =  async(req,res)=>{
     res.send('User has been updated successfully.')
 }
 
-// const loginUser = (req,res)=>{
-//     res.json({message:"User logged in successfully",token:req.body.token})
-// }
+const loginUser = (req,res)=>{
+    res.json({message:"User logged in successfully",token:req.body.token})
+}
 
 // <----------------------------------------- Items --------------------------------------------------------------------->
 const fetchRooms = async (req,res)=>{
@@ -113,4 +113,4 @@ const updateBooked =  async(req,res)=>{
     res.send('Booked room has been updated successfully.')
 }
 
-export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked}
+export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked,loginUser}
