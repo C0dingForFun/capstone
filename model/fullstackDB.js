@@ -40,7 +40,7 @@ const getRoomDB = async (room_id)=>{
 
 const insertRoomDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)=>{
     let [data] = await pool.query(`
-        INSERT INTO users (room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)
+        INSERT INTO rooms (room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)
         VALUES(?,?,?,?,?,?,?,?,?,?)`,
         [room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3]
     )
@@ -51,6 +51,6 @@ const deleteRoomDB = async(room_id)=>{
 }
 
 const updateRoomDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,room_id )=>{
-    await pool.query(`UPDATE users SET room_name = ?,room_category = ?,room_description = ?,room_package = ?,price = ?,pets = ?,image = ?,subImage1 = ?,subImage2 = ?,subImage3 = ? WHERE room_id = ?`,[room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,room_id])
+    await pool.query(`UPDATE rooms SET room_name = ?,room_category = ?,room_description = ?,room_package = ?,price = ?,pets = ?,image = ?,subImage1 = ?,subImage2 = ?,subImage3 = ? WHERE room_id = ?`,[room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,room_id])
 }
 export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB}
