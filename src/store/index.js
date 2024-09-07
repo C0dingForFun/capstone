@@ -7,7 +7,8 @@ export default createStore({
   state: {
     users:null,
     user:null,
-    rooms:null
+    rooms:null,
+    room:null
   },
   getters: {
   },
@@ -21,19 +22,34 @@ export default createStore({
     setRooms(state,payload){
       state.rooms=payload
     }
+    setRoom(state,payload){
+      state.room=payload
+    }
   },
   actions: {
     async getUsers({commit}){
-      let [data] = axios.get('http://localhost:8080/users')
+      let [data] = await axios.get('http://localhost:8080/users')
     },
     async getUsers({commit},id){
-      let [data] = axios.get('http://localhost:8080/users',id)
+      let [data] = await axios.get('http://localhost:8080/users',id)
     },
     async getRooms({commit}){
-      
       try {
-        let {data} = axios.get('http://localhost:8080/rooms')
+        let {data} = await axios.get('http://localhost:3005/rooms')
           commit('setRooms',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+    },
+    async getRoom ({commit},id) {
+      try {
+        let {data} = await axios.get(`${apiURL}products/${id}`);        
+        commit('setRoom',data}
       }
       catch (error) {
         toast("There has been an error", {
