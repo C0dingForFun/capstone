@@ -103,13 +103,13 @@ const deleteBooked =  async(req,res)=>{
 }
 
 const updateBooked =  async(req,res)=>{
-    let {room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3} = req.body
-    let room = await getSingleBookedDB(req.params.id)
+    let {user_id,room_id} = req.body
+    let booked = await getSingleBookedDB(req.params.id)
 
-    room_name?room_name = room_name:room_name = room.room_name;
+    user_id?user_id = user_id:user_id = booked.user_id;
+    room_id?room_id = room_id:room_id = booked.room_id;
     
-
-    await updateBookedDB(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,req.params.id);
+    await updateBookedDB(user_id,room_id,req.params.id);
     res.send('Booked room has been updated successfully.')
 }
 export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked}
