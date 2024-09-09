@@ -6,30 +6,7 @@
             </div>
             <div class="row center">
                         <div class="card mt-5">
-                            <!-- <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item" v-for="(room,index) in room()" :key="index" :class="{'active':index==0}">
-                                        <img :src="$store.state.room.image" class="card-img-top">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img :src="$store.state.room.subImage1" class="card-img-top">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img :src="$store.state.room.subImage2" class="card-img-top">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img :src="$store.state.room.subImage3" class="card-img-top">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button> -->
-                                <!-- </div> -->
+                            <img :src="$store.state.room.image"/>
                             <div class="card-body">
                                 <div class="prodName">
                                     <h5 class="card-title">{{$store.state.room.room_name}}</h5>
