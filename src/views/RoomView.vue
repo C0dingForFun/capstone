@@ -1,12 +1,17 @@
 <template>
     <div class="container-fluid mb-5 mt-5">
         <div class="row mt-5" v-if="room()">
+            {{ $store.state.room }}
             <div class="row">
                 <h2 class="display-2">Product Details</h2>
             </div>
             <div class="row center">
                         <div class="card mt-5">
-                            <img :src="$store.state.room.image"/>
+                            <button onclick="document.getElementById('myImage').:src='$store.state.room.subImage1' ">Turn on the light</button>
+
+                            <img :src="$store.state.room.image" id="myImage"/>
+
+                        <button onclick="document.getElementById('myImage').:src='$store.state.room.subImage2' ">Turn off the light</button>
                             <div class="card-body">
                                 <div class="prodName">
                                     <h5 class="card-title">{{$store.state.room.room_name}}</h5>
