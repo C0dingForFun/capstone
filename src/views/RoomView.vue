@@ -1,9 +1,9 @@
 <template>
     <div class="container-fluid mb-5">
-        <div class="row">
-            <h2 class="display-2">Product Details</h2>
-        </div>
         <div class="row my-2" v-if="room()">
+            <div class="row">
+                <h2 class="display-2">Product Details</h2>
+            </div>
             <div class="row center">
                         <div class="card mt-5">
                             <img :src="$store.state.room.image" class="card-img-top">
