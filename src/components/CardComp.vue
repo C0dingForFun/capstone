@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="d-flex justify-content-center mt-4 gap-3" id="filter" >
+    <div class="mt-5">
+        <div class="d-flex justify-content-center mt-5 gap-3 " id="filter" >
             <input type="text" placeholder="Search..." id="mySearch" v-model="searchQuery">
           <!-- <select v-model="searchProduct">
             <option value="" class="text-center">Filter:</option>
