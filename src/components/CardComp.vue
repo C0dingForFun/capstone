@@ -92,7 +92,7 @@ export default {
     .card:hover{
         cursor: pointer;
         transform: scale(1.02);
-        background: #bae39e;
+        background: #93C572;
     }
     .prodName{
         height: 8vh;
