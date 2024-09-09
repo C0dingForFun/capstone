@@ -7,14 +7,14 @@
             <div class="row center">
                         <div class="card mt-3">
                             <img :src="$store.state.room.image" id="myImage"/>
-                            <div class="mt-2">
+                            <div class="mt-3">
                                 <button onclick="document.getElementById('myImage').src='$store.state.room.subImage1' "><img :src="$store.state.room.subImage1"/></button>
                                 <button onclick="document.getElementById('myImage').src='$store.state.room.subImage2' "><img :src="$store.state.room.subImage2"/></button>
                                 <button onclick="document.getElementById('myImage').src='$store.state.room.subImage3' "><img :src="$store.state.room.subImage3"/></button>
                             </div>
                             <div class="card-body">
                                 <div class="prodName">
-                                    <h5 class="card-title">{{$store.state.room.room_name}}</h5>
+                                    <h5 class="display-5">{{$store.state.room.room_name}}</h5>
                                     <h4>{{$store.state.room.room_category}}</h4>
                                 </div>
                                 <div>
@@ -57,8 +57,9 @@ export default{
         border:none !important;
     }
     #myImage{
-        width:98vw;
-        height:80vh;
+        width:85vw;
+        height:65vh;
+        margin:auto;
     }
     .details{
         margin-top: 12vh;
@@ -81,8 +82,8 @@ export default{
         background: none;
     }
     button img{
-        width:10vw;
-        height:10vh;
+        width:15vw;
+        height:15vh;
         border-radius:20px;
     }
 </style>

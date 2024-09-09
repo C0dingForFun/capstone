@@ -85,6 +85,7 @@ export default {
     .card{
         width: 80vw ;
         transition: 1s;
+        background: #93C572;
     }
     .card img{
         height:200px;
@@ -92,7 +93,7 @@ export default {
     .card:hover{
         cursor: pointer;
         transform: scale(1.02);
-        background: #93C572;
+        box-shadow: 10px 10px 10px #93C572;;
     }
     .prodName{
         height: 8vh;

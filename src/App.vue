@@ -19,6 +19,7 @@ export default{
   color: #2c3e50;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background: #2c3e50;
 }
 
 .bannertxt{
