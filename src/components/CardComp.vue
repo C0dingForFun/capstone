@@ -11,26 +11,9 @@
           </select> -->
       </div>
         <slot name="rooms">
-            <section>
-                    <!-- <div class="row" v-for="room in filterRooms" :key="room.room_id">
-                        <div class="card mt-5" style="width:18rem">
-                            <img :src="room.image" class="card-img-top">
-                            <div class="card-body">
-                                <div class="prodName">
-                                    <h5 class="card-title">{{room.room_name}}</h5>
-                                    <h4>{{ room.room_category }}</h4>
-                                </div>
-                                <div>
-                                    <p class="card-text">Price: R{{room.price}}</p>
-                                </div>
-                                <div class="d-flex justify-content-center mt-2 align-content-end">
-                                    <router-link :to="{name:'room',params:{id:room.room_id}}" class="btn text-center">View More</router-link> 
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+            <section class="mt-5">
                     <div class="row" v-for="room in filterRooms" :key="room.room_id">
-                        <div class="card mb-3" style="width: 40rem">
+                        <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img :src="room.image" class="card-img-top">
@@ -76,11 +59,11 @@ export default {
                 (this.searchProduct === '' || room.room_category === this.searchProduct)
             })
         },
-        if (category) {
-            this.searchProducts = searchProducts.filter(product =>
-                product.category === category.value
-            )
-        }
+        // if (category) {
+        //     this.searchProducts = searchProducts.filter(product =>
+        //         product.category === category.value
+        //     )
+        // }
     },
     mounted() {
         this.getRooms();
@@ -90,13 +73,18 @@ export default {
 <style scoped>
     section{
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         place-items: center;
         margin:auto;
+    }
+    #filter{
+        margin-top:20vh !important;
     }
     /* .card{
         height:370px;
     } */
+    .card{
+        width: 80vw ;
+    }
     .card img{
         height:200px;
     }
@@ -112,20 +100,20 @@ export default {
     }
     .card a:hover{
         color:white;
-        background: #1479EA;
+        background: #bae39e;
     }
     #filter button{
         width:10vw;
         height:5vh;
         font-size:2vh;
-        background: #1479EA;
+        background: #bae39e;
     }
-    #filter a{
+    #filter router-link{
         font-size:2vh;
         transition: 1s;
     }
     #filter a:hover{
-        background: #1479EA;
+        background: #bae39e;
         color:white;
     }
     #filter input{
@@ -134,7 +122,7 @@ export default {
     }
     select{
         border-radius:15px;
-        background: #1479EA;
+        background: #bae39e;
         transition: 1s;
     }
     select:hover{
