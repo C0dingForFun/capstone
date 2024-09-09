@@ -1,5 +1,8 @@
 <template>
-  <div class="spinner">
+  <div class="container">
+    <div class="spinner">
+    </div>
+
   </div>
 </template>
 <script>
@@ -8,12 +11,20 @@ export default {
 }
 </script>
 <style scoped>
+.container{
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
 .spinner {
  --size-of-spinner: 100px;
  --spinner-border-width: 6px;
  --spinner-color: #93C572;
  --circle-color: #bae39e;
- --speed-of-animation: 2s;
+ --speed-of-animation: 1.9s;
  --scale: 1.7;
  width: var(--size-of-spinner);
  height: var(--size-of-spinner);
