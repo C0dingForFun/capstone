@@ -46,9 +46,9 @@ export default createStore({
         })
       }
     },
-    async getRoom ({commit},id) {
+    async getRoom ({commit},room_id) {
       try {
-        let {data} = await axios.get(`http://localhost:3005/rooms/${id}`);        
+        let {data} = await axios.get(`http://localhost:3005/rooms/${room_id}`);        
         commit('setRoom',data)
       }
       catch (error) {
