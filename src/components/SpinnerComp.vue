@@ -1,96 +1,50 @@
 <template>
-    <div class="loader-container">
-        <div class="loader"></div>
-        <div class="loader-text">Loading...</div>
-    </div>
+  <div class="spinner">
+  </div>
 </template>
 <script>
 export default {
-    
+  
 }
 </script>
 <style scoped>
-        .loader-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.spinner {
+ --size-of-spinner: 100px;
+ --spinner-border-width: 6px;
+ --spinner-color: #93C572;
+ --circle-color: #bae39e;
+ --speed-of-animation: 2s;
+ --scale: 1.7;
+ width: var(--size-of-spinner);
+ height: var(--size-of-spinner);
+ background: var(--circle-color);
+ border-radius: 50%;
+ position: relative;
 }
 
-.loader {
-  width: 70px;
-  height: 70px;
-  position: relative;
+.spinner::after {
+ content: "";
+ display: block;
+ position: absolute;
+ border-radius: 50%;
+ inset: 0;
+ border: var(--spinner-border-width) solid var(--spinner-color);
+ border-left-color: transparent;
+ border-right-color: transparent;
+ animation: spinny var(--speed-of-animation) linear infinite;
 }
 
-.loader:before {
-  content: "";
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 6px solid #007bff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: pulse 1s ease-in-out infinite;
-}
+@keyframes spinny {
+ 0% {
+  transform: rotate(0deg) scale(1)
+ }
 
-.loader:after {
-  content: "";
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 6px solid transparent;
-  border-top-color: #007bff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: spin 2s linear infinite;
-}
+ 50% {
+  transform: rotate(45deg) scale(var(--scale))
+ }
 
-.loader-text {
-  font-size: 24px;
-  margin-top: 20px;
-  color: #007bff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.6);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(0.6);
-    opacity: 1;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.content {
-  display: none;
-}
-
-.loaded .loader-container {
-  display: none;
-}
-
-.loaded .content {
-  display: block;
+ 100% {
+  transform: rotate(360deg) scale(1)
+ }
 }
 </style>
