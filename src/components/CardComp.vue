@@ -84,14 +84,14 @@ export default {
     } */
     .card{
         width: 80vw ;
-        transition: 07s;
+        transition: 1s;
     }
     .card img{
         height:200px;
     }
     .card:hover{
         cursor: pointer;
-        transform: scale(1.04);
+        transform: scale(1.02);
         background: #bae39e;
     }
     .prodName{
