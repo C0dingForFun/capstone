@@ -1,17 +1,17 @@
 <template>
-    <div class="container-fluid mb-5 mt-5">
+    <div class="container-fluid details mb-5">
         <div class="row mt-5" v-if="room()">
-            {{ $store.state.room }}
             <div class="row">
-                <h2 class="display-2">Product Details</h2>
+                <h2 class="display-5">Product Details</h2>
             </div>
             <div class="row center">
-                        <div class="card mt-5">
-                            <button onclick="document.getElementById('myImage').:src='$store.state.room.subImage1' ">Turn on the light</button>
-
+                        <div class="card mt-3">
                             <img :src="$store.state.room.image" id="myImage"/>
-
-                        <button onclick="document.getElementById('myImage').:src='$store.state.room.subImage2' ">Turn off the light</button>
+                            <div class="mt-2">
+                                <button onclick="document.getElementById('myImage').src='$store.state.room.subImage1' "><img :src="$store.state.room.subImage1"/></button>
+                                <button onclick="document.getElementById('myImage').src='$store.state.room.subImage2' "><img :src="$store.state.room.subImage2"/></button>
+                                <button onclick="document.getElementById('myImage').src='$store.state.room.subImage3' "><img :src="$store.state.room.subImage3"/></button>
+                            </div>
                             <div class="card-body">
                                 <div class="prodName">
                                     <h5 class="card-title">{{$store.state.room.room_name}}</h5>
@@ -53,8 +53,36 @@ export default{
 }
 </script>
 <style scoped>
+    .card{
+        border:none !important;
+    }
+    #myImage{
+        width:98vw;
+        height:80vh;
+    }
+    .details{
+        margin-top: 12vh;
+        width:100vw;
+        height:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .details img{
+        border-radius:15px;
+        margin:auto;
+    }
     .center{
         display: flex;
         justify-content: center;
+    }
+    button{
+        border:none;
+        background: none;
+    }
+    button img{
+        width:10vw;
+        height:10vh;
+        border-radius:20px;
     }
 </style>
