@@ -1,6 +1,6 @@
 import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB }
  from "../model/fullstackDB.js";
-import {hash} from 'bcrypt';
+import {hash} from 'bcrypt'
 // <----------------------------------------- Users --------------------------------------------------------------------->
 const fetchUsers = async (req,res)=>{
     res.json(await getUsersDB());
