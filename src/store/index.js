@@ -40,7 +40,7 @@ export default createStore({
         })
       }
     },
-    async getUsers({commit},id){
+    async getUser({commit},id){
       try {
         let {data} = await axios.get(`http://localhost:3005/users/${user_id}`);        
         commit('setUser',data)
