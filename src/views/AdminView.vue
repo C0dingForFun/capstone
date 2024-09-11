@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="mt-5">
       <!-- USERS TABLE -->
-      <h2>Users Table</h2>
+      <h2 class="mt-5">Users Table</h2>
       <addUser/>
       <div class="container table-responsive">
         <div class="col">
@@ -15,7 +15,7 @@
               <th>User Age</th>
               <th>User Role</th>
               <th>Username</th>
-              <th>Password</th>
+              <th></th>
             </tr>
           </thead>
           <tbody v-if="users()">
@@ -45,13 +45,12 @@
         <table class="table products-table">
           <thead class="table-dark">
             <tr>
-              <th>Product ID</th>
-              <th>Product Name</th>
-              <th>Quantity</th>
-              <th>Amount</th>
+              <th>Room ID</th>
+              <th>Room Name</th>
               <th>Category</th>
-              <th>Product URL</th>
-              <th>Action</th>
+              <th>Price</th>
+              <th>Room URL</th>
+              <th></th>
             </tr>
           </thead>
           <tbody v-if="rooms">
@@ -88,7 +87,7 @@
       // addUser,
     },
     mounted() {
-      this.$store.dispatch('getProducts');
+      this.$store.dispatch('getRooms');
       this.$store.dispatch('getUsers');
     },
     methods: {
