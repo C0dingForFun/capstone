@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-5">
+    <div class="admin">
       <!-- USERS TABLE -->
       <h2 class="mt-5">Users Table</h2>
       <addUser/>
@@ -27,7 +27,7 @@
               <td>{{ user.userRole }}</td>
               <td>
                 <a :href="user.userProfile" target="_blank">
-                  <img :src="user.userProfile" alt="User Profile" width="50">
+                  <img :src="user.image" alt="User Profile" width="50">
                 </a>
               </td>
               <td>
@@ -134,6 +134,9 @@
   <style scoped>
   h2{
     font-weight: bold;
+  }
+  .admin{
+    margin-top:20vh;
   }
   /* Responsive Styles for Users Table */
   @media (max-width: 768px) {

@@ -46,9 +46,10 @@ export default {
         width:100vw;
         height:auto;
     }
-    .newsletter a{
+    .newsletter .link a{
         color:whitesmoke;
         text-decoration: none;
+        transition:1s;
     }
     .newsletter .link a:hover{
         color:#93C572;
@@ -66,13 +67,14 @@ export default {
         border-radius:2px;
     }
     .newsletter button{
-        border-radius:2px;
-        border:solid 2px #bae39e;
+        border-radius:5px;
+        padding:1px;
         transition:1s;
+        color:whitesmoke;
+        background-color: gray;
     }
-
     .newsletter button:hover{
-        color: rgb(224, 216, 216);
+        color: white;
         background-color: #bae39e;
     }
     .link{
