@@ -2,16 +2,16 @@
     <div class="bookRoom" v-if="room()">
         <div class="book row">
             <div class="col-lg-3 col-md-3 col-sm-12">
-                <img :src="$store.state.book.image" loading="lazy"/>
+                <img :src="$store.state.rooms.image" loading="lazy"/>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
-                {{$store.state.book.room_name}}
+                {{$store.state.rooms.room_name}}
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
-                {{$store.state.book.room_category}}
+                {{$store.state.rooms.room_category}}
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
-                {{$store.state.book.price}}
+                {{$store.state.rooms.price}}
             </div>
         </div>
     </div>

@@ -82,6 +82,33 @@ export default createStore({
       }
     },
   },
+  async addUser({commit},info){
+    let data = await axios.post(`${coastalURL}users/insertUser`,info);
+    // console.log(data);
+  },
+  async loginUser({commit},info){
+    let {data} =  await axios.post(`${coastalURL}users/login`,info);
+    // console.log(data);
+    $cookies.set('token', data.token)
+    if(data.message){
+      toast("Login is successful",{
+        "theme": "dark",
+        "type": "default",
+        "position": "top-center",
+        "transition": "zoom",
+        "dangerouslyHTMLString": true
+      })
+    }else{
+      toast("Your password is incorrect", {
+        "theme": "auto",
+        "type": "error",
+        "position": "top-center",
+        "dangerouslyHTMLString": true
+      })
+    }
+    await router.push('/home');
+    location.reload();
+  },
   modules: {
   }
 })
