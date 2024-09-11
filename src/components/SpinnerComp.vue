@@ -24,7 +24,7 @@ export default {
  --spinner-border-width: 6px;
  --spinner-color: #93C572;
  --circle-color: #bae39e;
- --speed-of-animation: 1.9s;
+ --speed-of-animation: 1s;
  --scale: 1.7;
  width: var(--size-of-spinner);
  height: var(--size-of-spinner);
