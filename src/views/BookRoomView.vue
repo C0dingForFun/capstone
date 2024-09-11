@@ -1,13 +1,47 @@
 <template lang="">
-    <div>
-        this is the book room page.
+    <div class="bookRoom">
+        <div class="book row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+
+            </div>
+        </div>
     </div>
 </template>
 <script>
-export default {
-    
+export default{
+    methods: {
+        getRoom(){
+            this.$store.dispatch('getRoom',this.$route.params.id);
+        },
+        room() {
+            return this.$store.state.room;
+        },
+    },
+    mounted() {
+        this.getRoom();
+    },
+    components:{
+        SpinnerComp
+    }
 }
 </script>
 <style scoped>
-    
+    .bookRoom{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:100vw;
+        height:auto;
+    }
+    .book{
+        width: 80vw;
+        height: auto;
+
+    }
 </style>
