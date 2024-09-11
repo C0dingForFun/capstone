@@ -28,10 +28,30 @@ export default createStore({
   },
   actions: {
     async getUsers({commit}){
-      let [data] = await axios.get('http://localhost:8080/users')
+      try {
+        let {data} = await axios.get('http://localhost:3005/users')
+          commit('setUsers',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
     },
     async getUsers({commit},id){
-      let [data] = await axios.get('http://localhost:8080/users',id)
+      try {
+        let {data} = await axios.get(`http://localhost:3005/users/${user_id}`);        
+        commit('setUser',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
     },
     async getRooms({commit}){
       try {
