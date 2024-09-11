@@ -41,11 +41,11 @@
                                         <input type="number" placeholder="1">
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-12 align-content-center pt-1" >
-                                        <button>Book Now</button>
+                                        <router-link to="/bookRoom">Book Room</router-link>
                                     </div>
                                 </div>
                                 <div class="justify-content-center">
-                                    <router-link to="/bookRoom">Book Room</router-link>
+                                    
                                 </div>
                             </div>
                         </div>
