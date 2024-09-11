@@ -23,6 +23,9 @@
                                 <div>
                                     <p class="card-text">Price: R{{$store.state.room.price}}</p>
                                 </div>
+                                <div class="justify-content-center">
+                                    <router-link to="bookRoom">Book Room</router-link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -77,11 +80,7 @@ export default{
         display: flex;
         justify-content: center;
     }
-    button{
-        border:none;
-        background: none;
-    }
-    button img{
+    img{
         width:20vw;
         height:20vh;
         border-radius:20px;

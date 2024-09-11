@@ -4,6 +4,7 @@ import ContactView from '@/views/ContactView.vue';
 import EventsView from '@/views/EventsView.vue';
 import RoomsView from '@/views/RoomsView.vue';
 import RoomView from '@/views/RoomView.vue';
+import BookRoomView from '@/views/BookRoomView.vue';
 import LoginView from '@/views/LoginView.vue';
 import AdminView from "@/views/AdminView.vue";
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/room/:id',
     name: 'room',
     component: RoomView
+  },
+  {
+    path: '/bookRoom',
+    name: 'bookRoom',
+    component: BookRoomView
   },
   {
     path: '/events',
