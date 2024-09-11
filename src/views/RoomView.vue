@@ -6,14 +6,14 @@
             </div>
             <div class="row center">
                         <div class="card mt-3">
-                            <img :src="$store.state.room.image" id="myImage"/>
+                            <img :src="$store.state.room.image"/>
                             <div class="mt-3">
                                 <img :src="$store.state.room.subImage1"/>
                                 <img :src="$store.state.room.subImage2"/>
                                 <img :src="$store.state.room.subImage3"/>
                             </div>
                             <div class="card-body">
-                                <div class="prodName">
+                                <div>
                                     <h5 class="display-5">{{$store.state.room.room_name}}</h5>
                                     <h4>{{$store.state.room.room_category}}</h4>
                                 </div>
