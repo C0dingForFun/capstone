@@ -1,12 +1,12 @@
 import { compare } from "bcrypt";
-import { getUserDB } from "../model/fullstackDB.js";
+import { getUserDB2 } from "../model/fullstackDB.js";
 import jwt from 'jsonwebtoken';
 import { config }from "dotenv";
 config();
 
 const checkUser = async (req,res,next)=>{
     const {username, password} = req.body;
-    let hashedPassword = (await getUserDB(username)).password;
+    let hashedPassword = (await getUserDB2(username)).password;
     let result = await compare(password, hashedPassword);
     if(result == true){
         let token = jwt.sign({username:username},process.env.SECRET_KEY, {expiresIn:'1h'});
@@ -28,10 +28,10 @@ const verifyAToken = (req,res,next)=>{
             res.json({message:'Token has expired'});
             return;
         }
-        req.body.user = decoded.username
+        req.body.username = decoded.username
         console.log(req.body.username);
         next();
-    } )
+    })
 }
 
 export {checkUser,verifyAToken}

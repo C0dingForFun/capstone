@@ -11,6 +11,11 @@ const getUserDB = async (user_id)=>{
     return data;
 }
 
+const getUserDB2 = async (username)=>{
+    let [[data]] = await pool.query('SELECT * FROM users WHERE username = ?', [username]);
+    return data;
+}
+
 const insertUserDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)=>{
     let [data] = await pool.query(`
         INSERT INTO users (room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)
@@ -77,4 +82,4 @@ const updateBookedDB = async(user_id,room_id,booked_id )=>{
 const deleteBookedDB = async(booked_id)=>{
     await pool.query(`DELETE FROM booked WHERE booked_id = ?`,[booked_id])
 }
-export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB}
+export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,getUserDB2}
