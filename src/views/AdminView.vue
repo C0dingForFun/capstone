@@ -23,12 +23,10 @@
           <tbody v-if="users">
     <tr v-for="user in users" :key="user.userID">
       <td>{{ user.userID }}</td>
-      <td>{{ user.firstName }}</td>
-      <td>{{ user.lastName }}</td>
-      <td>{{ user.userAge }}</td>
-      <td>{{ user.Gender }}</td>
+      <td>{{ user.user_Name }}</td>
+      <td>{{ user.user_surname }}</td>
+      <td>{{ user.age }}</td>
       <td>{{ user.userRole }}</td>
-      <td>{{ user.emailAdd }}</td>
       <td>
         <a :href="user.userProfile" target="_blank">
           <img :src="user.userProfile" alt="User Profile" width="50">
