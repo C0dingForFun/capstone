@@ -57,7 +57,7 @@ export default createStore({
     },
     async getRooms({commit}){
       try {
-        let {data} = await axios.get(`${coastalURL}/rooms`)
+        let {data} = await axios.get(`${coastalURL}rooms`)
           commit('setRooms',data)
       }
       catch (error) {
@@ -70,7 +70,7 @@ export default createStore({
     },
     async getRoom ({commit},room_id) {
       try {
-        let {data} = await axios.get(`${coastalURL}/rooms/${room_id}`);        
+        let {data} = await axios.get(`${coastalURL}rooms/${room_id}`);        
         commit('setRoom',data)
       }
       catch (error) {

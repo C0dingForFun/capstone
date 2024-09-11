@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        
+        this is the book room page.
     </div>
 </template>
 <script>

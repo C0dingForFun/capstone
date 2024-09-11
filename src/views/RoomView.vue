@@ -6,7 +6,7 @@
             </div>
             <div class="row center">
                         <div class="card mt-3">
-                            <img :src="$store.state.room.image"/>
+                            <img :src="$store.state.room.image" id="myImage"/>
                             <div class="mt-3">
                                 <img :src="$store.state.room.subImage1"/>
                                 <img :src="$store.state.room.subImage2"/>
@@ -24,7 +24,7 @@
                                     <p class="card-text">Price: R{{$store.state.room.price}}</p>
                                 </div>
                                 <div class="justify-content-center">
-                                    <router-link to="bookRoom">Book Room</router-link>
+                                    <router-link to="/bookRoom">Book Room</router-link>
                                 </div>
                             </div>
                         </div>
