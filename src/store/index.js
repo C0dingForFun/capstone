@@ -2,13 +2,13 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
-import {usedCookies} from 'vue3-cookies';
+import {useCookies} from 'vue-cookies';
 import router from '@/router';
 
 const coastalURL  = 'https://capstone-2xa4.onrender.com/'
 
 axios.defaults.withCredentials = true;
-// axios.defaults.headers = $cookies.get('token');
+axios.defaults.headers = $cookies.get('token');
 
 export default createStore({
   state: {
@@ -86,38 +86,48 @@ export default createStore({
         })
       }
     },
-  },
-  async addUser({commit},info){
-    let data = await axios.post(`${coastalURL}users/insertUser`,info);
-    // console.log(data);
-  },
-  async loginUser({commit},info){
-    let {data} =  await axios.post(`${coastalURL}users/login`,info);
-    // console.log(data);
-    $cookies.set('token', data.token)
-    if(data.message){
-      toast("Login is successful",{
-        "theme": "dark",
-        "type": "default",
-        "position": "top-center",
-        "transition": "zoom",
-        "dangerouslyHTMLString": true
-      })
-    }else{
-      toast("Your password is incorrect", {
-        "theme": "auto",
-        "type": "error",
-        "position": "top-center",
-        "dangerouslyHTMLString": true
-      })
+    async addUser({commit},info){
+      let data = await axios.post(`${coastalURL}users/insertUser`,info);
+      // console.log(data);
+    },
+    async loginUser({commit},info){
+      console.log(info);
+      
+      let {data} =  await axios.post(`${coastalURL}users/login`,info);
+      console.log(data);
+      $cookies.set('token', data.token)
+      $cookies.set('userRole', data.userRole)
+      if(data.userRole == 'admin'){
+        router.push('/admin')
+      }
+      else{
+        router.push('/')
+      }
+      if(data.message){
+        toast("Login is successful",{
+          "theme": "dark",
+          "type": "default",
+          "position": "top-center",
+          "transition": "zoom",
+          "dangerouslyHTMLString": true
+        })
+      }else{
+        toast("Your password is incorrect", {
+          "theme": "auto",
+          "type": "error",
+          "position": "top-center",
+          "dangerouslyHTMLString": true
+        })
+      }
+      // await router.push('/');
+      // location.reload();
+    },
+    async bookRoom({commit},room_id){
+      let {data} = await axios.post(`${coastalURL}cart`,{id:room_id});
+      console.log(data);
     }
-    await router.push('/');
-    location.reload();
   },
-  async bookRoom({commit},room_id){
-    let {data} = await axios.post(`${coastalURL}cart`,{id:room_id});
-    console.log(data);
-  },
+  
   modules: {
   }
 })
