@@ -33,13 +33,18 @@
     </div>
   </section>
   <section>
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-lg-6 col-md-6 col-sm-12">
         knnn
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <h3>Why Choose Us</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="col-lg-6 col-md-6 col-sm-12 text-start">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Unbeatable oceanfront location with breathtaking views.</li>
+          <li>Luxurious rooms and suites with modern amenities and private balconies.</li>
+          <li>Exceptional amenities, including oceanfront pool, fitness center, and spa treatments.</li>
+          <li>Personalized service tailored to your needs.</li>
+        </ul>
         <div class="row">
           <div class="col">
             ewjjfbw
