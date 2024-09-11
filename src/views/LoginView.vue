@@ -27,6 +27,8 @@ export default {
     .login{
         width:100vw;
         height:80vh;
-        background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif')
+        background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 </style>

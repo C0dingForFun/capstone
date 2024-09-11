@@ -1,14 +1,17 @@
 <template lang="">
     <div class="bookRoom" v-if="room()">
-        <div class="book row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                
+        <div class="book row" v-for="book in room()" :key="book.room_id">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <img :src="book.image" loading="lazy"/>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                {{book.room_name}}
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                {{book.room_category}}
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                {{book.price}}
             </div>
         </div>
     </div>
