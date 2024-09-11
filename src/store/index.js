@@ -2,7 +2,7 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
-import {usedCookies} from 'vue-cookies';
+import {usedCookies} from 'vue3-cookies';
 import router from '@/router';
 
 const coastalURL  = 'https://capstone-2xa4.onrender.com/'

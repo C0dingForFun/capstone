@@ -1,6 +1,9 @@
 <template lang="">
-<!-- <div class="login"> -->
-    <button @click="signUp = !signUp">Sign / Login</button>
+<div class="login row">
+    <div>
+        <button @click="signUp = !signUp">Signup</button>
+        <button @click="login = !login">Login</button>
+    </div>
     <div v-if="signUp">
         <h1>Sign Up here:</h1>
         <table style="margin:auto">
@@ -17,7 +20,7 @@
             </tbody>
         </table>
     </div>
-    <div v-else>
+    <div v-else-if="login">
         <h1>Login here:</h1>
         <div>
             <label>Enter your Username:</label>
@@ -27,6 +30,7 @@
             <button @click="loginUser()">Login</button>
         </div>
     </div>
+</div>
 </template>
 <script>
 export default {
@@ -38,7 +42,8 @@ export default {
             user_role:'',
             username:'',
             password:'',
-            signUp: true
+            signUp: false,
+            login:true
         }
     },
     methods:{
@@ -61,5 +66,6 @@ export default {
         background-repeat: no-repeat;
         display:flex;
         align-items: center;
+        padding-top:20vh;
     }
 </style>
