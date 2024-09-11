@@ -29,7 +29,7 @@
                     <a><i class="lab la-twitter"></i></a>
                 </div>
            </div> 
-           <div class="col-lg-5 col-md-5 col-sm-12">
+           <div class="col-lg-5 col-md-5 col-sm-12 pages">
 
            </div> 
         </div>
@@ -93,6 +93,9 @@ export default {
     .info i:hover{
         cursor: pointer;
         color:whitesmoke;
+    }
+    .pages{
+        background-color: #aeeb85;
     }
     .copyright{
         padding:1vh;
