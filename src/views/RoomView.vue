@@ -57,8 +57,8 @@ export default{
         border:none !important;
     }
     #myImage{
-        width:85vw;
-        height:65vh;
+        width:90vw;
+        height:70vh;
         margin:auto;
     }
     .details{
@@ -82,8 +82,8 @@ export default{
         background: none;
     }
     button img{
-        width:15vw;
-        height:15vh;
+        width:20vw;
+        height:20vh;
         border-radius:20px;
     }
 </style>

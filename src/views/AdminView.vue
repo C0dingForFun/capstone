@@ -79,16 +79,16 @@
     </div>
   </template>
   <script>
-  import updateUser from '@/components/UpdateUser.vue';
-  import updateProduct from '@/components/UpdateProduct.vue';
-  import addProduct from '@/components/AddProduct.vue';
-  import addUser from '@/components/AddUser.vue';
+  // import updateUser from '@/components/UpdateUser.vue';
+  // import updateProduct from '@/components/UpdateProduct.vue';
+  // import addProduct from '@/components/AddProduct.vue';
+  // import addUser from '@/components/AddUser.vue';
   export default {
     components: {
-      updateUser,
-      updateProduct,
-      addProduct,
-      addUser,
+      // updateUser,
+      // updateProduct,
+      // addProduct,
+      // addUser,
     },
     computed: {
       products(){
