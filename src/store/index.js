@@ -2,13 +2,13 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
-import {usedCookies} from 'vue3-cookies';
+// import {usedCookies} from 'vue3-cookies';
 import router from '@/router';
 
 const coastalURL  = 'https://capstone-2xa4.onrender.com/'
 
-axios.defaults.withCredentials = true;
-axios.defaults.headers = $cookies.get('token');
+// axios.defaults.withCredentials = true;
+// axios.defaults.headers = $cookies.get('token');
 
 export default createStore({
   state: {
@@ -113,6 +113,10 @@ export default createStore({
     }
     await router.push('/home');
     location.reload();
+  },
+  async bookRoom({commit},room_id){
+    let {data} = await axios.post(`${coastalURL}cart`,{id:room_id});
+    console.log(data);
   },
   modules: {
   }

@@ -26,7 +26,7 @@
               <td>{{ user.age }}</td>
               <td>{{ user.user_role }}</td>
               <td>
-                <a :href="user.userProfile" target="_blank">
+                <a :href="user.image" target="_blank">
                   <img :src="user.image" alt="User Profile" width="50">
                 </a>
               </td>

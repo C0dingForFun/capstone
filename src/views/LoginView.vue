@@ -63,9 +63,12 @@ export default {
         height:100vh;
         background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif');
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
         display:flex;
         align-items: center;
-        padding-top:20vh;
+        padding-top:18vh;
+        color:whitesmoke;
+        text-shadow:2px 2px black;
     }
 </style>

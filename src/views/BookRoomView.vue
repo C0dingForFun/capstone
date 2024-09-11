@@ -29,6 +29,9 @@ export default{
         room() {
             return this.$store.state.room;
         },
+        bookRoom(room_id){
+            this.$store.dispatch('bookRoom',room_id);
+        }
     },
     mounted() {
         this.getRoom();
