@@ -1,17 +1,17 @@
 <template lang="">
     <div class="bookRoom" v-if="room()">
-        <div class="book row" v-for="book in room()" :key="book.room_id">
+        <div class="book row">
             <div class="col-lg-3 col-md-3 col-sm-12">
-                <img :src="book.image" loading="lazy"/>
+                <img :src="$store.state.book.image" loading="lazy"/>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
-                {{book.room_name}}
+                {{$store.state.book.room_name}}
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
-                {{book.room_category}}
+                {{$store.state.book.room_category}}
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
-                {{book.price}}
+                {{$store.state.book.price}}
             </div>
         </div>
     </div>
