@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid details mb-5">
         <div class="row mt-5" v-if="room()">
-            <div class="row">
+            <div>
                 <h2 class="display-5">Product Details</h2>
             </div>
             <div class="row center">

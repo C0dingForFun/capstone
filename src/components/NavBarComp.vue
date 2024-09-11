@@ -77,6 +77,9 @@ export default {
       color:#93C572;
         
     }
+    .nav-item button router-link-exact-active{
+      color:#93C572;
+    }
     nav button i{
       color:whitesmoke;
       transition: 1s;
