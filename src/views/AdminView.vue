@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="admin">
       <!-- USERS TABLE -->
-      <h2>Users Table</h2>
+      <h2 class="mt-5">Users Table</h2>
       <addUser/>
       <div class="container table-responsive">
         <div class="col">
@@ -13,30 +13,28 @@
               <th>First Name</th>
               <th>Last Name</th>
               <th>User Age</th>
-              <th>Gender</th>
               <th>User Role</th>
-              <th>Email Address</th>
-              <th>User Profile</th>
-              <th>Action</th>
+              <th>Username</th>
+              <th></th>
             </tr>
           </thead>
-          <tbody v-if="users">
-    <tr v-for="user in users" :key="user.userID">
-      <td>{{ user.userID }}</td>
-      <td>{{ user.user_Name }}</td>
-      <td>{{ user.user_surname }}</td>
-      <td>{{ user.age }}</td>
-      <td>{{ user.userRole }}</td>
-      <td>
-        <a :href="user.userProfile" target="_blank">
-          <img :src="user.userProfile" alt="User Profile" width="50">
-        </a>
-      </td>
-      <td>
-        <updateUser :user="user" />
-        <button class="btn btn-danger deleteButton" @click="deleteUser(user.user_iD)">Delete</button>
-      </td>
-    </tr>
+          <tbody v-if="users()">
+            <tr v-for="user in users()" :key="user.user_id">
+              <td>{{ user.user_id }}</td>
+              <td>{{ user.user_name }}</td>
+              <td>{{ user.user_surname }}</td>
+              <td>{{ user.age }}</td>
+              <td>{{ user.userRole }}</td>
+              <td>
+                <a :href="user.userProfile" target="_blank">
+                  <img :src="user.image" alt="User Profile" width="50">
+                </a>
+              </td>
+              <td>
+                <updateUser :user="user" />
+                <button class="btn btn-danger deleteButton" @click="deleteUser(user.user_iD)">Delete</button>
+              </td>
+            </tr>
   </tbody>
         </table>
       </div>
@@ -47,30 +45,28 @@
         <table class="table products-table">
           <thead class="table-dark">
             <tr>
-              <th>Product ID</th>
-              <th>Product Name</th>
-              <th>Quantity</th>
-              <th>Amount</th>
+              <th>Room ID</th>
+              <th>Room Name</th>
               <th>Category</th>
-              <th>Product URL</th>
-              <th>Action</th>
+              <th>Price</th>
+              <th>Room URL</th>
+              <th></th>
             </tr>
           </thead>
-          <tbody v-if="products">
-            <tr v-for="product in products" :key="product.prodID">
-              <td>{{ product.prodID }}</td>
-              <td>{{ product.prodName }}</td>
-              <td>{{ product.quantity }}</td>
-              <td>R {{ product.amount }}</td>
-              <td> {{ product.Category }}</td>
+          <tbody v-if="rooms">
+            <tr v-for="room in rooms()" :key="room.room_id">
+              <td>{{ room.room_id }}</td>
+              <td>{{ room.room_name }}</td>
+              <td>{{ room.room_category }}</td>
+              <td>R {{ room.price }}</td>
               <td>
-        <a :href="product.prodURL" target="_blank">
-          <img :src="product.prodURL" alt="Product Image" width="50">
-        </a>
-      </td>
+                <a :href="room.image" target="_blank">
+                  <img :src="room.image" alt="Room Image" width="50">
+                </a>
+              </td>
               <td>
                 <updateProduct :product="product"/>
-                <button class="btn btn-danger deleteButton" @click.prevent="deleteProduct(product.prodID)">Delete</button>
+                <button class="btn btn-danger deleteButton" @click.prevent="deleteProduct(room.room_id)">Delete</button>
               </td>
             </tr>
           </tbody>
@@ -90,56 +86,57 @@
       // addProduct,
       // addUser,
     },
-    computed: {
-      products(){
-        return this.$store.state.products;
-      },
-      users(){
-        return this.$store.state.users;
-      }
-    },
     mounted() {
-      this.$store.dispatch('getProducts');
+      this.$store.dispatch('getRooms');
       this.$store.dispatch('getUsers');
     },
     methods: {
-      deleteUser(userID) {
-        this.$store.dispatch('deleteUser', userID );
+      rooms(){
+        return this.$store.state.rooms;
       },
-      deleteProduct(prodID) {
-        this.$store.dispatch('deleteProduct', prodID );
+      users(){
+        return this.$store.state.users;
       },
-      updateUser(user) {
-        let editUser = {
-          userID: user.userID,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          userAge: user.userAge,
-          Gender: user.Gender,
-          userRole: user.userRole,
-          emailAdd: user.emailAdd,
-          userPass: user.userPass,
-          userProfile: user.userProfile,
-        };
-        this.$store.dispatch('updateUser', { id: user.userID, data: editUser });
-      },
-      updateProduct(product) {
-        let editProduct = {
-          productID: product.prodID,
-          productName: product.prodName,
-          quantity: product.quantity,
-          amount: product.amount,
-          category: product.category,
-          prodURL: product.prodURL,
-        };
-        this.$store.dispatch('updateProduct', { id: product.prodID, data: editProduct });
-      }
+      // deleteUser(userID) {
+      //   this.$store.dispatch('deleteUser', userID );
+      // },
+      // deleteProduct(prodID) {
+      //   this.$store.dispatch('deleteProduct', prodID );
+      // },
+      // updateUser(user) {
+      //   let editUser = {
+      //     userID: user.userID,
+      //     firstName: user.firstName,
+      //     lastName: user.lastName,
+      //     userAge: user.userAge,
+      //     Gender: user.Gender,
+      //     userRole: user.userRole,
+      //     emailAdd: user.emailAdd,
+      //     userPass: user.userPass,
+      //     userProfile: user.userProfile,
+      //   };
+      //   this.$store.dispatch('updateUser', { id: user.userID, data: editUser });
+      // },
+      // updateProduct(product) {
+      //   let editProduct = {
+      //     productID: product.prodID,
+      //     productName: product.prodName,
+      //     quantity: product.quantity,
+      //     amount: product.amount,
+      //     category: product.category,
+      //     prodURL: product.prodURL,
+      //   };
+      //   this.$store.dispatch('updateProduct', { id: product.prodID, data: editProduct });
+      // }
     }
   }
   </script>
   <style scoped>
   h2{
     font-weight: bold;
+  }
+  .admin{
+    margin-top:20vh;
   }
   /* Responsive Styles for Users Table */
   @media (max-width: 768px) {

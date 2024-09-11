@@ -31,7 +31,7 @@ export default createStore({
   actions: {
     async getUsers({commit}){
       try {
-        let {data} = await axios.get(`${coastalURL}/users`)
+        let {data} = await axios.get(`${coastalURL}users`)
           commit('setUsers',data)
       }
       catch (error) {

@@ -30,7 +30,7 @@
                         </ul>                       
                         <ul class="navbar-nav justify-content-end flex-grow-1 p-3 f-3 px-2"> 
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/login" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-user"></i></button></router-link>
+                            <router-link class="nav-link" to="/admin" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close"><i class="las la-user"></i></button></router-link>
                           </li>
                         </ul>                    
                       </div>
@@ -76,6 +76,9 @@ export default {
     nav .nav-item button:hover{
       color:#93C572;
         
+    }
+    .nav-item button router-link-exact-active{
+      color:#93C572;
     }
     nav button i{
       color:whitesmoke;

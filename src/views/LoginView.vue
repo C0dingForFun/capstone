@@ -1,7 +1,6 @@
 <template lang="">
-<div>
-        <form role="form" class="mx-auto my-auto">
-            <h1 class="text-center text-white"><b>Reach Us Here:</b></h1>
+<div class="login">
+        <form role="form" class="mx-auto pt-5"><b>Login Here:</b>
                 <div class="row text">
                     <div class="col-md-6 form-group">
                         <input type="text" name="name" class="form-control px-2" placeholder="Your Username" v-model="username">
@@ -18,11 +17,19 @@ export default {
     data() {
         return {
             username: '',
-            password:''
+            password: ''
         }
     },
 }
 </script>
 <style scoped>
-    
+    .login{
+        width:100vw;
+        height:100vh;
+        background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display:flex;
+        align-items: center;
+    }
 </style>

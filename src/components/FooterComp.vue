@@ -1,12 +1,10 @@
 <template lang="">
     <footer>
         <div class="newsletter row">
-            <div class="link col-lg-6 col-md-6 col-sm-12 mt-3">
+            <div class="link col-lg-6 col-md-6 col-sm-12 mt-3 mb-3">
                 <div>
-                        <i class="las la-map-marker"></i>
-                    
-                        <a href="https://www.google.com/maps/place/Lagoon+Beach+Hotel+%26+Spa/@-33.8925909,18.4832667,15z/data=!4m9!3m8!1s0x1dcc5c2ed4759665:0xe4c965c5195298f9!5m2!4m1!1i2!8m2!3d-33.8925909!4d18.4832667!16s%2Fg%2F11h565fllm?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="blank"><p>1 Lagoon Gate Drive, Cape Town, 7441</p></a>
-
+                    <i class="las la-map-marker"></i>
+                    <a href="https://www.google.com/maps/place/Lagoon+Beach+Hotel+%26+Spa/@-33.8925909,18.4832667,15z/data=!4m9!3m8!1s0x1dcc5c2ed4759665:0xe4c965c5195298f9!5m2!4m1!1i2!8m2!3d-33.8925909!4d18.4832667!16s%2Fg%2F11h565fllm?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="blank"><p>1 Lagoon Gate Drive, Cape Town, 7441</p></a>
                 </div>
                 <div>
                     <i class="las la-phone-volume"></i> <a href="tel:+27210098072"> +27 21 009 8072</a>
@@ -29,7 +27,7 @@
                     <a><i class="lab la-twitter"></i></a>
                 </div>
            </div> 
-           <div class="col-lg-5 col-md-5 col-sm-12">
+           <div class="col-lg-5 col-md-5 col-sm-12 pages">
 
            </div> 
         </div>
@@ -48,9 +46,10 @@ export default {
         width:100vw;
         height:auto;
     }
-    .newsletter a{
+    .newsletter .link a{
         color:whitesmoke;
         text-decoration: none;
+        transition:1s;
     }
     .newsletter .link a:hover{
         color:#93C572;
@@ -68,13 +67,14 @@ export default {
         border-radius:2px;
     }
     .newsletter button{
-        border-radius:2px;
-        border:solid 2px #bae39e;
+        border-radius:5px;
+        padding:1px;
         transition:1s;
+        color:whitesmoke;
+        background-color: gray;
     }
-
     .newsletter button:hover{
-        color: rgb(224, 216, 216);
+        color: white;
         background-color: #bae39e;
     }
     .link{
@@ -93,6 +93,9 @@ export default {
     .info i:hover{
         cursor: pointer;
         color:whitesmoke;
+    }
+    .pages{
+        background-color: #aeeb85;
     }
     .copyright{
         padding:1vh;
