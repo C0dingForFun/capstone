@@ -8,7 +8,7 @@
       <p>
         Our Single Suites is designed for solo travelers seeking comfort and relaxation.
         The features are a queen-sized bed, a cozy seating area, and a work desk for your convience.
-        Enjoy multiple amenities like a flat-screen TV and a mini fridge, as well as a private bathroom with a large shower.
+        Enjoy multiple amenities like a flat-screen TV and a mini-fridge, as well as a private bathroom with a large shower.
         It's perferct getaway for a restful stay or a productive business trip.
       </p>
     </div>
@@ -23,10 +23,12 @@
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h2>Family Package</h2>
       <p>
-        Our Single Suites is designed for solo travelers seeking comfort and relaxation.
-        The features are a queen-sized bed, a cozy seating area, and a work desk for your convience.
-        Enjoy multiple amenities like a flat-screen TV and a mini fridge, as well as a private bathroom with a large shower.
-        It's perferct getaway for a restful stay or a productive business trip.
+        Our Family Suites offers spacious and comfort for everyone.
+        When a separate master bedroom and a cozy living area, it's perferct for quality time together.
+        The suite features a king-sized bed, a sleeper sofa, and a large flat screen TV.
+        Enjoy the convience of a family-friendly bathroom and a mini-fridge.
+        With room to spend out and modern amenities, it's the ideal choice for family gateaways.
+
       </p>
     </div>
   </section>
