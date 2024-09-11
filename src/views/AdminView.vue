@@ -24,7 +24,7 @@
               <td>{{ user.user_name }}</td>
               <td>{{ user.user_surname }}</td>
               <td>{{ user.age }}</td>
-              <td>{{ user.userRole }}</td>
+              <td>{{ user.user_role }}</td>
               <td>
                 <a :href="user.userProfile" target="_blank">
                   <img :src="user.image" alt="User Profile" width="50">
