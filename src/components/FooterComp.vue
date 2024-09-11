@@ -34,6 +34,14 @@ export default {
         width:100vw;
         height:auto;
     }
+    footer a{
+        color:whitesmoke;
+        text-decoration: none;
+    }
+    footer a:hover{
+        color:#bae39e;
+        text-decoration: underline;
+    }
     .newsletter{
         display:flex;
         justify-content: center;
