@@ -8,7 +8,7 @@
     <section id="events">
         <div class="mt-4 row">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <img src="https://c0dingforfun.github.io/capstone-images/Home/Slide1.jpg"/>
+                <img src="https://c0dingforfun.github.io/capstone-images/Events/.jpg"/>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 my-auto new-year">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nobis exercitationem esse rem voluptatem cum aperiam consequuntur debitis sapiente illum, atque vero quidem cupiditate, adipisci assumenda velit laborum dolor laudantium.
