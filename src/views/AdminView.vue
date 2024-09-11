@@ -34,7 +34,7 @@
       </td>
       <td>
         <updateUser :user="user" />
-        <button class="btn btn-danger deleteButton" @click="deleteUser(user.userID)">Delete</button>
+        <button class="btn btn-danger deleteButton" @click="deleteUser(user.user_iD)">Delete</button>
       </td>
     </tr>
   </tbody>
