@@ -3,6 +3,8 @@ import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
 
+const coastalURL  = 'https://capstone-2xa4.onrender.com/'
+
 export default createStore({
   state: {
     users:null,
@@ -29,7 +31,7 @@ export default createStore({
   actions: {
     async getUsers({commit}){
       try {
-        let {data} = await axios.get('http://localhost:3005/users')
+        let {data} = await axios.get(`${coastalURL}/users`)
           commit('setUsers',data)
       }
       catch (error) {
@@ -42,7 +44,7 @@ export default createStore({
     },
     async getUser({commit},id){
       try {
-        let {data} = await axios.get(`http://localhost:3005/users/${user_id}`);        
+        let {data} = await axios.get(`${coastalURL}users/${user_id}`);        
         commit('setUser',data)
       }
       catch (error) {
@@ -55,7 +57,7 @@ export default createStore({
     },
     async getRooms({commit}){
       try {
-        let {data} = await axios.get('http://localhost:3005/rooms')
+        let {data} = await axios.get(`${coastalURL}/rooms`)
           commit('setRooms',data)
       }
       catch (error) {
@@ -68,7 +70,7 @@ export default createStore({
     },
     async getRoom ({commit},room_id) {
       try {
-        let {data} = await axios.get(`http://localhost:3005/rooms/${room_id}`);        
+        let {data} = await axios.get(`${coastalURL}/rooms/${room_id}`);        
         commit('setRoom',data)
       }
       catch (error) {
