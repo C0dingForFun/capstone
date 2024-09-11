@@ -111,7 +111,7 @@ export default createStore({
         "dangerouslyHTMLString": true
       })
     }
-    await router.push('/home');
+    // await router.push('/');
     location.reload();
   },
   async bookRoom({commit},room_id){
