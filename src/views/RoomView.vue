@@ -8,9 +8,9 @@
                         <div class="card mt-3">
                             <img :src="$store.state.room.image" id="myImage"/>
                             <div class="mt-3">
-                                <button onclick="document.getElementById('myImage').src='$store.state.room.subImage1' "><img :src="$store.state.room.subImage1"/></button>
-                                <button onclick="document.getElementById('myImage').src='$store.state.room.subImage2' "><img :src="$store.state.room.subImage2"/></button>
-                                <button onclick="document.getElementById('myImage').src='$store.state.room.subImage3' "><img :src="$store.state.room.subImage3"/></button>
+                                <img :src="$store.state.room.subImage1"/>
+                                <img :src="$store.state.room.subImage2"/>
+                                <img :src="$store.state.room.subImage3"/>
                             </div>
                             <div class="card-body">
                                 <div class="prodName">
