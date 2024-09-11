@@ -5,9 +5,21 @@
   <section class="row packages">
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h2>Single Package</h2>
+      <p>
+        Our Single Suites is designed for solo travelers seeking comfort and relaxation.
+        The features are a queen-sized bed, a cozy seating area, and a work desk for your convience.
+        Enjoy multiple amenities like a flat-screen TV and a mini fridge, as well as a private bathroom with a large shower.
+        It's perferct getaway for a restful stay or a productive business trip.
+      </p>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="col-lg-4 col-md-4 col-sm-12 couples">
       <h2>Couple Package</h2>
+      <p>
+        Our Single Suites is designed for solo travelers seeking comfort and relaxation.
+        The features are a queen-sized bed, a cozy seating area, and a work desk for your convience.
+        Enjoy multiple amenities like a flat-screen TV and a mini fridge, as well as a private bathroom with a large shower.
+        It's perferct getaway for a restful stay or a productive business trip.
+      </p>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h2>Family Package</h2>
@@ -62,6 +74,9 @@
   align-items: center;
   width:100vw;
   height:40vh;
-  background-color: black;
+}
+.couples{
+  background-color: #bae39e;
+  color:whitesmoke;
 }
 </style>

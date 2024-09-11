@@ -13,7 +13,7 @@
                     <i class="las la-envelope"></i> <a href="mailto:support@coastalgetaway.co.za">support@coastalgetaway.co.za</a>
                 </div>
             </div>
-            <div class=" col-lg-6 col-md-6 col-sm-12 mt-3">
+            <div class=" col-lg-6 col-md-6 col-sm-12 mt-3 mb-3">
                 <input type="text" placeholder="Email Address"/><button>Subscribe</button>
             </div>
         </div>
@@ -86,13 +86,15 @@ export default {
     }
     .about{
         background-color: #93C572;
+        color:whitesmoke;
     }
     .info a i{
-        font-size:23px;
+        font-size:30px;
+        transition: 0.6s;
     }
     .info i:hover{
         cursor: pointer;
-        color:whitesmoke;
+        color:#bae39e;
     }
     .pages{
         background-color: #aeeb85;
