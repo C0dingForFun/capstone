@@ -23,6 +23,27 @@
                                 <div>
                                     <p class="card-text">Price: R{{$store.state.room.price}}</p>
                                 </div>
+                                <div class="book row">
+                                    <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
+                                        <label>Check in:</label><br>
+                                        <input type="datetime-local">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
+                                        <label>Check out:</label><br>
+                                        <input type="datetime-local">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
+                                        <label>Adult(s):</label><br>
+                                        <input type="number" placeholder="2">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
+                                        <label>Kid(s):</label><br>
+                                        <input type="number" placeholder="1">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-12 align-content-center pt-1" >
+                                        <button>Book Now</button>
+                                    </div>
+                                </div>
                                 <div class="justify-content-center">
                                     <router-link to="/bookRoom">Book Room</router-link>
                                 </div>
@@ -84,5 +105,31 @@ export default{
         width:20vw;
         height:20vh;
         border-radius:20px;
+    }
+    .book{
+        border-radius:20px;
+        color:whitesmoke;
+        padding:1em;
+        display:flex;
+        position: relative;
+        justify-content: space-around;
+        background-color: #96e065;
+    }
+    .book input{
+        width:150px;
+        border-radius:20px;
+        text-align: center;
+    }
+    .book button{
+        border-radius:20px;
+        color:whitesmoke;
+        background-color: #bae39e;
+        color:black;
+        transition:0.5s;
+    }
+    .book button:hover{
+        box-shadow:2px 2px 2px #bae39e;
+        background-color: #93C572;
+        color: whitesmoke;
     }
 </style>

@@ -4,27 +4,6 @@
 		  <div class="bannertxt mt-5 pt-5">
 			  <h3>Your Getaway to</h3>
 			  <h1>Comfort & Relaxation</h1>
-			  <div class="book row">
-				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
-					  <label>Check in:</label><br>
-					  <input type="datetime-local">
-				  </div>
-				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
-					  <label>Check out:</label><br>
-					  <input type="datetime-local">
-				  </div>
-				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
-					  <label>Adult(s):</label><br>
-					  <input type="number" placeholder="2">
-				  </div>
-				  <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
-					  <label>Kid(s):</label><br>
-					  <input type="number" placeholder="1">
-				  </div>
-				  <div class="col-lg-2 col-md-2 col-sm-12 align-content-center pt-1" >
-					  <button>Book Now</button>
-				  </div>
-			  </div>
 		  </div>
 		</div>
 	</div>
