@@ -49,6 +49,7 @@ export default{
     .book{
         width: 80vw;
         height: auto;
-
+        border-radius:20px;
+        border:solid 2px #93C572;
     }
 </style>
