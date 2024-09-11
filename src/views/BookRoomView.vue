@@ -1,5 +1,5 @@
 <template lang="">
-    <div class="bookRoom">
+    <div class="bookRoom" v-if="room()">
         <div class="book row">
             <div class="col-lg-4 col-md-4 col-sm-12">
                 
@@ -12,8 +12,12 @@
             </div>
         </div>
     </div>
+    <div v-else>
+        <SpinnerComp/>
+    </div>
 </template>
 <script>
+import SpinnerComp from '@/components/SpinnerComp.vue';
 export default{
     methods: {
         getRoom(){
