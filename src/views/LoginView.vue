@@ -1,5 +1,5 @@
 <template lang="">
-<div>
+<div class="login">
         <form role="form" class="mx-auto my-auto">
             <h1 class="text-center text-white"><b>Reach Us Here:</b></h1>
                 <div class="row text">
@@ -24,5 +24,9 @@ export default {
 }
 </script>
 <style scoped>
-    
+    .login{
+        width:100vw;
+        height:80vh;
+        background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif')
+    }
 </style>
