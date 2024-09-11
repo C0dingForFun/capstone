@@ -7,7 +7,7 @@ import router from '@/router';
 
 const coastalURL  = 'https://capstone-2xa4.onrender.com/'
 
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 // axios.defaults.headers = $cookies.get('token');
 
 export default createStore({
