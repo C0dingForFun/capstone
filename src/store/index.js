@@ -82,6 +82,11 @@ export default createStore({
       try {
         let {data} = await axios.delete(`${coastalURL}users/${id}`);        
         commit('setUser',data)
+        toast("User is has been deleted successfully", {
+          "theme": "dark",
+          "type": "success",
+          "dangerouslyHTMLString": true
+        })
       }
       catch (error) {
         toast("There has been an error", {

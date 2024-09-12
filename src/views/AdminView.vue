@@ -15,6 +15,7 @@
               <th>User Age</th>
               <th>User Role</th>
               <th>Username</th>
+              <th>Image</th>
               <th></th>
             </tr>
           </thead>
@@ -25,6 +26,7 @@
               <td>{{ user.user_surname }}</td>
               <td>{{ user.age }}</td>
               <td>{{ user.user_role }}</td>
+              <td>{{ user.username }}</td>
               <td>
                 <a :href="user.image" target="_blank">
                   <img :src="user.image" alt="User Profile" width="50">
@@ -97,12 +99,12 @@
       users(){
         return this.$store.state.users;
       },
-      // deleteUser(userID) {
-      //   this.$store.dispatch('deleteUser', userID );
-      // },
-      // deleteProduct(prodID) {
-      //   this.$store.dispatch('deleteProduct', prodID );
-      // },
+      deleteUser(user_id) {
+        this.$store.dispatch('deleteUser', user_id );
+      },
+      deleteRoom(room_id) {
+        this.$store.dispatch('deleteRoom', prodID );
+      },
       // updateUser(user) {
       //   let editUser = {
       //     userID: user.userID,
