@@ -28,7 +28,22 @@
                 </div>
            </div> 
            <div class="col-lg-5 col-md-5 col-sm-12 pages">
-
+                <div class="row">
+                    <div class="col">
+                        <h5>About</h5>               
+                            <router-link to="/about">Our Story</router-link>
+                            <router-link to="/about">Our Categories</router-link>
+                            <router-link to="/about">Our Features</router-link>
+                            <router-link to="/about">Our Amenities</router-link>
+                            <router-link to="/about">Why Choose Us</router-link>
+                    </div>
+                    <div class="col">
+    
+                    </div>
+                    <div class="col">
+    
+                    </div>
+                </div>
            </div> 
         </div>
         <div class="copyright">
@@ -98,7 +113,17 @@ export default {
     }
     .pages{
         background-color: #aeeb85;
-        width:100%;
+        text-align:start;
+        /* width:100%; */
+    }
+    .pages a{
+        color:whitesmoke;
+        text-decoration: none;
+        transition:0.6s;
+    }
+    .pages a:hover{
+        color:#93C572;
+        text-decoration: underline;
     }
     .copyright{
         display:flex;
