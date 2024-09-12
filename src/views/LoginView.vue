@@ -1,5 +1,5 @@
 <template lang="">
-<div class="login pt-5 row">
+<div class="login pt-4 row">
     <div class="mt-5">
         <button @click="login = !login">Signup</button>
         <button @click="signUP = login">Login</button>
@@ -64,7 +64,7 @@ export default {
         display:flex;
         align-items: center;
         color:whitesmoke;
-        text-shadow:2px 2px black;
+        text-shadow:1px 1px black;
     }
     .signup{
         width:80vw;
