@@ -91,10 +91,7 @@ export default createStore({
       // console.log(data);
     },
     async loginUser({commit},info){
-      console.log(info);
-      
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
-      console.log(data);
       $cookies.set('token', data.token)
       $cookies.set('userRole', data.userRole)
       if(data.userRole == 'admin'){
@@ -119,8 +116,6 @@ export default createStore({
           "dangerouslyHTMLString": true
         })
       }
-      // await router.push('/');
-      // location.reload();
     },
     async bookRoom({commit},room_id){
       let {data} = await axios.post(`${coastalURL}cart`,{id:room_id});
