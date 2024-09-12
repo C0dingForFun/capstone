@@ -1,6 +1,6 @@
+import cors from 'cors';
 import express from 'express';
 import { usersRouter,roomsRouter,bookedRouter} from './routes/fullstackRoute.js';
-import cors from 'cors';
 
 const app = express();
 
