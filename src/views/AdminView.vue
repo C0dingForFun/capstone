@@ -77,7 +77,7 @@
     </div>
   </template>
   <script>
-  // import updateUser from '@/components/UpdateUser.vue';
+  import updateUser from '@/components/UpdateUser.vue';
   // import updateProduct from '@/components/UpdateProduct.vue';
   // import addProduct from '@/components/AddProduct.vue';
   // import addUser from '@/components/AddUser.vue';
@@ -103,22 +103,21 @@
         this.$store.dispatch('deleteUser', user_id );
       },
       deleteRoom(room_id) {
-        this.$store.dispatch('deleteRoom', prodID );
+        this.$store.dispatch('deleteRoom', room_id );
       },
-      // updateUser(user) {
-      //   let editUser = {
-      //     userID: user.userID,
-      //     firstName: user.firstName,
-      //     lastName: user.lastName,
-      //     userAge: user.userAge,
-      //     Gender: user.Gender,
-      //     userRole: user.userRole,
-      //     emailAdd: user.emailAdd,
-      //     userPass: user.userPass,
-      //     userProfile: user.userProfile,
-      //   };
-      //   this.$store.dispatch('updateUser', { id: user.userID, data: editUser });
-      // },
+      updateUser(user) {
+        let editUser = {
+          user_id: this.user.user_id,
+          user_name: this.user.user_name,
+          user_surename: this.user.user_surename,
+          age: this.user.age,
+          user_role: this.user.user_role,
+          username:  this.user.username,
+          password: this.user.password,
+          image: this.user.image
+        };
+        this.$store.dispatch('updateUser', { id: user.user_id, data: editUser });
+      },
       // updateProduct(product) {
       //   let editProduct = {
       //     productID: product.prodID,
