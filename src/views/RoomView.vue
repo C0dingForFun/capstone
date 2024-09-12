@@ -17,7 +17,7 @@
                                     <h5 class="display-5">{{$store.state.room.room_name}}</h5>
                                     <h4>{{$store.state.room.room_category}}</h4>
                                 </div>
-                                <div>
+                                <div class="text-start description">
                                     <p>{{$store.state.room.room_description}}</p>
                                 </div>
                                 <div>
@@ -108,6 +108,10 @@ export default{
     }
     .subImages img{
         margin-right:1vw;
+    }
+    .description{
+        width:50vw;
+        margin:auto;
     }
     .book{
         border-radius:20px;
