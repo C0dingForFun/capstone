@@ -60,6 +60,10 @@ export default createStore({
         })
       }
     },
+    async addUser({commit},info){
+      let data = await axios.post(`${coastalURL}users/insertUser`,info);
+      // console.log(data);
+    },
     async updateUser(id){
       try {
         let {data} = await axios.patch(`${coastalURL}users/${id}`);        
@@ -111,10 +115,6 @@ export default createStore({
           "dangerouslyHTMLString": true
         })
       }
-    },
-    async addUser({commit},info){
-      let data = await axios.post(`${coastalURL}users/insertUser`,info);
-      // console.log(data);
     },
     async loginUser({commit},info){
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
