@@ -66,7 +66,7 @@
            </div> 
         </div>
         <div class="copyright">
-            <p class="pt-3">Copyright 2020 Coastal Getaway. All rights reserved.</p>
+            <p class="pt-3">Copyright 2024 Coastal Getaway. All rights reserved.</p>
         </div>
     </footer>
 </template>

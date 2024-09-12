@@ -7,7 +7,7 @@
             <div class="row center">
                         <div class="card mt-3">
                             <img :src="$store.state.room.image" id="myImage"/>
-                            <div class="mt-3">
+                            <div class="mt-3 subImages">
                                 <img :src="$store.state.room.subImage1"/>
                                 <img :src="$store.state.room.subImage2"/>
                                 <img :src="$store.state.room.subImage3"/>
@@ -105,6 +105,9 @@ export default{
         width:20vw;
         height:20vh;
         border-radius:20px;
+    }
+    .subImages img{
+        margin-right:1vw;
     }
     .book{
         border-radius:20px;
