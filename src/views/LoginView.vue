@@ -46,10 +46,6 @@ export default {
         addUser(){
             this.$store.dispatch('addUser',this.$data);
         },
-        async loginUser(){
-            await this.$store.dispatch('loginUser',this.$data);
-            // location.reload();
-        }
     }
 }
 </script>

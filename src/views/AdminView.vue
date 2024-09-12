@@ -65,7 +65,7 @@
                 </a>
               </td>
               <td>
-                <updateProduct :product="product"/>
+                <updateProduct :room="room"/>
                 <button class="btn btn-danger deleteButton" @click.prevent="deleteProduct(room.room_id)">Delete</button>
               </td>
             </tr>
