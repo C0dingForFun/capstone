@@ -79,9 +79,7 @@ export default createStore({
     },
     async deleteUser(user_id){
       try {
-        let {data} = await axios.delete(`${coastalURL}users/${user_id}`);    
-        console.log(data);
-            
+        let {data} = await axios.delete(`${coastalURL}users/${user_id}`); 
         commit('setUser',data)
         toast("User is has been deleted successfully", {
           "theme": "dark",

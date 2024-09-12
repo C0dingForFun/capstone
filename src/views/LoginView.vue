@@ -55,6 +55,7 @@ export default {
                 "type": "success",
                 "dangerouslyHTMLString": true
                 })  
+                location.reload();
             } catch (error) {
                 toast("User is has been deleted successfully", {
                 "theme": "dark",
