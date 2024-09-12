@@ -60,7 +60,16 @@
                         </div>   
                     </div>
                     <div class="col">
-    
+                        <h5>Rooms</h5>
+                        <div>
+                            <router-link to="/rooms">Single Room</router-link>                   
+                        </div>   
+                        <div>
+                            <router-link to="/rooms">Couples Room</router-link>
+                        </div>   
+                        <div>
+                            <router-link to="/rooms">Family Room</router-link>
+                        </div>   
                     </div>
                 </div>
            </div> 
@@ -134,6 +143,7 @@ export default {
     .pages{
         background-color: #aeeb85;
         text-align:start;
+        
     }
     .pages h5{
         color:whitesmoke;
