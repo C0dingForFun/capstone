@@ -63,7 +63,6 @@ export default {
         background-repeat: no-repeat;
         display:flex;
         align-items: center;
-        /* padding-top:18vh; */
         color:whitesmoke;
         text-shadow:2px 2px black;
     }
