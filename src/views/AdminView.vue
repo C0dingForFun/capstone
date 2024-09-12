@@ -36,7 +36,7 @@
               </td>
               <td>
                 <updateUser :user="user" />
-                <button class="btn btn-danger deleteButton" @click="deleteUser(user.user_iD)">Delete</button>
+                <button class="btn btn-danger deleteButton" @click="deleteUser(user.user_id)">Delete</button>
               </td>
             </tr>
   </tbody>
@@ -173,30 +173,24 @@
       border-bottom: 0;
     }
     .users-table td:nth-child(1):before {
-      content: "User ID";
+      content: "Product ID";
     }
     .users-table td:nth-child(2):before {
-      content: "First Name";
+      content: "Product Name";
     }
     .users-table td:nth-child(3):before {
-      content: "Last Name";
+      content: "Quantity";
     }
     .users-table td:nth-child(4):before {
-      content: "User Age";
+      content: "Amount";
     }
     .users-table td:nth-child(5):before {
-      content: "Gender";
+      content: "Category";
     }
     .users-table td:nth-child(6):before {
-      content: "User Role";
+      content: "Product URL";
     }
     .users-table td:nth-child(7):before {
-      content: "Email Address";
-    }
-    .users-table td:nth-child(8):before {
-      content: "User Profile";
-    }
-    .users-table td:nth-child(9):before {
       content: "Action";
     }
   }
