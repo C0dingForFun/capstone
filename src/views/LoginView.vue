@@ -1,10 +1,10 @@
 <template lang="">
-<div class="login row">
-    <div>
-        <button @click="signUp = !signUp">Signup</button>
-        <button @click="login = !login">Login</button>
+<div class="login pt-5 row">
+    <div class="mt-5">
+        <button @click="login = !login">Signup</button>
+        <button @click="signUP = login">Login</button>
     </div>
-    <div v-if="signUp">
+    <div v-if="signUp" class="signup mt-5">
         <h1>Sign Up here:</h1>
         <table style="margin:auto">
             <tbody>
@@ -17,7 +17,7 @@
             </tbody>
         </table>
     </div>
-    <div v-else-if="login">
+    <div v-else="login" class="signup mt-5">
         <h1>Login here:</h1>
         <div>
             <label>Enter your Username:</label>
@@ -38,8 +38,8 @@ export default {
             age:'',
             username:'',
             password:'',
-            signUp: false,
-            login:true
+            signUp: true,
+            login:false
         }
     },
     methods:{
@@ -63,8 +63,18 @@ export default {
         background-repeat: no-repeat;
         display:flex;
         align-items: center;
-        padding-top:18vh;
+        /* padding-top:18vh; */
         color:whitesmoke;
         text-shadow:2px 2px black;
+    }
+    .signup{
+        width:80vw;
+        height:auto;
+        margin:auto;
+        padding:1em;
+        border-radius:20px;
+        background-color:rgba(144, 216, 63, 0.6);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(4px);
     }
 </style>
