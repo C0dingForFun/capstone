@@ -47,13 +47,21 @@
         </ul>
         <div class="row">
           <div class="col">
-            Our Features:
-
-            • Oceanfront Location: Unbeatable views and easy access to the beach • Luxurious Rooms & Suites: Plush bedding, modern amenities, and private balconies with stunning ocean views 
-            • Personalized Service: Our friendly staff are dedicated to making your stay unforgettable
+           <h4>Our Features:</h4> 
+            <ul>
+              <li>Oceanfront Location: Unbeatable views and easy access to the beach.</li>
+              <li>Luxurious Rooms & Suites: Plush bedding, modern amenities, and private balconies with stunning ocean views. </li>
+              <li>Personalized Service: Our friendly staff are dedicated to making your stay unforgettable.</li>
+            </ul>
           </div>
           <div class="col">
-            oib
+            <h4>Amenities:</h4> 
+            <ul>
+              <li>Free Wifi</li>
+              <li>Coffe maker for all rooms </li>
+              <li>Flat screen TV with Netflix, Yotube,Hulu, many more</li>
+              <li>Walk in shower</li>
+            </ul>
           </div>
         </div>
       </div>
