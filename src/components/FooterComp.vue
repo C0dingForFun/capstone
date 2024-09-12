@@ -32,7 +32,7 @@
            </div> 
         </div>
         <div class="copyright">
-            <p>Copyright 2020 Coastal Getaway. All rights reserved.</p>
+            <p class="pt-3">Copyright 2020 Coastal Getaway. All rights reserved.</p>
         </div>
     </footer>
 </template>
@@ -98,13 +98,14 @@ export default {
     }
     .pages{
         background-color: #aeeb85;
+        width:100%;
     }
     .copyright{
-        padding:1vh;
         display:flex;
         justify-content: center;
         align-items: center;
         width:100vw;
         background: #cbf4af;
+        color:whitesmoke;
     }
 </style>

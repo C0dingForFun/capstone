@@ -34,10 +34,10 @@
   </section>
   <section>
     <div class="row mt-4">
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        knnn
+      <div class="col-lg-6 col-md-6 col-sm-12" id="choose">
+        <img src="https://c0dingforfun.github.io/capstone-images/Home/Slide1.jpg" loading="lazy"/>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 text-start">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-start mt-2">
         <h3>Why Choose Us?</h3>
         <ul>
           <li>Unbeatable oceanfront location with breathtaking views.</li>
@@ -47,7 +47,10 @@
         </ul>
         <div class="row">
           <div class="col">
-            ewjjfbw
+            Our Features:
+
+            • Oceanfront Location: Unbeatable views and easy access to the beach • Luxurious Rooms & Suites: Plush bedding, modern amenities, and private balconies with stunning ocean views 
+            • Personalized Service: Our friendly staff are dedicated to making your stay unforgettable
           </div>
           <div class="col">
             oib
@@ -93,5 +96,9 @@
   
   background-color: #bae39e;
   color:whitesmoke;
+}
+#choose img{
+  width: 100%;
+  height:auto;
 }
 </style>
