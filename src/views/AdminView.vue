@@ -15,6 +15,7 @@
               <th>User Age</th>
               <th>User Role</th>
               <th>Username</th>
+              <th>Password</th>
               <th>Image</th>
               <th></th>
             </tr>
@@ -27,6 +28,7 @@
               <td>{{ user.age }}</td>
               <td>{{ user.user_role }}</td>
               <td>{{ user.username }}</td>
+              <td>{{ user.password }}</td>
               <td>
                 <a :href="user.image" target="_blank">
                   <img :src="user.image" alt="User Profile" width="50">
@@ -83,7 +85,7 @@
   // import addUser from '@/components/AddUser.vue';
   export default {
     components: {
-      // updateUser,
+      updateUser,
       // updateProduct,
       // addProduct,
       // addUser,
