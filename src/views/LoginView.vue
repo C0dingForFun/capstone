@@ -1,7 +1,7 @@
 <template lang="">
 <div class="login pt-4 row">
     <div class="mt-5">
-        <button @click="login = !login">Signup</button>
+        <button @click="signUp = !signUP">Signup</button>
         <button @click="signUP = login">Login</button>
     </div>
     <div v-if="signUp" class="signup mt-5">
@@ -38,8 +38,8 @@ export default {
             age:'',
             username:'',
             password:'',
-            signUp: true,
-            login:false
+            signUp: false,
+            login:true
         }
     },
     methods:{
