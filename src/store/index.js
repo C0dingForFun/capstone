@@ -49,7 +49,33 @@ export default createStore({
     },
     async getUser({commit},id){
       try {
-        let {data} = await axios.get(`${coastalURL}users/${user_id}`);        
+        let {data} = await axios.get(`${coastalURL}users/${id}`);        
+        commit('setUser',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+    },
+    async updateUser(id){
+      try {
+        let {data} = await axios.patch(`${coastalURL}users/${id}`);        
+        commit('setUser',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+    },
+    async deleteUser(id){
+      try {
+        let {data} = await axios.delete(`${coastalURL}users/${id}`);        
         commit('setUser',data)
       }
       catch (error) {
@@ -120,7 +146,7 @@ export default createStore({
     async bookRoom({commit},room_id){
       let {data} = await axios.post(`${coastalURL}cart`,{id:room_id});
       console.log(data);
-    }
+    },
   },
   
   modules: {
