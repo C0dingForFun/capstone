@@ -38,11 +38,11 @@
   </tbody>
         </table>
       </div>
-      <!-- PRODUCTS TABLE -->
-      <h2>Products Table</h2>
+      <!-- ROOMS TABLE -->
+      <h2>Rooms Table</h2>
       <addProduct/>
       <div class="container table-responsive">
-        <table class="table products-table">
+        <table class="table rooms-table">
           <thead class="table-dark">
             <tr>
               <th>Room ID</th>
@@ -199,19 +199,19 @@
   }
   /* Responsive Styles for Products Table */
   @media (max-width: 768px) {
-    .products-table {
+    .rooms-table {
       width: 100%;
       border-collapse: collapse;
     }
-    .products-table thead {
+    .rooms-table thead {
       display: none;
     }
-    .products-table tr {
+    .rooms-table tr {
       display: block;
       margin-bottom: 10px;
       border: 1px solid #ddd;
     }
-    .products-table td {
+    .rooms-table td {
       display: block;
       text-align: right;
       font-size: 13px;
@@ -219,34 +219,34 @@
       padding: 10px;
       position: relative;
     }
-    .products-table td:before {
+    .rooms-table td:before {
       content: attr(data-label);
       float: left;
       text-transform: uppercase;
       font-weight: bold;
     }
-    .products-table td:last-child {
+    .rooms-table td:last-child {
       border-bottom: 0;
     }
-    .products-table td:nth-child(1):before {
+    .rooms-table td:nth-child(1):before {
       content: "Product ID";
     }
-    .products-table td:nth-child(2):before {
+    .rooms-table td:nth-child(2):before {
       content: "Product Name";
     }
-    .products-table td:nth-child(3):before {
+    .rooms-table td:nth-child(3):before {
       content: "Quantity";
     }
-    .products-table td:nth-child(4):before {
+    .rooms-table td:nth-child(4):before {
       content: "Amount";
     }
-    .products-table td:nth-child(5):before {
+    .rooms-table td:nth-child(5):before {
       content: "Category";
     }
-    .products-table td:nth-child(6):before {
+    .rooms-table td:nth-child(6):before {
       content: "Product URL";
     }
-    .products-table td:nth-child(7):before {
+    .rooms-table td:nth-child(7):before {
       content: "Action";
     }
   }
