@@ -9,7 +9,6 @@ const coastalURL  = 'https://capstone-2xa4.onrender.com/'
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers = $cookies.get('token');
-// const userInfo = cookies.get('VerifiedUser')
 
 export default createStore({
   state: {
