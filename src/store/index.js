@@ -116,6 +116,37 @@ export default createStore({
         })
       }
     },
+    async addRoom({commit}){
+      let data = await axios.post(`${coastalURL}rooms/insertRoom`,info);
+      // console.log(data);
+      
+    },
+    async updateRoom({commit},id){
+      try {
+        let {data} = await axios.patch(`${coastalURL}rooms/${id}`);        
+        commit('setRoom',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+    },
+    async deleteRoom(id){
+      try {
+        let {data} = await axios.delete(`${coastalURL}rooms/${id}`);        
+        commit('setRoom',data)
+      }
+      catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+    },
     async loginUser({commit},info){
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
       $cookies.set('token', data.token)
