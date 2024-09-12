@@ -9,6 +9,7 @@ const coastalURL  = 'https://capstone-2xa4.onrender.com/'
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers = $cookies.get('token');
+// const userInfo = cookies.get('VerifiedUser')
 
 export default createStore({
   state: {
@@ -81,6 +82,11 @@ export default createStore({
       try {
         let {data} = await axios.delete(`${coastalURL}users/${id}`);        
         commit('setUser',data)
+        toast("User is has been deleted successfully", {
+          "theme": "dark",
+          "type": "success",
+          "dangerouslyHTMLString": true
+        })
       }
       catch (error) {
         toast("There has been an error", {
@@ -155,7 +161,7 @@ export default createStore({
         router.push('/admin')
       }
       else{
-        router.push('/')
+        router.push('/rooms')
       }
       if(data.message){
         toast("Login is successful",{

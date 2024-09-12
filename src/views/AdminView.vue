@@ -15,6 +15,7 @@
               <th>User Age</th>
               <th>User Role</th>
               <th>Username</th>
+              <th>Image</th>
               <th></th>
             </tr>
           </thead>
@@ -25,6 +26,7 @@
               <td>{{ user.user_surname }}</td>
               <td>{{ user.age }}</td>
               <td>{{ user.user_role }}</td>
+              <td>{{ user.username }}</td>
               <td>
                 <a :href="user.image" target="_blank">
                   <img :src="user.image" alt="User Profile" width="50">
@@ -38,11 +40,11 @@
   </tbody>
         </table>
       </div>
-      <!-- PRODUCTS TABLE -->
-      <h2>Products Table</h2>
+      <!-- ROOMS TABLE -->
+      <h2>Rooms Table</h2>
       <addProduct/>
       <div class="container table-responsive">
-        <table class="table products-table">
+        <table class="table rooms-table">
           <thead class="table-dark">
             <tr>
               <th>Room ID</th>
@@ -65,7 +67,7 @@
                 </a>
               </td>
               <td>
-                <updateProduct :product="product"/>
+                <updateProduct :room="room"/>
                 <button class="btn btn-danger deleteButton" @click.prevent="deleteProduct(room.room_id)">Delete</button>
               </td>
             </tr>
@@ -75,7 +77,7 @@
     </div>
   </template>
   <script>
-  // import updateUser from '@/components/UpdateUser.vue';
+  import updateUser from '@/components/UpdateUser.vue';
   // import updateProduct from '@/components/UpdateProduct.vue';
   // import addProduct from '@/components/AddProduct.vue';
   // import addUser from '@/components/AddUser.vue';
@@ -97,26 +99,25 @@
       users(){
         return this.$store.state.users;
       },
-      // deleteUser(userID) {
-      //   this.$store.dispatch('deleteUser', userID );
-      // },
-      // deleteProduct(prodID) {
-      //   this.$store.dispatch('deleteProduct', prodID );
-      // },
-      // updateUser(user) {
-      //   let editUser = {
-      //     userID: user.userID,
-      //     firstName: user.firstName,
-      //     lastName: user.lastName,
-      //     userAge: user.userAge,
-      //     Gender: user.Gender,
-      //     userRole: user.userRole,
-      //     emailAdd: user.emailAdd,
-      //     userPass: user.userPass,
-      //     userProfile: user.userProfile,
-      //   };
-      //   this.$store.dispatch('updateUser', { id: user.userID, data: editUser });
-      // },
+      deleteUser(user_id) {
+        this.$store.dispatch('deleteUser', user_id );
+      },
+      deleteRoom(room_id) {
+        this.$store.dispatch('deleteRoom', room_id );
+      },
+      updateUser(user) {
+        let editUser = {
+          user_id: this.user.user_id,
+          user_name: this.user.user_name,
+          user_surename: this.user.user_surename,
+          age: this.user.age,
+          user_role: this.user.user_role,
+          username:  this.user.username,
+          password: this.user.password,
+          image: this.user.image
+        };
+        this.$store.dispatch('updateUser', { id: user.user_id, data: editUser });
+      },
       // updateProduct(product) {
       //   let editProduct = {
       //     productID: product.prodID,
@@ -199,19 +200,19 @@
   }
   /* Responsive Styles for Products Table */
   @media (max-width: 768px) {
-    .products-table {
+    .rooms-table {
       width: 100%;
       border-collapse: collapse;
     }
-    .products-table thead {
+    .rooms-table thead {
       display: none;
     }
-    .products-table tr {
+    .rooms-table tr {
       display: block;
       margin-bottom: 10px;
       border: 1px solid #ddd;
     }
-    .products-table td {
+    .rooms-table td {
       display: block;
       text-align: right;
       font-size: 13px;
@@ -219,34 +220,34 @@
       padding: 10px;
       position: relative;
     }
-    .products-table td:before {
+    .rooms-table td:before {
       content: attr(data-label);
       float: left;
       text-transform: uppercase;
       font-weight: bold;
     }
-    .products-table td:last-child {
+    .rooms-table td:last-child {
       border-bottom: 0;
     }
-    .products-table td:nth-child(1):before {
+    .rooms-table td:nth-child(1):before {
       content: "Product ID";
     }
-    .products-table td:nth-child(2):before {
+    .rooms-table td:nth-child(2):before {
       content: "Product Name";
     }
-    .products-table td:nth-child(3):before {
+    .rooms-table td:nth-child(3):before {
       content: "Quantity";
     }
-    .products-table td:nth-child(4):before {
+    .rooms-table td:nth-child(4):before {
       content: "Amount";
     }
-    .products-table td:nth-child(5):before {
+    .rooms-table td:nth-child(5):before {
       content: "Category";
     }
-    .products-table td:nth-child(6):before {
+    .rooms-table td:nth-child(6):before {
       content: "Product URL";
     }
-    .products-table td:nth-child(7):before {
+    .rooms-table td:nth-child(7):before {
       content: "Action";
     }
   }

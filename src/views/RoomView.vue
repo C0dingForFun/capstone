@@ -67,7 +67,7 @@ export default{
             return this.$store.state.room;
         },
         bookRoom(){
-            this.$store.dispatch('bookRoom',{room_id:this.$route.params.id, check_in, check_out})
+            this.$store.dispatch('bookRoom',{room_id:this.$route.params.id, check_in:this.check_in, check_out:this.check_out})
         }
     },
     mounted() {
