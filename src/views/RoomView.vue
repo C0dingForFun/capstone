@@ -26,22 +26,15 @@
                                 <div class="book row">
                                     <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
                                         <label>Check in:</label><br>
-                                        <input type="datetime-local">
+                                        <input type="datetime-local" v-model="check_in">
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
                                         <label>Check out:</label><br>
-                                        <input type="datetime-local">
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
-                                        <label>Adult(s):</label><br>
-                                        <input type="number" placeholder="2">
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-12 pt-1">
-                                        <label>Kid(s):</label><br>
-                                        <input type="number" placeholder="1">
+                                        <input type="datetime-local" v-model="check_out">
+                                        
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-12 align-content-center pt-1" >
-                                        <router-link to="/bookRoom">Book Room</router-link>
+                                        <button @click="bookRoom()">Book Room</button>
                                     </div>
                                 </div>
                                 <div class="justify-content-center">
@@ -58,8 +51,14 @@
 </template>
 
 <script >
-import SpinnerComp from '@/components/SpinnerComp.vue';
+import SpinnerComp from '@/components/SpinnerComp.vue'; 
 export default{
+    data() {
+        return {
+            check_in:null,
+            check_out:null
+        }
+    },
     methods: {
         getRoom(){
             this.$store.dispatch('getRoom',this.$route.params.id);
@@ -67,6 +66,9 @@ export default{
         room() {
             return this.$store.state.room;
         },
+        bookRoom(){
+            this.$store.dispatch('bookRoom',{room_id:this.$route.params.id, check_in, check_out})
+        }
     },
     mounted() {
         this.getRoom();

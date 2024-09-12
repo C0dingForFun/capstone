@@ -9,7 +9,7 @@
     </div>
 </template>
 <script>
-import CardComp from '@/components/CardComp.vue';
+import CardComp from '@/components/CardComp.vue'; 
 import SpinnerComp from '@/components/SpinnerComp.vue';
 export default {
   
