@@ -92,8 +92,8 @@ const fetchSingleBooked = async (req, res)=>{
 }
 
 const insertBooked =  async(req,res)=>{
-    let {user_id,room_id} = req.body;
-    await insertBookedDB(user_id,room_id);
+    let {user_id,room_id,check_in, check_out} = req.body;
+    await insertBookedDB(user_id,room_id,check_in, check_out);
     res.send('Booked room was inserted successfully.');
 }
 

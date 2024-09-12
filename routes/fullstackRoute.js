@@ -12,7 +12,7 @@ roomsRouter.get('/',fetchRooms)
 bookedRouter.get('/',fetchBooked)
 bookedRouter.get('/',verifyAToken,fetchRooms)
 
-bookedRouter.post('/manageRoom',verifyAToken,insertBooked)
+bookedRouter.post('/manageRoom',insertBooked)
 
 usersRouter.post('/insertUser',insertUser)
 roomsRouter.post('/insertRoom',insertRoom)

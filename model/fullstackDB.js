@@ -70,8 +70,8 @@ const getSingleBookedDB = async (booked_id)=>{
     return data;
 }
 
-const insertBookedDB = async(user_id,room_id)=>{
-    let [data] = await pool.query(`INSERT INTO booked (user_id, room_id) VALUES(?,?)`, [user_id,room_id]
+const insertBookedDB = async(user_id,room_id,check_in, check_out)=>{
+    let [data] = await pool.query(`INSERT INTO booked (user_id, room_id, check_in, check_out) VALUES(?,?,?,?)`, [user_id,room_id,check_in, check_out]
     )
 }
 
