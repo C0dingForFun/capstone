@@ -31,21 +31,21 @@
                 <div class="row">
                     <div class="col">
                         <h5>About</h5>               
-                            <div>
-                                <router-link to="/about">Our Story</router-link>
-                            </div>
-                            <div>
-                                <router-link to="/about">Our Categories</router-link>
-                            </div>
-                            <div>
-                                <router-link to="/about">Our Features</router-link>
-                            </div>
-                            <div>
-                                <router-link to="/about">Our Amenities</router-link>
-                            </div>
-                            <div>
-                                <router-link to="/about">Why Choose Us</router-link>
-                            </div>
+                        <div>
+                            <router-link to="/about">Our Story</router-link>
+                        </div>
+                        <div>
+                            <router-link to="/about">Our Categories</router-link>
+                        </div>
+                        <div>
+                            <router-link to="/about">Our Features</router-link>
+                        </div>
+                        <div>
+                            <router-link to="/about">Our Amenities</router-link>
+                        </div>
+                        <div>
+                            <router-link to="/about">Why Choose Us</router-link>
+                        </div>
                     </div>
                     <div class="col">
                         <h5>Contact Us</h5>            
@@ -121,6 +121,7 @@ export default {
     .about{
         background-color: #93C572;
         color:whitesmoke;
+        text-align: center;
     }
     .info a i{
         font-size:30px;
