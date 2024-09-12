@@ -123,6 +123,9 @@ export default {
     .link{
         width:500px;
     }
+    .info{
+        width: 100vw;
+    }
     .info img{
         object-fit: contain;
         height:50px;
@@ -143,7 +146,6 @@ export default {
     .pages{
         background-color: #aeeb85;
         text-align:start;
-        
     }
     .pages h5{
         color:whitesmoke;
