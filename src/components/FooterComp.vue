@@ -27,18 +27,37 @@
                     <a><i class="lab la-twitter"></i></a>
                 </div>
            </div> 
-           <div class="col-lg-5 col-md-5 col-sm-12 pages">
+           <div class="col-lg-5 col-md-5 col-sm-12 pages pb-2">
                 <div class="row">
                     <div class="col">
                         <h5>About</h5>               
-                            <router-link to="/about">Our Story</router-link>
-                            <router-link to="/about">Our Categories</router-link>
-                            <router-link to="/about">Our Features</router-link>
-                            <router-link to="/about">Our Amenities</router-link>
-                            <router-link to="/about">Why Choose Us</router-link>
+                            <div>
+                                <router-link to="/about">Our Story</router-link>
+                            </div>
+                            <div>
+                                <router-link to="/about">Our Categories</router-link>
+                            </div>
+                            <div>
+                                <router-link to="/about">Our Features</router-link>
+                            </div>
+                            <div>
+                                <router-link to="/about">Our Amenities</router-link>
+                            </div>
+                            <div>
+                                <router-link to="/about">Why Choose Us</router-link>
+                            </div>
                     </div>
                     <div class="col">
-    
+                        <h5>Contact Us</h5>            
+                        <div>
+                            <router-link to="/contact">Location</router-link>                   
+                        </div>   
+                        <div>
+                            <router-link to="/contact">Email</router-link>
+                        </div>   
+                        <div>
+                            <router-link to="/contact">Reach us</router-link>
+                        </div>   
                     </div>
                     <div class="col">
     
@@ -114,7 +133,10 @@ export default {
     .pages{
         background-color: #aeeb85;
         text-align:start;
-        /* width:100%; */
+    }
+    .pages h5{
+        color:whitesmoke;
+        text-shadow:2px 2px black;
     }
     .pages a{
         color:whitesmoke;
