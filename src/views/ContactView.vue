@@ -9,7 +9,7 @@
         <div class="d-flex justify-content-center">
             <div>
                 <i class="las la-map-marker"></i><h2>Location:</h2>
-                <a href="https://www.google.com/maps/place/Lagoon+Beach+Hotel+%26+Spa/@-33.8925909,18.4832667,15z/data=!4m9!3m8!1s0x1dcc5c2ed4759665:0xe4c965c5195298f9!5m2!4m1!1i2!8m2!3d-33.8925909!4d18.4832667!16s%2Fg%2F11h565fllm?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="blank">gg</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13247.5438173967!2d18.4832667!3d-33.8925909!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5c2ed4759665%3A0xe4c965c5195298f9!2sLagoon%20Beach%20Hotel%20%26%20Spa!5e0!3m2!1sen!2sza!4v1726231596132!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="row justify-content-evenly text-center pt-5">
@@ -22,7 +22,7 @@
                     <h4><b>Make a Call</b></h4>
                 </div>
                 <div>
-                    <p>Call us here.</p>
+                    <p>This our tel number..</p>
                 </div>
                 <div  class="contact-info">
                     <p>(+27) 21 009 8072</p>
@@ -38,7 +38,7 @@
                     <h4><b>Send an Email</b></h4>
                 </div>
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Responses are AI generated for instant feedback.</p>
                 </div>
                 <div class="contact-info">
                     <p>support@coastalgetaway.co.za</p>
@@ -54,7 +54,7 @@
                     <h4><b>Toll Free</b></h4>
                 </div>
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>We have a 24/7 cell centre for any support.</p>
                 </div>
                 <div  class="contact-info">
                     <p>(+27) 021 457 7890</p>
@@ -125,7 +125,7 @@ export default {
         top:5px;
         font-size:30px;
     }
-    .info{
+    .info {
         height:auto;
         background-color: #bae39e;
         border-radius:20px;
@@ -138,6 +138,21 @@ export default {
         box-shadow:10px 10px 10px #bae39e;
         color:white;
     }
+    .info a{
+        height:auto;
+        background-color: #bae39e;
+        border-radius:20px;
+        transition: 0.8s;
+        color:grey;
+        text-decoration: none;
+    }
+    .info a:hover{
+        cursor: pointer;
+        background-color:#93C572;
+        box-shadow:10px 10px 10px #bae39e;
+        color:white;
+    }
+
     .contact-info{
         color:#51b112;
     }
@@ -160,5 +175,9 @@ export default {
         box-shadow:5px 5px 5px #93C572;
         background-color: #93C572;
         color: whitesmoke;
+    }
+    iframe{
+        width: 60vw;
+        height:20vh;
     }
 </style>
