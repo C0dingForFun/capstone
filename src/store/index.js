@@ -156,6 +156,7 @@ export default createStore({
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
       $cookies.set('token', data.token)
       $cookies.set('userRole', data.userRole)
+      // $cookies.set('user_id', data.user_id)
       if(data.userRole == 'admin'){
         router.push('/admin')
       }
@@ -180,7 +181,7 @@ export default createStore({
       }
     },
     async bookRoom({commit},{room_id,check_in, check_out}){
-      let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:2,room_id,check_in, check_out});
+      let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:3,room_id,check_in, check_out});
       console.log(data);
     },
   },
