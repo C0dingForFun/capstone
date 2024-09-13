@@ -22,7 +22,7 @@
                     <h4><b>Make a Call</b></h4>
                 </div>
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Call us here.</p>
                 </div>
                 <div  class="contact-info">
                     <p>(+27) 21 009 8072</p>
@@ -126,7 +126,6 @@ export default {
         font-size:30px;
     }
     .info{
-        /* width: 300px; */
         height:auto;
         background-color: #bae39e;
         border-radius:20px;
