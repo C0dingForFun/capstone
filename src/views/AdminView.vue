@@ -120,17 +120,17 @@
         };
         this.$store.dispatch('updateUser', { id: user.user_id, data: editUser });
       },
-      // updateProduct(product) {
-      //   let editProduct = {
-      //     productID: product.prodID,
-      //     productName: product.prodName,
-      //     quantity: product.quantity,
-      //     amount: product.amount,
-      //     category: product.category,
-      //     prodURL: product.prodURL,
-      //   };
-      //   this.$store.dispatch('updateProduct', { id: product.prodID, data: editProduct });
-      // }
+      updateProduct(room) {
+        let editRoom = {
+          room_id: room.room_id,
+          room_name: room.room_name,
+          room_category: room.room_category,
+          room_description: room.room_description,
+          price: room.price,
+          image: room.image,
+        };
+        this.$store.dispatch('updateProduct', { id: roomroom_id, data: editRoom });
+      }
     }
   }
   </script>
