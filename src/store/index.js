@@ -55,6 +55,11 @@ export default createStore({
       try {
         let {data} = await axios.get(`${coastalURL}users/${id}`);        
         commit('setUser',data)
+        toast("User fetched successfully", {
+          "theme": "dark",
+          "type": "success",
+          "dangerouslyHTMLString": true
+        })
       }
       catch (error) {
         toast("There has been an error", {
@@ -64,35 +69,15 @@ export default createStore({
         })
       }
     },
-    // async addUser({commit},info){
-    //   try {
-    //     let {data} = await axios.post(`${coastalURL}users/insertUser`,info);
-    //   console.log(data);
-    //   toast("User has been added successfully", {
-    //     "theme": "dark",
-    //     "type": "success",
-    //     "dangerouslyHTMLString": true
-    //   })
-    //   } catch (error) {
-    //     toast("There has been an error", {
-    //       "theme": "dark",
-    //       "type": "error",
-    //       "dangerouslyHTMLString": true
-    //     })
-    //   }
-      
-      
-    // },
     async addUser(context, payload) {
       try {
         console.log(payload);
-        
         const { msg } = await (
           await axios.post(`${coastalURL}users/insertUser`, payload)
         ).data;
         if (msg) {
           context.dispatch("getUsers");
-          toast.success(`${msg}`, {
+          toast.success(`User added successfully`, {
             autoClose: 2000,
             position: toast.POSITION.BOTTOM_CENTER,
           });
@@ -102,6 +87,7 @@ export default createStore({
           autoClose: 2000,
           position: toast.POSITION.BOTTOM_CENTER,
         });
+        location.reload();
       }
     },
     async updateUser(user_id){
