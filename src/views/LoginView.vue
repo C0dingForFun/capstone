@@ -13,6 +13,7 @@
                 <tr><th><label>Enter your age:</label></th><td><input type="text" v-model="age"><br><br></td></tr>
                 <tr><th><label>Enter your username:</label></th><td><input type="text" v-model="username"><br><br></td></tr>
                 <tr><th><label>Enter your password:</label></th><td><input type="password" v-model="password"></td></tr>
+                <tr><th><label>Enter an image:</label></th><td><input type="text" v-model="image"></td></tr>
                 <tr><td><button @click="addUser()">Submit</button></td></tr>
             </tbody>
         </table>
@@ -40,6 +41,7 @@ export default {
             age:'',
             username:'',
             password:'',
+            image:'',
             signUp: false,
             login:true
         }
