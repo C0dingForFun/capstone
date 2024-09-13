@@ -20,6 +20,10 @@
                                 <div class="text-start description">
                                     <p>{{$store.state.room.room_description}}</p>
                                 </div>
+                                <div class="text-center description">
+                                    <p>Adults:{{$store.state.room.adults}}</p>
+                                    <p>Kids:{{$store.state.room.kids}}</p>
+                                </div>
                                 <div>
                                     <p class="card-text">Price: R{{$store.state.room.price}}</p>
                                 </div>
