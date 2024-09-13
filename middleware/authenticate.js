@@ -5,17 +5,17 @@ import { config }from "dotenv";
 config();
 
 const checkUser = async (req,res,next)=>{
-    const {username, password,user_id} = req.body;
+    const {username, password} = req.body;
     let hashedPassword = (await getUserDB2(username)).password;
     let userRole = (await getUserDB2(username)).user_role;
-    // let userID = (await getUserDB(userID)).user_id;
+    let user_id = (await getUserDB2(username)).user_id;
     let result = await compare(password, hashedPassword);
     if(result == true){
-        let token = jwt.sign({username:username,userRole:userRole},process.env.SECRET_KEY, {expiresIn:'1h'});
+        let token = jwt.sign({username:username,userRole:userRole,user_id:user_id},process.env.SECRET_KEY, {expiresIn:'1h'});
         console.log(token);
         req.body.token = token;
         req.body.userRole = userRole
-        // req.body.token = userID;
+        req.body.user_id = user_id;
         next();
     }else{
         res.send('Password incorrect');

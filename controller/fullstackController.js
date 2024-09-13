@@ -40,7 +40,10 @@ const updateUser =  async(req,res)=>{
 }
 
 const loginUser = (req,res)=>{
-    res.json({message:"User logged in successfully",token:req.body.token,userRole:req.body.userRole})
+    res.json({message:"User logged in successfully",
+        token:req.body.token,
+        userRole:req.body.userRole,
+        user_id:req.body.user_id})
 }
 
 // <----------------------------------------- Items --------------------------------------------------------------------->
