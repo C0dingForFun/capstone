@@ -81,6 +81,8 @@ export default createStore({
     // },
     async addUser(context, payload) {
       try {
+        console.log(payload);
+        
         const { msg } = await (
           await axios.post(`${coastalURL}users/insertUser`, payload)
         ).data;

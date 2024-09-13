@@ -8,12 +8,12 @@
         <h1>Sign Up here:</h1>
         <table style="margin:auto">
             <tbody>
-                <tr><th><label>Enter your name:</label></th><td><input type="text" v-model="user_name"><br><br></td></tr>
-                <tr><th><label>Enter your surname:</label></th><td><input type="text" v-model="user_surname"><br><br></td></tr>
-                <tr><th><label>Enter your age:</label></th><td><input type="text" v-model="age"><br><br></td></tr>
-                <tr><th><label>Enter your username:</label></th><td><input type="text" v-model="username"><br><br></td></tr>
-                <tr><th><label>Enter your password:</label></th><td><input type="password" v-model="password"></td></tr>
-                <tr><th><label>Enter an image:</label></th><td><input type="text   " v-model="image"></td></tr>
+                <tr><th><label>Enter your name:</label></th><td><input type="text" v-model="payload.user_name"><br><br></td></tr>
+                <tr><th><label>Enter your surname:</label></th><td><input type="text" v-model="payload.user_surname"><br><br></td></tr>
+                <tr><th><label>Enter your age:</label></th><td><input type="text" v-model="payload.age"><br><br></td></tr>
+                <tr><th><label>Enter your username:</label></th><td><input type="text" v-model="payload.username"><br><br></td></tr>
+                <tr><th><label>Enter your password:</label></th><td><input type="password" v-model="payload.password"></td></tr>
+                <tr><th><label>Enter an image:</label></th><td><input type="text   " v-model="payload.image"></td></tr>
                 <tr><td><button @click="addUser()">Submit</button></td></tr>
             </tbody>
         </table>
@@ -33,34 +33,27 @@
 <script>
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
+import { mapActions } from 'vuex';
 export default {
     data(){
         return{
-            user_name:'',
-            user_surname:'',
-            age:'',
-            username:'',
-            password:'',
-            image:'',
+            payload:{
+                user_name:'',
+                user_surname:'',
+                age:'',
+                username:'',
+                password:'',
+                image:'',
+            },
             signUp: false,
             login:true
         }
     },
     methods:{
-        addUser(){
-        let payload = {
-          user_id: this.user.user_id,
-          user_name: this.user.user_name,
-          user_surname: this.user.user_surname,
-          age: this.user.age,
-          user_role: this.user.user_role,
-          username:  this.user.username,
-          password: this.user.password,
-          image: this.user.image
-        };
-            this.$store.dispatch('addUser',this.$data);
-            location.reload()
-
+        ...mapActions(['addUser']),
+        async addUser(){
+            await this.$store.dispatch('addUser',this.payload);
+            // location.reload();
         },
 
         async loginUser(){
