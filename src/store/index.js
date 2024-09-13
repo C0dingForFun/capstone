@@ -176,7 +176,7 @@ export default createStore({
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
       $cookies.set('token', data.token)
       $cookies.set('userRole', data.userRole)
-      // $cookies.set('user_id', data.user_id)
+      $cookies.set('user_id', data.user_id)
       if(data.userRole == 'admin'){
         router.push('/admin')
       }
