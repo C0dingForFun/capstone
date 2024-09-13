@@ -79,9 +79,9 @@ export default createStore({
       
       
     },
-    async updateUser(id){
+    async updateUser(user_id){
       try {
-        let {data} = await axios.patch(`${coastalURL}users/${id}`);        
+        let {data} = await axios.patch(`${coastalURL}users/${user_id}`);        
         commit('setUser',data)
         toast("User has been updated  successfully", {
           "theme": "dark",
