@@ -9,11 +9,12 @@
         <div class="d-flex justify-content-center">
             <div>
                 <i class="las la-map-marker"></i><h2>Location:</h2>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <a href="https://www.google.com/maps/place/Lagoon+Beach+Hotel+%26+Spa/@-33.8925909,18.4832667,15z/data=!4m9!3m8!1s0x1dcc5c2ed4759665:0xe4c965c5195298f9!5m2!4m1!1i2!8m2!3d-33.8925909!4d18.4832667!16s%2Fg%2F11h565fllm?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="blank">gg</a>
             </div>
         </div>
         <div class="row justify-content-evenly text-center pt-5">
             <div class="col-lg-3 col-md-2 col-sm-12 info mt-2">
+               <a href="tel:+27210098072">
                 <div>
                     <i class="las la-tty"></i>
                 </div>
@@ -26,8 +27,10 @@
                 <div  class="contact-info">
                     <p>(+27) 21 009 8072</p>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-2 col-sm-12 info mt-2">
+                <a href="mailto:support@coastalgetaway.co.za">
                 <div>
                     <i class="las la-envelope"></i>
                 </div>
@@ -40,8 +43,10 @@
                 <div class="contact-info">
                     <p>support@coastalgetaway.co.za</p>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-2 col-sm-12 info mt-2">
+                <a href="tel:+27214577890">
                 <div>
                     <i class="las la-headset"></i>
                 </div>
@@ -54,6 +59,7 @@
                 <div  class="contact-info">
                     <p>(+27) 021 457 7890</p>
                 </div>
+                </a>
             </div>
         </div>
     </div>

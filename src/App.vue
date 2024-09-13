@@ -34,11 +34,22 @@ span{
   font-size:22px;
 }
 
+#events .card{
+      width:18rem;
+    }
+
 @media screen and (max-width:600px) {
-  #events img{
+    #events img{
         width: 95vw !important;
         height:40vh;
         margin: auto;
+    }
+    #events .card{
+      width:15rem;
+    }
+    #nav img{
+      width:100px;
+      height:90px;
     }
 }
 </style>

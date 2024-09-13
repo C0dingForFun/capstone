@@ -34,7 +34,7 @@
 <div id="event">
 	<div class="mt-3 events">
 		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
-			<div class="card" style="width: 18rem;">
+			<div class="card">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">
 					<h5 class="card-title">News Years Eve Event</h5>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
-			<div class="card" style="width: 18rem;">
+			<div class="card">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/christmas.jpg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">
 					<h5 class="card-title">Christmas Party</h5>
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
-			<div class="card" style="width: 18rem;">
+			<div class="card">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/conference.jpg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">
 					<h5 class="card-title">Conference events</h5>
