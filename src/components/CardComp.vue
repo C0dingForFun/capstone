@@ -9,10 +9,6 @@
                       {{ category }}
             </option>
           </select> -->
-          <ul>
-            <li><a @clicked.prevent="sortLowestPrice()">Lowest Price</a></li>
-            <li><a @clicked.prevent="sortHighestPrice()">Highest Price</a></li>
-          </ul>
       </div>
         <slot name="rooms">
             <section class="mt-5">
