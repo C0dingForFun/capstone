@@ -59,17 +59,20 @@ export default {
                 (this.searchProduct === '' || room.room_category === this.searchProduct)
             })
         },
+        
+        // if (category) {
+        //     this.searchProducts = searchProducts.filter(product =>
+        //         product.category === category.value
+        //     )
+        // }
+    },
+    filters:{
         sortLowestPrice(){
             this.$store.rooms.price.sort((a,b)=> a.price > b.price ? 1 : -1)
         },
         sortHighestPrice(){
             this.$store.rooms.price.sort((a,b)=> a.price < b.price ? 1 : -1)
         }
-        // if (category) {
-        //     this.searchProducts = searchProducts.filter(product =>
-        //         product.category === category.value
-        //     )
-        // }
     },
     mounted() {
         this.getRooms();
