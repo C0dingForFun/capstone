@@ -24,7 +24,6 @@ export default {
         rooms() {
             return this.$store.state.rooms;
         },
-        
     },
     mounted() {
       this.getRooms();

@@ -9,6 +9,10 @@
                       {{ category }}
             </option>
           </select> -->
+          <ul>
+            <li><a @clicked.prevent="sortLowestPrice()">Lowest Price</a></li>
+            <li><a @clicked.prevent="sortHighestPrice()">Highest Price</a></li>
+          </ul>
       </div>
         <slot name="rooms">
             <section class="mt-5">
@@ -59,6 +63,12 @@ export default {
                 (this.searchProduct === '' || room.room_category === this.searchProduct)
             })
         },
+        sortLowestPrice(){
+            this.$store.rooms.price.sort((a,b)=> a.price > b.price ? 1 : -1)
+        },
+        sortHighestPrice(){
+            this.$store.rooms.price.sort((a,b)=> a.price < b.price ? 1 : -1)
+        }
         // if (category) {
         //     this.searchProducts = searchProducts.filter(product =>
         //         product.category === category.value
