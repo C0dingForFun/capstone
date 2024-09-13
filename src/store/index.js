@@ -61,13 +61,33 @@ export default createStore({
       }
     },
     async addUser({commit},info){
-      let data = await axios.post(`${coastalURL}users/insertUser`,info);
-      // console.log(data);
+      try {
+        let {data} = await axios.post(`${coastalURL}users/insertUser`,info);
+      console.log(data);
+      toast("User has been added successfully", {
+        "theme": "dark",
+        "type": "success",
+        "dangerouslyHTMLString": true
+      })
+      } catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+      
+      
     },
     async updateUser(id){
       try {
         let {data} = await axios.patch(`${coastalURL}users/${id}`);        
         commit('setUser',data)
+        toast("User has been updated  successfully", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
       }
       catch (error) {
         toast("There has been an error", {
