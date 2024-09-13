@@ -5,7 +5,7 @@ import { usersRouter,roomsRouter,bookedRouter} from './routes/fullstackRoute.js'
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:8080',
+    origin: ['http://localhost:8080','*'],
     credentials:true,
 }));
 // app.use('/users/login',(req,res)=>{
