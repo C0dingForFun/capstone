@@ -129,7 +129,7 @@
           price: room.price,
           image: room.image,
         };
-        this.$store.dispatch('updateProduct', { id: roomroom_id, data: editRoom });
+        this.$store.dispatch('updateProduct', { id: room.room_id, data: editRoom });
       }
     }
   }
