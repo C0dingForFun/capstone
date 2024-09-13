@@ -5,7 +5,7 @@ import { usersRouter,roomsRouter,bookedRouter} from './routes/fullstackRoute.js'
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:8080','*'],
+    origin: ['http://localhost:8080','https://capstone-a999d.web.app/'],
     credentials:true,
 }));
 // app.use('/users/login',(req,res)=>{
