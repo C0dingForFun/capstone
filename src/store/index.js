@@ -15,7 +15,8 @@ export default createStore({
     users:null,
     user:null,
     rooms:null,
-    room:null
+    room:null,
+    categories:null
   },
   getters: {
   },
@@ -31,6 +32,9 @@ export default createStore({
     },
     setRoom(state,payload){
       state.room=payload
+    },
+    setCategory(state,payload){
+      state.categories=payload
     }
   },
   actions: {
@@ -217,6 +221,18 @@ export default createStore({
         })
       }
     },
+    async fetchCategories(){
+        try {
+          let {data} = await axios.get(`${coastalURL}users`)
+          commit('setCategory',data)
+      } catch (error) {
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
+      }
+    },
     async loginUser({commit},info){
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
       $cookies.set('token', data.token)
@@ -246,7 +262,8 @@ export default createStore({
       }
     },
     async bookRoom({commit},{room_id,check_in, check_out}){
-      let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:8,room_id,check_in, check_out});
+      let user = $cookies.get('user_id')
+      let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:user,room_id,check_in, check_out});
       console.log(data);
     },
   },
