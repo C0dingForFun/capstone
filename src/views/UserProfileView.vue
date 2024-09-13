@@ -16,17 +16,16 @@ export default {
                 username:'',
                 password:'',
                 image:'',
+                userID: '$cookies.get("user_id")'
             },
         }
     },
     methods: {
         getUser(){
-            const userID = $cookies.get('user_id')
-            this.$store.dispatch('getUser',userID) 
-
+            this.$store.dispatch('getUser',this.payload.userID) 
         },
-        updateUser(){
-            this.$store.dispatch('get',this.payload)
+        update(){
+            this.$store.dispatch('getUser',this.payload)
         }
     },
     mounted() {
