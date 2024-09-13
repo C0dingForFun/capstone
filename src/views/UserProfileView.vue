@@ -4,6 +4,8 @@
     </div>
 </template>
 <script>
+import UpdateUser from '@/components/UpdateUser.vue';
+
 export default {
     data() {
         return {
@@ -22,7 +24,13 @@ export default {
             const userID = $cookies.get('user_id')
             this.$store.dispatch('getUser',userID) 
 
+        },
+        updateUser(){
+            this.$store.dispatch('get',this.payload)
         }
+    },
+    mounted() {
+        this.getUser();
     },
 }
 </script>
