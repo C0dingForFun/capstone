@@ -67,19 +67,6 @@
       </div>
     </div>
   </section>
-  <section>
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        hey
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        lib
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        hi
-      </div>
-    </div>
-  </section>
 </template>
 <style scoped>
 .about-banner {
