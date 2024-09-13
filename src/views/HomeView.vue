@@ -82,7 +82,7 @@ export default {
 	background-color: gray;
 	
 	z-index:0;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
