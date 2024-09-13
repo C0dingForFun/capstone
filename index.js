@@ -5,13 +5,13 @@ import { usersRouter,roomsRouter,bookedRouter} from './routes/fullstackRoute.js'
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:8080', 'https://capstone-2xa4.onrender.com'],
+    origin: 'http://localhost:8080',
     credentials:true,
-    headers:['Content-Type', 'Authorization']
+    // headers:['Content-Type', 'Authorization']
 }));
-app.use('/users/login',(req,res)=>{
-    res.header('Allow-Control-Allow-Origin','http://localhost:8080')
-})
+// app.use('/users/login',(req,res)=>{
+//     res.header('Allow-Control-Allow-Origin','http://localhost:8080')
+// })
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/users',usersRouter);
