@@ -17,6 +17,13 @@ export default {
             },
         }
     },
+    methods: {
+        getUser(){
+            const userID = $cookies.get('user_id')
+            this.$store.dispatch('getUser',userID) 
+
+        }
+    },
 }
 </script>
 <style lang="">
