@@ -228,7 +228,7 @@ export default createStore({
         router.push('/admin')
       }
       else{
-        router.push('/rooms')
+        router.push('/profile')
       }
       if(data.message){
         toast("Login is successful",{

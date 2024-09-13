@@ -1,5 +1,6 @@
 <template lang="">
-    <div class="profile d-flex justify-content-center align-items-center">
+    <div v-if="user()">
+       <div class="profile d-flex justify-content-center align-items-center">
 
         <h2 style="text-align:center">User Profile Card</h2>
 
@@ -10,12 +11,20 @@
             <p>Harvard University</p>
             <p><button>Contact</button></p>
         </div>
+        </div> 
     </div>
+    <div v-else>
+        <SpinnerComp/>
+    </div>
+    
 </template>
 <script>
-import UpdateUser from '@/components/UpdateUser.vue';
-
+// import UpdateUser from '@/components/UpdateUser.vue';
+import SpinnerComp from '@/components/SpinnerComp.vue';
 export default {
+    components:{
+        SpinnerComp
+    },
     data() {
         return {
             payload:{
