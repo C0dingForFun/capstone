@@ -146,6 +146,7 @@ export default {
     .pages{
         background-color: #aeeb85;
         text-align:start;
+        width:49vw;
     }
     .pages h5{
         color:whitesmoke;
