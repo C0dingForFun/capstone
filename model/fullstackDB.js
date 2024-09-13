@@ -16,6 +16,7 @@ const getUserDB2 = async (username)=>{
     return data;
 }
 
+
 const insertUserDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)=>{
     let [data] = await pool.query(`
         INSERT INTO users (room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)
