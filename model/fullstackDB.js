@@ -60,6 +60,11 @@ const updateRoomDB = async(room_name,room_category,room_description,room_package
     await pool.query(`UPDATE rooms SET room_name = ?,room_category = ?,room_description = ?,room_package = ?,price = ?,pets = ?,image = ?,subImage1 = ?,subImage2 = ?,subImage3 = ? WHERE room_id = ?`,[room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3,room_id])
 }
 
+const categoriesDB = async ()=>{
+    let [data] = await pool.query('SELECT * FROM rooms LIMIT 3;')
+    return data
+}
+
 //Book
 const getBookedDB = async (req,res)=>{
     let [data] = await pool.query('SELECT * FROM booked')
@@ -83,4 +88,4 @@ const updateBookedDB = async(user_id,room_id,booked_id )=>{
 const deleteBookedDB = async(booked_id)=>{
     await pool.query(`DELETE FROM booked WHERE booked_id = ?`,[booked_id])
 }
-export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,getUserDB2}
+export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,getUserDB2, categoriesDB}

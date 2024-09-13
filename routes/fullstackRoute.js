@@ -1,5 +1,5 @@
 import express from 'express';
-import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked,loginUser } 
+import { fetchUsers,fetchUser, insertUser, updateUser, deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked,loginUser,fetchCategories } 
 from '../controller/fullstackController.js';
 import { checkUser,verifyAToken } from '../middleware/authenticate.js';
 
@@ -9,6 +9,7 @@ const bookedRouter = express.Router();
 
 usersRouter.get('/',fetchUsers)
 roomsRouter.get('/',fetchRooms)
+roomsRouter.get('/categories',fetchCategories)
 bookedRouter.get('/',fetchBooked)
 bookedRouter.get('/',verifyAToken,fetchRooms)
 
