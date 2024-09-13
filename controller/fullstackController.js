@@ -12,6 +12,7 @@ const fetchUser = async (req, res)=>{
 
 const insertUser =  async(req,res)=>{
     let {user_name, user_surname, age, user_role, username, password, image} = req.body;
+    user_role = 'user'
     let hashedP = await hash(password,10);
     if (hashedP.stack) throw (hashedP);
     await insertUserDB(user_name, user_surname, age, user_role, username, hashedP, image);
