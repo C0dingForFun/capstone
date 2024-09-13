@@ -103,7 +103,7 @@
       },
       deleteUser(user_id) {
         this.$store.dispatch('deleteUser', user_id );
-        location.reload()
+        // location.reload()
       },
       
       deleteRoom(room_id) {
