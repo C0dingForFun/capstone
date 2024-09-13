@@ -1,6 +1,6 @@
 <template>
     <button type="button" class="btn btn-success modalButton" data-bs-toggle="modal" :data-bs-target="'#updateUserModal'+user.userID">
-      Update User
+      Edit
     </button>
     <!-- Modal -->
     <div class="modal fade" :id="'updateUserModal'+user.userID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
