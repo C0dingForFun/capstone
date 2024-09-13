@@ -17,11 +17,11 @@ const getUserDB2 = async (username)=>{
 }
 
 
-const insertUserDB = async(room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)=>{
+const insertUserDB = async(user_name, user_surname, age, user_role, username, password, image)=>{
     let [data] = await pool.query(`
-        INSERT INTO users (room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3)
+        INSERT INTO users (user_name, user_surname, age, user_role, username, password, image)
         VALUES(?,?,?,?,?,?,?)`,
-        [room_name,room_category,room_description,room_package,price,pets,image,subImage1,subImage2,subImage3]
+        [user_name, user_surname, age, user_role, username, password, image]
     )
 }
 
