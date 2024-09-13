@@ -22,9 +22,9 @@
         <h1>Login here:</h1>
         <div>
             <label>Enter your Username:</label>
-            <input type="text" v-model="username" required><br><br>
+            <input type="text" v-model="payload.username" required><br><br>
             <label>Enter your Password:</label>
-            <input type="password" v-model="password" required><br><br>
+            <input type="password" v-model="payload.password" required><br><br>
             <button @click="loginUser()" >Login</button>
         </div>
     </div>
@@ -58,7 +58,7 @@ export default {
 
         async loginUser(){
             try {
-                await  this.$store.dispatch('loginUser',this.$data);
+                await  this.$store.dispatch('loginUser',this.payload);
                 toast("User is has been deleted successfully", {
                 "theme": "dark",
                 "type": "success",
