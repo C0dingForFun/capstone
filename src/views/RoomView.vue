@@ -51,6 +51,7 @@
 </template>
 
 <script >
+import {useCookies} from 'vue-cookies';
 import SpinnerComp from '@/components/SpinnerComp.vue'; 
 export default{
     data() {
@@ -67,7 +68,7 @@ export default{
             return this.$store.state.room;
         },
         bookRoom(){
-            this.$store.dispatch('bookRoom',{user_id:this.$cookies.get('user_id'),room_id:this.$route.params.id, check_in:this.check_in, check_out:this.check_out})
+            this.$store.dispatch('bookRoom',{room_id:this.$route.params.id, check_in:this.check_in, check_out:this.check_out})
         }
     },
     mounted() {

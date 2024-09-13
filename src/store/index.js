@@ -246,7 +246,7 @@ export default createStore({
       }
     },
     async bookRoom({commit},{room_id,check_in, check_out}){
-      let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:5,room_id,check_in, check_out});
+      let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:8,room_id,check_in, check_out});
       console.log(data);
     },
   },
