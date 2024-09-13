@@ -103,7 +103,9 @@
       },
       deleteUser(user_id) {
         this.$store.dispatch('deleteUser', user_id );
+        location.reload()
       },
+      
       deleteRoom(room_id) {
         this.$store.dispatch('deleteRoom', room_id );
       },
@@ -111,7 +113,7 @@
         let editUser = {
           user_id: this.user.user_id,
           user_name: this.user.user_name,
-          user_surename: this.user.user_surename,
+          user_surname: this.user.user_surname,
           age: this.user.age,
           user_role: this.user.user_role,
           username:  this.user.username,

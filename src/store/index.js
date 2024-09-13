@@ -60,24 +60,43 @@ export default createStore({
         })
       }
     },
-    async addUser({commit},info){
+    // async addUser({commit},info){
+    //   try {
+    //     let {data} = await axios.post(`${coastalURL}users/insertUser`,info);
+    //   console.log(data);
+    //   toast("User has been added successfully", {
+    //     "theme": "dark",
+    //     "type": "success",
+    //     "dangerouslyHTMLString": true
+    //   })
+    //   } catch (error) {
+    //     toast("There has been an error", {
+    //       "theme": "dark",
+    //       "type": "error",
+    //       "dangerouslyHTMLString": true
+    //     })
+    //   }
+      
+      
+    // },
+    async addUser(context, payload) {
       try {
-        let {data} = await axios.post(`${coastalURL}users/insertUser`,info);
-      console.log(data);
-      toast("User has been added successfully", {
-        "theme": "dark",
-        "type": "success",
-        "dangerouslyHTMLString": true
-      })
-      } catch (error) {
-        toast("There has been an error", {
-          "theme": "dark",
-          "type": "error",
-          "dangerouslyHTMLString": true
-        })
+        const { msg } = await (
+          await axios.post(`${coastalURL}users/insertUser`, payload)
+        ).data;
+        if (msg) {
+          context.dispatch("getUsers");
+          toast.success(`${msg}`, {
+            autoClose: 2000,
+            position: toast.POSITION.BOTTOM_CENTER,
+          });
+        }
+      } catch (e) {
+        toast.error(`${e.message}`, {
+          autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
       }
-      
-      
     },
     async updateUser(user_id){
       try {
@@ -97,22 +116,46 @@ export default createStore({
         })
       }
     },
-    async deleteUser(user_id){
+    // async deleteUser(user_id){
+    //   try {
+    //     let {data} = await axios.delete(`${coastalURL}users/${user_id}`); 
+    //     commit('setUser',data)
+    //     toast("User is has been deleted successfully", {
+    //       "theme": "dark",
+    //       "type": "success",
+    //       "dangerouslyHTMLString": true
+    //     })
+    //   }
+    //   catch (error) {
+    //     toast("There has been an error", {
+    //       "theme": "dark",
+    //       "type": "error",
+    //       "dangerouslyHTMLString": true
+    //     })
+    //   }
+    // },
+    async deleteUser(context, id) {
       try {
-        let {data} = await axios.delete(`${coastalURL}users/${user_id}`); 
-        commit('setUser',data)
-        toast("User is has been deleted successfully", {
-          "theme": "dark",
-          "type": "success",
-          "dangerouslyHTMLString": true
-        })
-      }
-      catch (error) {
-        toast("There has been an error", {
-          "theme": "dark",
-          "type": "error",
-          "dangerouslyHTMLString": true
-        })
+        const { msg, err } = await (
+          await axios.delete(`${coastalURL}users/${id}`)
+        ).data;
+        if (msg) {
+          context.dispatch("getUsers");
+          toast.success(`${msg}`, {
+            autoClose: 2000,
+            position: toast.POSITION.BOTTOM_CENTER,
+          });
+        } else {
+          toast.error(`${err}`, {
+            autoClose: 2000,
+            position: toast.POSITION.BOTTOM_CENTER,
+          });
+        }
+      } catch (e) {
+        toast.error(`${e.message}`, {
+          autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
       }
     },
     async getRooms({commit}){

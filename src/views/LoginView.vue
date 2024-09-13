@@ -13,7 +13,7 @@
                 <tr><th><label>Enter your age:</label></th><td><input type="text" v-model="age"><br><br></td></tr>
                 <tr><th><label>Enter your username:</label></th><td><input type="text" v-model="username"><br><br></td></tr>
                 <tr><th><label>Enter your password:</label></th><td><input type="password" v-model="password"></td></tr>
-                <tr><th><label>Enter an image:</label></th><td><input type="text" v-model="image"></td></tr>
+                <tr><th><label>Enter an image:</label></th><td><input type="text   " v-model="image"></td></tr>
                 <tr><td><button @click="addUser()">Submit</button></td></tr>
             </tbody>
         </table>
@@ -48,7 +48,19 @@ export default {
     },
     methods:{
         addUser(){
+        let payload = {
+          user_id: this.user.user_id,
+          user_name: this.user.user_name,
+          user_surname: this.user.user_surname,
+          age: this.user.age,
+          user_role: this.user.user_role,
+          username:  this.user.username,
+          password: this.user.password,
+          image: this.user.image
+        };
             this.$store.dispatch('addUser',this.$data);
+            location.reload()
+
         },
 
         async loginUser(){
@@ -67,7 +79,7 @@ export default {
                 })  
             }
         }
-
+        
     }
 }
 </script>
@@ -94,4 +106,4 @@ export default {
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(4px);
     }
-</style>
+</style> 
