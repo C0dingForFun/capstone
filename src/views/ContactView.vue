@@ -82,14 +82,42 @@
                         <textarea class="form-control px-2" name="message" rows="5" placeholder="Message" v-model="message"></textarea>
                       </div>
                       <div class="text-center mt-4 send">
-                        <button type="submit">Send Message</button> <br>
+                        <button type="submit" @click.prevent="resetForm()">Send Message</button> <br>
                       </div>
             </form>
         </div>
     </div>
 </template>
 <script>
+import { toast } from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
 export default {
+    data() {
+        return {
+            name: '',
+            surname: '',
+            email: '',
+            message: '',
+        }
+    },
+    methods: {
+        resetForm() {
+            if(this.name  == '' && this.surname == '' && this.email == '' && this.message == '') {
+                toast("Please fill in the whole form", {
+                    "theme": "dark",
+                    "type": "error",
+                    "dangerouslyHTMLString": true
+                })
+            }
+            else{
+                toast("Meassage sent successfully", {
+                    "theme": "dark",
+                    "type": "success",
+                    "dangerouslyHTMLString": true
+                })
+            }
+        }
+    }
     
 }
 </script>

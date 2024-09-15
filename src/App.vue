@@ -34,9 +34,9 @@ span{
   font-size:22px;
 }
 
-#events .card{
+/* #events .card{
       width:18rem;
-    }
+    } */
 
 @media screen and (max-width:600px) {
     #events img{
