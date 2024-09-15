@@ -97,14 +97,18 @@ export default createStore({
         toast("User has been updated  successfully", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
       catch (error) {
         toast("There has been an error", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },
@@ -159,7 +163,9 @@ export default createStore({
         toast("There has been an error", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },
@@ -172,7 +178,9 @@ export default createStore({
         toast("There has been an error", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },
@@ -190,7 +198,9 @@ export default createStore({
         toast("There has been an error", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },
@@ -203,7 +213,9 @@ export default createStore({
         toast("There has been an error", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },
@@ -236,14 +248,18 @@ export default createStore({
           "type": "default",
           "position": "top-center",
           "transition": "zoom",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }else{
         toast("Your password is incorrect", {
           "theme": "auto",
           "type": "error",
           "position": "top-center",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+           autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },

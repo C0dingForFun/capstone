@@ -106,14 +106,18 @@ export default {
                 toast("Please fill in the whole form", {
                     "theme": "dark",
                     "type": "error",
-                    "dangerouslyHTMLString": true
+                    "dangerouslyHTMLString": true,
+                    autoClose: 2000,
+                    position: toast.POSITION.BOTTOM_CENTER,
                 })
             }
             else{
                 toast("Meassage sent successfully", {
                     "theme": "dark",
                     "type": "success",
-                    "dangerouslyHTMLString": true
+                    "dangerouslyHTMLString": true,
+                    autoClose: 2000,
+                    position: toast.POSITION.BOTTOM_CENTER,
                 })
             }
         }
@@ -206,6 +210,7 @@ export default {
     }
     iframe{
         width: 60vw;
-        height:20vh;
+        height:25vh;
+        border-radius: 20px;
     }
 </style>

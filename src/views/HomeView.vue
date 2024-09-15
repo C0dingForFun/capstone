@@ -32,7 +32,7 @@
 	</div>
 </div>
 <div id="event">
-	<div class="mt-3 events">
+	<div class="mt-3 events row">
 		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
 			<div class="card">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
@@ -179,13 +179,13 @@ export default {
 	font-size:50px;
 }
 #event .events{
-	width: 100vw;
+	width: 98vw;
 	margin: auto;
 	display:grid;
 	/* margin-left:50px; */
 	/* margin-top:50px; */
 	/* gap:0.1em; */
-	grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
+	grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
 	place-items:center;
 }
 #event button{
