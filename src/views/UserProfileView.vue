@@ -5,11 +5,11 @@
         <h2 style="text-align:center">User Profile Card</h2>
 
         <div class="card">
-            <!-- <img :src="" alt="John" style="width:100%"> -->
-            <h1>John Doe</h1>
-            <p class="title">CEO & Founder, Example</p>
-            <p>Harvard University</p>
-            <p><button>Contact</button></p>
+            <img :src="$store.state.image"/>
+            <h1>{{$store.state.user_name}} {{$store.state.user.user_surname}}</h1>
+            <p class="card-title">{{$store.state.user.age}}</p>
+            <p>{{$store.state.user.username}}</p>
+            <button @click="logOut()">Log Out</button>
         </div>
         </div> 
     </div>
@@ -43,6 +43,9 @@ export default {
         },
         update(){
             this.$store.dispatch('getUser',this.payload)
+        },
+        logOut(){
+            router.push('/login');
         }
     },
     mounted() {

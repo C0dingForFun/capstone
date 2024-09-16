@@ -69,7 +69,7 @@
                 </a>
               </td>
               <td>
-                <updateProduct :room="room"/>
+                <updateRoom :room="room"/>
                 <button class="btn btn-danger deleteButton" @click.prevent="deleteProduct(room.room_id)">Delete</button>
               </td>
             </tr>
@@ -175,10 +175,10 @@
       border-bottom: 0;
     }
     .users-table td:nth-child(1):before {
-      content: "Product ID";
+      content: "UserID";
     }
     .users-table td:nth-child(2):before {
-      content: "Product Name";
+      content: "User Name";
     }
     .users-table td:nth-child(3):before {
       content: "Quantity";
@@ -193,6 +193,12 @@
       content: "Product URL";
     }
     .users-table td:nth-child(7):before {
+      content: "Action";
+    }
+    .users-table td:nth-child(8):before {
+      content: "Action";
+    }
+    .users-table td:nth-child(9):before {
       content: "Action";
     }
   }
