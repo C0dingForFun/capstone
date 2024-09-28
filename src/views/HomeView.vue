@@ -154,13 +154,14 @@ export default {
 	font-size:50px;
 }
 #event .events{
-	width: 98vw;
+	width: 100vw;
 	margin: auto;
 	display:grid;
+	height:auto;
 	/* margin-left:50px; */
 	/* margin-top:50px; */
 	/* gap:0.1em; */
-	grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
+	grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
 	place-items:center;
 }
 #event button{
@@ -176,10 +177,12 @@ export default {
 	background-color: #93C572;
 	color: whitesmoke;
 }
-.card{
+#event .events .card{
 	border:none !important;
+	width:15rem;
+	margin:auto;
 }
-.card img{
+#event .events .card img{
 	height:30vh;
 	border-radius:50% 50% 0 0;
 }

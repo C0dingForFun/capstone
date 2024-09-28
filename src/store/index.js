@@ -267,6 +267,14 @@ export default createStore({
       let user = $cookies.get('user_id')
       let {data} = await axios.post(`${coastalURL}booked/manageRoom`,{user_id:user,room_id,check_in, check_out});
       console.log(data);
+      toast("Room has been booked", {
+        "theme": "auto",
+        "type": "success",
+        "position": "top-center",
+        "dangerouslyHTMLString": true,
+         autoClose: 2000,
+        position: toast.POSITION.BOTTOM_CENTER,
+      })
     },
   },
   
