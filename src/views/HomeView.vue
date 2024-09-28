@@ -80,39 +80,14 @@ export default {
 	width:100vw;
 	height:80vh;
 	background-color: gray;
-	
-	z-index:0;
-	/* background-attachment: fixed; */
+	background-image: url("https://c0dingforfun.github.io/capstone-images/Home/Slide1.jpg");
+	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
-	/*animation for background-images*/ 
-  	background-image: url("https://c0dingforfun.github.io/node-images/Images/Footer/background.jpg");
-	animation-name:slideshow;
-	animation-duration:10s;
-	animation-timing-function:ease-in-out;
-	animation-iteration-count:infinite;
 }
 
-/*slideshow*/
-@keyframes slideshow{
-	0%{
-		background-image: url("https://c0dingforfun.github.io/node-images/Images/Home/Carousel/One/one.jpg");
-	}
-	
-	25%{
-		background-image: url("https://c0dingforfun.github.io/capstone-images/Home/Slide1.jpg");
-	}	
-	
-	50%{
-		background-image: url("https://c0dingforfun.github.io/capstone-images/Contact/contact.jpg");
-	}
-	
-	100%{
-		background-image: url("https://c0dingforfun.github.io/node-images/Images/Home/Carousel/One/one.jpg");
-	}
-}
+
 
 .bannertxt{
 	position: relative;

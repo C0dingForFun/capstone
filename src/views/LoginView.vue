@@ -98,4 +98,17 @@ export default {
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(4px);
     }
+    .login button{
+        padding:0.6em;
+        border-radius:20px;
+        background: black;
+        color:whitesmoke;
+        text-decoration: none;
+        transition: 0.7s;
+    }
+    .login button:hover{
+        padding:0.6em;
+        border-radius:20px;
+        background: rgba(144, 216, 63);
+    }
 </style> 

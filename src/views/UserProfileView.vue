@@ -1,26 +1,33 @@
 <template lang="">
-    <div v-if="user()">
+    <!-- <div v-if="getUser()"> -->
        <div class="profile d-flex justify-content-center align-items-center">
 
         <h2 style="text-align:center">User Profile Card</h2>
 
         <div class="card">
-            <img :src="$store.state.image"/>
-            <h1>{{$store.state.user_name}} {{$store.state.user.user_surname}}</h1>
+            <!-- <img :src="$store.state.image"/>
+            <h1>{{$store.state.user_name}}</h1>
             <p class="card-title">{{$store.state.user.age}}</p>
-            <p>{{$store.state.user.username}}</p>
-            <button @click="logOut()">Log Out</button>
-        </div>
+            <p>{{$store.state.user.username}}</p> -->
+            <button @click="logOut()">Log Out</button> 
         </div> 
-    </div>
+        </div> 
+     <!-- </div> 
     <div v-else>
         <SpinnerComp/>
-    </div>
+    </div> -->
     
 </template>
 <script>
 // import UpdateUser from '@/components/UpdateUser.vue';
 import SpinnerComp from '@/components/SpinnerComp.vue';
+import router from '@/router';
+import {useCookies} from 'vue-cookies';
+import { toast } from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
+
+axios.defaults.withCredentials = true;
+axios.defaults.headers = $cookies.get('token');
 export default {
     components:{
         SpinnerComp
@@ -40,16 +47,26 @@ export default {
     methods: {
         getUser(){
             this.$store.dispatch('getUser',this.payload.userID) 
+            // this.$cookies.get('token')
+            $cookies.get('user_id')
         },
         update(){
             this.$store.dispatch('getUser',this.payload)
         },
         logOut(){
-            router.push('/login');
+            try {
+                $cookies.remove('token');
+                router.push('/');
+                location.reload()
+            } catch (error) {
+                
+            }
+           
         }
     },
     mounted() {
         this.getUser();
+        this.$cookies.get('user_id')
     },
 }
 </script>
