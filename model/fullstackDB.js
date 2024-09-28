@@ -65,6 +65,18 @@ const categoriesDB = async ()=>{
     return data
 }
 
+const sortLowPriceDB = async ()=>{
+    let [data] = await pool.query('SELECT * FROM rooms ORDER BY price asc;')
+    return data
+}
+
+const sortHighPriceDB = async ()=>{
+    let [data] = await pool.query('SELECT * FROM rooms ORDER BY price desc;')
+    return data
+}
+
+
+
 //Book
 const getBookedDB = async (req,res)=>{
     let [data] = await pool.query('SELECT * FROM booked')
@@ -72,7 +84,7 @@ const getBookedDB = async (req,res)=>{
 }
 
 const getSingleBookedDB = async (booked_id)=>{
-    let [[data]] = await pool.query('SELECT * FROM booked WHERE booked = ?', [booked_id]);
+    let [[data]] = await pool.query('SELECT * FROM booked WHERE booked_id = ?', [booked_id]);
     return data;
 }
 
@@ -88,4 +100,4 @@ const updateBookedDB = async(user_id,room_id,booked_id )=>{
 const deleteBookedDB = async(booked_id)=>{
     await pool.query(`DELETE FROM booked WHERE booked_id = ?`,[booked_id])
 }
-export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,getUserDB2, categoriesDB}
+export {getUsersDB,getUserDB,insertUserDB,updateUserDB,deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,getUserDB2, categoriesDB,sortLowPriceDB,sortHighPriceDB}

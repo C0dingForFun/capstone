@@ -1,4 +1,4 @@
-import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,categoriesDB }
+import { getUsersDB, getUserDB,insertUserDB, updateUserDB, deleteUserDB,getRoomsDB,getRoomDB,insertRoomDB,updateRoomDB,deleteRoomDB,getBookedDB,getSingleBookedDB,insertBookedDB,updateBookedDB,deleteBookedDB,categoriesDB,sortLowPriceDB,sortHighPriceDB }
  from "../model/fullstackDB.js";
 import {hash} from 'bcrypt'
 // <----------------------------------------- Users --------------------------------------------------------------------->
@@ -89,6 +89,15 @@ const updateRoom =  async(req,res)=>{
 const fetchCategories = async (req,res)=>{
     res.json(await categoriesDB());
 }
+
+const sortLowPrice = async (req,res)=>{
+    res.json(await sortLowPriceDB());
+}
+
+const sortHighPrice = async (req,res)=>{
+    res.json(await sortHighPriceDB());
+}
+
 // <----------------------------------------- Booked --------------------------------------------------------------------->
 const fetchBooked = async (req,res)=>{
     res.json(await getBookedDB());
@@ -120,4 +129,4 @@ const updateBooked =  async(req,res)=>{
     res.send('Booked room has been updated successfully.')
 }
 
-export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked,loginUser,fetchCategories}
+export {fetchUsers,fetchUser,insertUser,updateUser,deleteUser,fetchRooms,fetchRoom,insertRoom,updateRoom,deleteRoom,fetchBooked,fetchSingleBooked,insertBooked,updateBooked,deleteBooked,loginUser,fetchCategories,sortLowPrice,sortHighPrice}
