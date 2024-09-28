@@ -56,20 +56,7 @@ export default {
         },
 
         async loginUser(){
-            try {
                 await  this.$store.dispatch('loginUser',this.payload);
-                toast("User is has been deleted successfully", {
-                "theme": "dark",
-                "type": "success",
-                "dangerouslyHTMLString": true
-                })  
-            } catch (error) {
-                toast("User is has been deleted successfully", {
-                "theme": "dark",
-                "type": "success",
-                "dangerouslyHTMLString": true
-                })  
-            }
         }
         
     }

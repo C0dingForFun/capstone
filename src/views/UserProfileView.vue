@@ -20,14 +20,15 @@
 </template>
 <script>
 // import UpdateUser from '@/components/UpdateUser.vue';
+// import axios from 'axios';
+// import {useCookies} from 'vue-cookies';
 import SpinnerComp from '@/components/SpinnerComp.vue';
 import router from '@/router';
-import {useCookies} from 'vue-cookies';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
 
-axios.defaults.withCredentials = true;
-axios.defaults.headers = $cookies.get('token');
+// axios.defaults.withCredentials = true;
+// axios.defaults.headers = $cookies.get('token');
 export default {
     components:{
         SpinnerComp
@@ -45,28 +46,33 @@ export default {
         }
     },
     methods: {
-        getUser(){
-            this.$store.dispatch('getUser',this.payload.userID) 
-            // this.$cookies.get('token')
-            $cookies.get('user_id')
-        },
+        // getUser(){
+        //     this.$store.dispatch('getUser',this.payload.userID) 
+        //     this.$cookies.get('token')
+        //     $cookies.get('user_id')
+        // },
         update(){
             this.$store.dispatch('getUser',this.payload)
         },
         logOut(){
-            try {
                 $cookies.remove('token');
+                $cookies.remove('userRole');
+                $cookies.remove('user_id');
+                toast("Logged out successfully",{
+                    "theme": "dark",
+                    "type": "default",
+                    "position": "top-center",
+                    "transition": "zoom",
+                    "dangerouslyHTMLString": true,
+                    autoClose: 3000,
+                    position: toast.POSITION.BOTTOM_CENTER,
+                })
                 router.push('/');
-                location.reload()
-            } catch (error) {
-                
-            }
-           
-        }
+            } 
     },
     mounted() {
-        this.getUser();
-        this.$cookies.get('user_id')
+        // this.getUser();
+        // this.$cookies.get('user_id')
     },
 }
 </script>
