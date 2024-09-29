@@ -237,7 +237,9 @@ export default createStore({
         toast("There has been an error", {
           "theme": "dark",
           "type": "error",
-          "dangerouslyHTMLString": true
+          "dangerouslyHTMLString": true,
+          autoClose: 2000,
+          position: toast.POSITION.BOTTOM_CENTER,
         })
       }
     },
