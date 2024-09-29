@@ -1,14 +1,11 @@
 <template>
-    <div class="mt-5">
+    <div class="mt-5" v-if="filterRooms">
         <div class="d-flex justify-content-center mt-5 gap-3 " id="filter" >
             <input type="text" placeholder="Search..." id="mySearch" v-model="searchQuery">
-          <!-- <select v-model="searchProduct">
-            <option value="" class="text-center">Filter:</option>
+          <select v-model="searchProduct" class="text-center text-white">
             <option value="" >All Categories</option>
-            <option >
-                      {{ category }}
-            </option>
-          </select> -->
+            <option :value="$store.state.room_package" >{{ $store.state.room_package }} Single</option>
+          </select>
       </div>
         <slot name="rooms">
             <section class="mt-5">
@@ -60,13 +57,11 @@ export default {
             })
         },
         
-        // if (category) {
-        //     this.searchProducts = searchProducts.filter(product =>
-        //         product.category === category.value
-        //     )
-        // }
-    },
-    filters:{
+        if (category) {
+            this.searchProducts = searchProducts.filter(product =>
+                product.category === category.value
+            )
+        },
         sortLowestPrice(){
             this.$store.rooms.price.sort((a,b)=> a.price > b.price ? 1 : -1)
         },
@@ -88,9 +83,6 @@ export default {
     #filter{
         margin-top:20vh !important;
     }
-    /* .card{
-        height:370px;
-    } */
     .card{
         width: 80vw ;
         transition: 1s;

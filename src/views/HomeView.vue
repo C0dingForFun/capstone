@@ -9,17 +9,26 @@
 	</div>
   <div class="mt-3" id="popular">  
 	<h2>Popular Rooms & Suites:</h2>
-	<div class="row justify-content-around pt-5">
-		<div class="col-lg-4 col-md-4 col-sm-12 mt-2" style="width:300px; height:300px;background-color:green">
-			hello
-		</div>
-		<div class="col-lg-4 col-md-4 col-sm-12 mt-2" style="width:300px; height:300px; background-color:green">
-			hey
-  		</div>
-		<div class="col-lg-4 col-md-4 col-sm-12 mt-2" style="width:300px; height:300px; background-color:green">v                                                                                                                                                 7
-			hi
-		</div>
-	</div>
+	{{$store.state.categories}}
+    <div class="row" v-for="category in categories()" :key="category">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img :src="category.image" class="card-img-top">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{category.room_name}}</h5>
+                    <h4>{{ category.room_package }}</h4>
+                    <p class="card-text">Price: R{{category.price}}</p>
+                    <div class="d-flex justify-content-center mt-2 align-content-end">
+                        <router-link to="/rooms" class="btn text-center">View More</router-link> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
 </div>
 <div class="banner2 mt-5">
 	<div class="row">
@@ -70,6 +79,17 @@
 <script>
 
 export default {
+	methods: {
+		fetchCategories(){
+			this.$store.dispatch('fetchCategories')
+		},
+		categories(){
+			return this.$store.state.categories;
+		}
+	},
+	mounted() {
+		this.fetchCategories();
+	},
 }
 </script>
 <style scoped>
@@ -131,8 +151,12 @@ export default {
 #popular{
 	margin: auto;
 	position: relative;
-	width:70vw;
+	width:100vw;
 }
+#popular .card{
+	width:18rem;
+}
+
 .banner2{
 	position: relative;
 	width:100vw;
@@ -179,7 +203,7 @@ export default {
 }
 #event .events .card{
 	border:none !important;
-	width:15rem;
+	width:18rem;
 	margin:auto;
 }
 #event .events .card img{

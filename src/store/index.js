@@ -185,8 +185,8 @@ export default createStore({
       }
     },
     async addRoom({commit}){
-      let data = await axios.post(`${coastalURL}rooms/insertRoom`,info);
-      // console.log(data);
+      let {data} = await axios.post(`${coastalURL}rooms/insertRoom`,info);
+      console.log(data);
       
     },
     async updateRoom({commit},id){
@@ -221,8 +221,18 @@ export default createStore({
     },
     async fetchCategories(){
         try {
-          let {data} = await axios.get(`${coastalURL}users`)
+          let {data} = await axios.get(`${coastalURL}rooms/categories`)
+          console.log(data);
           commit('setCategory',data)
+          toast("Fetched successfullly",{
+            "theme": "dark",
+            "type": "default",
+            "position": "top-center",
+            "transition": "zoom",
+            "dangerouslyHTMLString": true,
+             autoClose: 2000,
+            position: toast.POSITION.BOTTOM_CENTER,
+          })
       } catch (error) {
         toast("There has been an error", {
           "theme": "dark",
