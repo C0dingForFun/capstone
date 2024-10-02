@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row info">
-           <div class="col-lg-5 col-md-5 col-sm-12 about">
+           <div class="col-lg-6 col-md-5 col-sm-12 about">
                 <img src="https://c0dingforfun.github.io/capstone-images/Logo/Capstone_Logo.png" loading="lazy"/>
                 <p>You may also follow us on our socials to keep up with the availability of rooms and new events.</p>
                 <div>
@@ -27,7 +27,7 @@
                     <a><i class="lab la-twitter"></i></a>
                 </div>
            </div> 
-           <div class="col-lg-5 col-md-5 col-sm-12 pages pb-2">
+           <div class="col-lg-6 col-md-5 col-sm-12 pages pb-2 text-center">
                 <div class="row">
                     <div class="col-lg-4">
                         <h5>About</h5>               
@@ -124,7 +124,7 @@ export default {
         width:500px;
     }
     .info{
-        width: 100vw;
+        width: 101vw;
         height: auto;
     }
     .info img{
