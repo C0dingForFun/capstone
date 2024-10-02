@@ -29,7 +29,7 @@
            </div> 
            <div class="col-lg-5 col-md-5 col-sm-12 pages pb-2">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-lg-4">
                         <h5>About</h5>               
                         <div>
                             <router-link to="/about">Our Story</router-link>
@@ -47,7 +47,7 @@
                             <router-link to="/about">Why Choose Us</router-link>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-4">
                         <h5>Contact Us</h5>            
                         <div>
                             <router-link to="/contact">Location</router-link>                   
@@ -59,7 +59,7 @@
                             <router-link to="/contact">Reach us</router-link>
                         </div>   
                     </div>
-                    <div class="col">
+                    <div class="col-lg-4">
                         <h5>Rooms</h5>
                         <div>
                             <router-link to="/rooms">Single Room</router-link>                   
@@ -102,7 +102,7 @@ export default {
         display:flex;
         justify-content: center;
         align-items: center;
-        width:100vw;
+        /* width:100vw; */
         height:auto;
         background: #cbf4af;
     }
@@ -125,6 +125,7 @@ export default {
     }
     .info{
         width: 100vw;
+        height: auto;
     }
     .info img{
         object-fit: contain;

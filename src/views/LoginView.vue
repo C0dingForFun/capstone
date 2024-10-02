@@ -1,10 +1,6 @@
 <template lang="">
-<div class="login pt-4 row">
-    <div class="mt-5">
-        <button @click="signUp = !signUP">Signup</button>
-        <button @click="signUP = login">Login</button>
-    </div>
-    <div v-if="signUp" class="signup mt-5">
+<div class="login pt-4 row align-items-center">
+    <div v-if="signUp" class="signup mt-5 justify-content-center">
         <h1>Sign Up here:</h1>
         <table style="margin:auto">
             <tbody>
@@ -13,7 +9,7 @@
                 <tr><th><label>Enter your age:</label></th><td><input type="text" v-model="payload.age"><br><br></td></tr>
                 <tr><th><label>Enter your username:</label></th><td><input type="text" v-model="payload.username"><br><br></td></tr>
                 <tr><th><label>Enter your password:</label></th><td><input type="password" v-model="payload.password"></td></tr>
-                <tr><th><label>Enter an image:</label></th><td><input type="text   " v-model="payload.image"></td></tr>
+                <tr><th><label>Enter an image:</label></th><td><input type="text" v-model="payload.image"></td></tr>
                 <tr><td><button @click="addUser()">Submit</button></td></tr>
             </tbody>
         </table>
@@ -27,6 +23,7 @@
             <input type="password" v-model="payload.password" required><br><br>
             <button @click="loginUser()" >Login</button>
         </div>
+        <button @click="signUp = !signUP">Signup</button>
     </div>
 </div>
 </template>
@@ -68,10 +65,11 @@ export default {
         height:100vh;
         background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif');
         background-size: cover;
-        background-position: center;
+        /* background-position: center; */
         background-repeat: no-repeat;
         display:flex;
         align-items: center;
+        justify-content: center;
         color:whitesmoke;
         text-shadow:1px 1px black;
     }
