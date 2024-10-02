@@ -53,19 +53,22 @@ export default {
         },
 
         async loginUser(){
-                await  this.$store.dispatch('loginUser',this.payload);
+            await  this.$store.dispatch('loginUser',this.payload);
         }
         
     }
 }
 </script>
 <style scoped>
+    .row{
+        margin-left:0px !important;
+    }
     .login{
-        width:100vw;
+        width:100vw !important;
         height:100vh;
         background-image:url('https://c0dingforfun.github.io/capstone-images/Login/Login.gif');
         background-size: cover;
-        /* background-position: center; */
+        background-position: center;
         background-repeat: no-repeat;
         display:flex;
         align-items: center;

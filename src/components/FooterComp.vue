@@ -85,8 +85,12 @@ export default {
 }
 </script>
 <style scoped>
+    *{
+        margin-left:0px !important;
+    }
     footer{
         width:100vw;
+        margin-left:0px !important;
         height:auto;
     }
     .newsletter .link a{
