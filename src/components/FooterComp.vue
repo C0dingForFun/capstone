@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class=" col-lg-6 col-md-6 col-sm-12 mt-3 mb-3">
-                <input type="text" placeholder="Email Address"/><button>Subscribe</button>
+                <input type="text" placeholder="Email Address" v-model="newsletter"/><button>Subscribe</button>
             </div>
         </div>
         <div class="row info">
@@ -81,7 +81,18 @@
 </template>
 <script>
 export default {
-    
+    data() {
+        return {
+            newsletter:''
+        }
+    },
+    methods: {
+        newsletter(){
+            if(this.newsletter != ''){
+                
+            }
+        }
+    },
 }
 </script>
 <style scoped>

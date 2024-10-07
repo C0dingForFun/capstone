@@ -50,6 +50,7 @@ export default {
         ...mapActions(['addUser']),
         async addUser(){
             await this.$store.dispatch('addUser',this.payload);
+            location.reload();
         },
 
         async loginUser(){
