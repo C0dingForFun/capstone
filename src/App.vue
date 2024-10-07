@@ -17,8 +17,9 @@ export default{
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 *{
   font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   font-style: normal;
+  /* font-weight: 900; */
 }
 #app {
   -webkit-font-smoothing: antialiased;

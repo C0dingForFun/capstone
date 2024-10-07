@@ -70,7 +70,7 @@ export default {
       color:whitesmoke;
       text-shadow: 1px 1px black;
       text-decoration: none;
-      font-weight: 200;
+      font-weight: 500;
       transition: 1s;
     }
     nav .nav-item button:hover{
