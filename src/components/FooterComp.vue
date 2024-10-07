@@ -80,6 +80,8 @@
     </footer>
 </template>
 <script>
+import { toast } from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
 export default {
     data() {
         return {
@@ -89,7 +91,13 @@ export default {
     methods: {
         newsletter(){
             if(this.newsletter != ''){
-                
+                toast("You have signed up successfully for future newsletter", {
+                    "theme": "dark",
+                    "type": "error",
+                    "dangerouslyHTMLString": true,
+                    autoClose: 2000,
+                    position: toast.POSITION.BOTTOM_CENTER,
+                })
             }
         }
     },
