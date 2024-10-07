@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class=" col-lg-6 col-md-6 col-sm-12 mt-3 mb-3">
-                <input type="text" placeholder="Email Address" v-model="newsletter"/><button>Subscribe</button>
+                <input type="text" placeholder="Email Address" v-model="newsletter"/><button @click="newsletterBtn()">Subscribe</button>
             </div>
         </div>
         <div class="row info">
@@ -89,9 +89,38 @@ export default {
         }
     },
     methods: {
-        newsletter(){
+        newsletterBtn(){
             if(this.newsletter != ''){
-                toast("You have signed up successfully for future newsletter", {
+                if(this.newsletter.includes('@')){
+                    toast("You can now see future newsletters", {
+                        "theme": "dark",
+                        "type": "success",
+                        "dangerouslyHTMLString": true,
+                        autoClose: 2000,
+                        position: toast.POSITION.BOTTOM_CENTER,
+                    })
+                }
+                else{
+                    toast("Please include the '@' sign", {
+                    "theme": "dark",
+                    "type": "error",
+                    "dangerouslyHTMLString": true,
+                    autoClose: 2000,
+                    position: toast.POSITION.BOTTOM_CENTER,
+                })
+                }
+            }
+            // else if(!this.newsletter.includes('@')){
+            //     toast("Please include the '@' sign", {
+            //         "theme": "dark",
+            //         "type": "error",
+            //         "dangerouslyHTMLString": true,
+            //         autoClose: 2000,
+            //         position: toast.POSITION.BOTTOM_CENTER,
+            //     })
+            // }
+            else{
+                toast("Please fill in the field", {
                     "theme": "dark",
                     "type": "error",
                     "dangerouslyHTMLString": true,
