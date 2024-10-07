@@ -164,6 +164,7 @@ export default {
     }
     .pages a:hover{
         color:#93C572;
+        text-shadow: 1px 1px whitesmoke;
         text-decoration: underline;
     }
     .copyright{
