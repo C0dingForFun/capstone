@@ -7,7 +7,7 @@
     </div>
     <div class="contact pt-5">
         <div class="d-flex justify-content-center">
-            <div>
+            <div class="location">
                 <i class="las la-map-marker"></i><h2>Location:</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13247.5438173967!2d18.4832667!3d-33.8925909!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5c2ed4759665%3A0xe4c965c5195298f9!2sLagoon%20Beach%20Hotel%20%26%20Spa!5e0!3m2!1sen!2sza!4v1726231596132!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -102,19 +102,30 @@ export default {
     },
     methods: {
         resetForm() {
-            if(this.name  == '' && this.surname == '' && this.email == '' && this.message == '') {
+            if(this.name  != '' && this.surname != '' && this.email != '' && this.message != '') {
+                if(this.email.includes('@')){
+                    toast("Please include the '@' sign", {
+                        "theme": "dark",
+                        "type": "error",
+                        "dangerouslyHTMLString": true,
+                        autoClose: 2000,
+                        position: toast.POSITION.BOTTOM_CENTER,
+                    })
+                }
+                else{
+                    toast("Meassage sent successfully", {
+                        "theme": "dark",
+                        "type": "success",
+                        "dangerouslyHTMLString": true,
+                        autoClose: 2000,
+                        position: toast.POSITION.BOTTOM_CENTER
+                    })
+                }
+            }
+            else{
                 toast("Please fill in the whole form", {
                     "theme": "dark",
                     "type": "error",
-                    "dangerouslyHTMLString": true,
-                    autoClose: 2000,
-                    position: toast.POSITION.BOTTOM_CENTER,
-                })
-            }
-            else{
-                toast("Meassage sent successfully", {
-                    "theme": "dark",
-                    "type": "success",
                     "dangerouslyHTMLString": true,
                     autoClose: 2000,
                     position: toast.POSITION.BOTTOM_CENTER,
@@ -156,6 +167,9 @@ export default {
         position: relative;
         top:5px;
         font-size:30px;
+    }
+    .location{
+        color:grey;
     }
     .info {
         height:auto;

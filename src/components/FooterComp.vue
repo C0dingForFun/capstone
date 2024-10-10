@@ -110,15 +110,6 @@ export default {
                 })
                 }
             }
-            // else if(!this.newsletter.includes('@')){
-            //     toast("Please include the '@' sign", {
-            //         "theme": "dark",
-            //         "type": "error",
-            //         "dangerouslyHTMLString": true,
-            //         autoClose: 2000,
-            //         position: toast.POSITION.BOTTOM_CENTER,
-            //     })
-            // }
             else{
                 toast("Please fill in the field", {
                     "theme": "dark",

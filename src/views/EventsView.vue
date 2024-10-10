@@ -22,7 +22,7 @@
                 <img src="https://c0dingforfun.github.io/capstone-images/Events/newyears.jpg" loading="lazy"/>
             </div>
         </div>
-        <div class="mt-4 mb-2 row events">
+        <div class="mt-4 mb-3 row events">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <img src="https://c0dingforfun.github.io/capstone-images/Events/conference.jpg" loading="lazy"/>
             </div>
