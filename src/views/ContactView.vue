@@ -104,21 +104,21 @@ export default {
         resetForm() {
             if(this.name  != '' && this.surname != '' && this.email != '' && this.message != '') {
                 if(this.email.includes('@')){
-                    toast("Please include the '@' sign", {
-                        "theme": "dark",
-                        "type": "error",
-                        "dangerouslyHTMLString": true,
-                        autoClose: 2000,
-                        position: toast.POSITION.BOTTOM_CENTER,
-                    })
-                }
-                else{
                     toast("Meassage sent successfully", {
                         "theme": "dark",
                         "type": "success",
                         "dangerouslyHTMLString": true,
                         autoClose: 2000,
                         position: toast.POSITION.BOTTOM_CENTER
+                    })
+                }
+                else{
+                    toast("Please include the '@' sign", {
+                        "theme": "dark",
+                        "type": "error",
+                        "dangerouslyHTMLString": true,
+                        autoClose: 2000,
+                        position: toast.POSITION.BOTTOM_CENTER,
                     })
                 }
             }
