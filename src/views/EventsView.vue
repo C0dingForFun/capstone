@@ -11,7 +11,7 @@
                 <img src="https://c0dingforfun.github.io/capstone-images/Events/christmas.jpg" loading="lazy"/>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 my-auto">
-                <h3 data-aos="fade-up" data-aos-delay="400">Upcoming Conferences</h3>
+                <h3 data-aos="fade-up" data-aos-delay="400">Christmas Party</h3>
                 Join us at Coastal Getaways Hotel for a magical Christmas celebration on December (insert date) from 5:00 pm to 10:00 pm! Enjoy a sumptuous feast crafted by our award-winning chefs, sip on signature cocktails, and partake in festive activities like ornament decorating and gingerbread house making, all while awaiting a special visit from Santa Claus. Dance the night away to our live DJ playing your favorite holiday tunes. Don't miss our special offers, including a complimentary room upgrade and exclusive holiday packages. Tickets are $50 for adults, $25 for children ages 5-12, and free for those under 5. Book your tickets now and get ready to jingle all the way! We can't wait to celebrate with you!
             </div>
         </div>
