@@ -53,7 +53,7 @@ export default {
             await this.$store.dispatch('addUser',this.payload);
             toast("You have signed up successfully", {
                 "theme": "dark",
-                "type": "error",
+                "type": "success",
                 "dangerouslyHTMLString": true,
                 autoClose: 2000,
                 position: toast.POSITION.BOTTOM_CENTER,
