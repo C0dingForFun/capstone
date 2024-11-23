@@ -146,4 +146,20 @@ export default{
         background-color: #93C572;
         color: whitesmoke;
     }
+    @media screen and (max-width:780px) {
+    #myImage{
+        width:90vw;
+        height:40vh;
+        margin:auto;
+    }
+    img{
+        width:20vw;
+        height:10vh;
+        border-radius:20px;
+    }
+    .description{
+        width:70vw;
+        margin:auto;
+    }
+}
 </style>

@@ -72,7 +72,7 @@
 .about-banner {
   width: 100vw;
   height:70vh;
-  background-image: url('https://c0dingforfun.github.io/capstone-images/Home/Slide1.jpg');
+  background-image: url('https://t4.ftcdn.net/jpg/08/15/78/47/360_F_815784772_RJWNG7S80zkl2j5SARZkHQ2GEX6rk8jw.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
