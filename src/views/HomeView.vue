@@ -92,7 +92,7 @@
 
 </script>
 <style scoped>
-  .home-banner{
+.home-banner{
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -105,19 +105,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-
-
 .bannertxt{
 	position: relative;
 	color:whitesmoke;
 	text-shadow: 1px 1px black;
 }
-
 .bannertxt h3{
 	font-size:3vw;
 }
-
 .bannertxt h1{
 	font-size: 8vw;
 }
@@ -155,7 +150,6 @@
 #popular .card{
 	width:18rem;
 }
-
 .banner2{
 	position: relative;
 	width:100vw;
@@ -207,6 +201,6 @@
 }
 #event .events .card img{
 	height:30vh;
-	border-radius:50% 50% 0 0;
+	border-radius:10px;
 }
 </style>

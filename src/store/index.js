@@ -108,24 +108,6 @@ export default createStore({
         })
       }
     },
-    // async deleteUser(user_id){
-    //   try {
-    //     let {data} = await axios.delete(`${coastalURL}users/${user_id}`); 
-    //     commit('setUser',data)
-    //     toast("User is has been deleted successfully", {
-    //       "theme": "dark",
-    //       "type": "success",
-    //       "dangerouslyHTMLString": true
-    //     })
-    //   }
-    //   catch (error) {
-    //     toast("There has been an error", {
-    //       "theme": "dark",
-    //       "type": "error",
-    //       "dangerouslyHTMLString": true
-    //     })
-    //   }
-    // },
     async deleteUser(context, id) {
       try {
         const { msg, err } = await (
