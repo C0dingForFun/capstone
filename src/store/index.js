@@ -15,8 +15,7 @@ export default createStore({
     users:null,
     user:null,
     rooms:null,
-    room:null,
-    categories:null
+    room:null
   },
   getters: {
   },
@@ -32,9 +31,6 @@ export default createStore({
     },
     setRoom(state,payload){
       state.room=payload
-    },
-    setCategory(state,payload){
-      state.categories=payload
     }
   },
   actions: {
@@ -215,30 +211,6 @@ export default createStore({
           "type": "error",
           "dangerouslyHTMLString": true,
            autoClose: 2000,
-          position: toast.POSITION.BOTTOM_CENTER,
-        })
-      }
-    },
-    async fetchCategories(){
-        try {
-          let {data} = await axios.get(`${coastalURL}rooms/categories`)
-          console.log(data);
-          commit('setCategory',data)
-          toast("Fetched successfullly",{
-            "theme": "dark",
-            "type": "default",
-            "position": "top-center",
-            "transition": "zoom",
-            "dangerouslyHTMLString": true,
-             autoClose: 2000,
-            position: toast.POSITION.BOTTOM_CENTER,
-          })
-      } catch (error) {
-        toast("There has been an error", {
-          "theme": "dark",
-          "type": "error",
-          "dangerouslyHTMLString": true,
-          autoClose: 2000,
           position: toast.POSITION.BOTTOM_CENTER,
         })
       }

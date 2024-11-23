@@ -7,28 +7,40 @@
 		  </div>
 		</div>
 	</div>
-  <div class="mt-3" id="popular">  
 	<h2>Popular Rooms & Suites:</h2>
-	{{$store.state.categories}}
-    <div class="row" v-for="category in categories()" :key="category">
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img :src="category.image" class="card-img-top">
-                </div>
-                <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{category.room_name}}</h5>
-                    <h4>{{ category.room_package }}</h4>
-                    <p class="card-text">Price: R{{category.price}}</p>
-                    <div class="d-flex justify-content-center mt-2 align-content-end">
-                        <router-link to="/rooms" class="btn text-center">View More</router-link> 
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div>
+	<div id="event">
+	<div class="mt-3 events row">
+		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
+			<div class="card">
+				<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
+				<div class="card-body">
+					<h5 class="card-title">News Years Eve Event</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<router-link to="/events"><button>See More</button></router-link>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
+			<div class="card">
+				<img src="https://c0dingforfun.github.io/capstone-images/Home/christmas.jpg" class="card-img-top" alt="..." loading="lazy">
+				<div class="card-body">
+					<h5 class="card-title">Christmas Party</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<router-link to="/events"><button>See More</button></router-link>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
+			<div class="card">
+				<img src="https://c0dingforfun.github.io/capstone-images/Home/conference.jpg" class="card-img-top" alt="..." loading="lazy">
+				<div class="card-body">
+					<h5 class="card-title">Conference events</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<router-link to="/events"><button>See More</button></router-link>
+				</div>
+			</div>
+		</div>
+</div>
 </div>
 <div class="banner2 mt-5">
 	<div class="row">
@@ -78,19 +90,6 @@
 
 <script>
 
-export default {
-	methods: {
-		fetchCategories(){
-			this.$store.dispatch('fetchCategories')
-		},
-		categories(){
-			return this.$store.state.categories;
-		}
-	},
-	mounted() {
-		this.fetchCategories();
-	},
-}
 </script>
 <style scoped>
   .home-banner{
