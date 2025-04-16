@@ -1,6 +1,6 @@
 <template lang="">
 <div class="login pt-4 row align-items-center">
-    <div v-if="signUp" class="signup mt-5 justify-content-center">
+    <div v-if="signUp" class="signup justify-content-center">
         <h1>Sign Up here:</h1>
         <table style="margin:auto">
             <tbody>
@@ -14,16 +14,16 @@
             </tbody>
         </table>
     </div>
-    <div v-else="login" class="signup mt-5">
+    <div v-else="login" class="signup">
         <h1>Login here:</h1>
         <div>
             <label>Enter your Username:</label>
             <input type="text" v-model="payload.username" required><br><br>
             <label>Enter your Password:</label>
             <input type="password" v-model="payload.password" required><br><br>
-            <button @click="loginUser()" >Login</button>
+            <button @click="loginUser()" class="mx-2" >Login</button>
+            <button @click="signUp = !signUP">Signup</button>
         </div>
-        <button @click="signUp = !signUP">Signup</button>
     </div>
 </div>
 </template>
@@ -86,7 +86,7 @@ export default {
         text-shadow:1px 1px black;
     }
     .signup{
-        width:80vw;
+        width:70vw;
         height:auto;
         margin:auto;
         padding:1em;
