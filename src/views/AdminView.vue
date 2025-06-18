@@ -178,25 +178,25 @@
       content: "UserID";
     }
     .users-table td:nth-child(2):before {
-      content: "User Name";
+      content: "First Name";
     }
     .users-table td:nth-child(3):before {
-      content: "Quantity";
+      content: "Last Name";
     }
     .users-table td:nth-child(4):before {
-      content: "Amount";
+      content: "Age";
     }
     .users-table td:nth-child(5):before {
-      content: "Category";
+      content: "Role";
     }
     .users-table td:nth-child(6):before {
-      content: "Product URL";
+      content: "Username";
     }
     .users-table td:nth-child(7):before {
-      content: "Action";
+      content: "Password";
     }
     .users-table td:nth-child(8):before {
-      content: "Action";
+      content: "Image";
     }
     .users-table td:nth-child(9):before {
       content: "Action";
@@ -234,22 +234,19 @@
       border-bottom: 0;
     }
     .rooms-table td:nth-child(1):before {
-      content: "Product ID";
+      content: "Room ID";
     }
     .rooms-table td:nth-child(2):before {
-      content: "Product Name";
+      content: "Room Name";
     }
     .rooms-table td:nth-child(3):before {
-      content: "Quantity";
-    }
-    .rooms-table td:nth-child(4):before {
-      content: "Amount";
-    }
-    .rooms-table td:nth-child(5):before {
       content: "Category";
     }
-    .rooms-table td:nth-child(6):before {
-      content: "Product URL";
+    .rooms-table td:nth-child(4):before {
+      content: "Price`";
+    }
+    .rooms-table td:nth-child(5):before {
+      content: "Room URL";
     }
     .rooms-table td:nth-child(7):before {
       content: "Action";

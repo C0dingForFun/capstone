@@ -95,10 +95,6 @@ export default {
       width:140px;
       height:110px;
     }
-    nav img{
-      width:50px;
-      height:50px;
-    }
     nav i{
       font-size: 25px;
       color:black;
@@ -106,6 +102,12 @@ export default {
     h1{
       color:#93C572;
       text-shadow: 1px 1px black;
+    }
+    @media screen and (max-width:600px) {
+      #nav img{
+        width:100px;
+        height: 90px;
+      }
     }
 
 </style>

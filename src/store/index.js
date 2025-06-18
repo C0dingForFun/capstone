@@ -199,13 +199,16 @@ export default createStore({
     },
     async loginUser({commit},info){
       let {data} =  await axios.post(`${coastalURL}users/login`,info);
-      $cookies.set('token', data.token)
-      $cookies.set('userRole', data.userRole)
-      $cookies.set('user_id', data.user_id)
       if(data.userRole == 'admin'){
+        $cookies.set('token', data.token)
+        $cookies.set('userRole', data.userRole)
+        $cookies.set('user_id', data.user_id)
         router.push('/admin')
       }
-      else{
+      else if(data.userRole == 'user'){
+        $cookies.set('token', data.token)
+        $cookies.set('userRole', data.userRole)
+        $cookies.set('user_id', data.user_id)
         router.push('/profile')
       }
       if(data.message){

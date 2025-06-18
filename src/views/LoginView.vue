@@ -62,7 +62,7 @@ export default {
         },
 
         async loginUser(){
-            await  this.$store.dispatch('loginUser',this.payload);
+            await this.$store.dispatch('loginUser',this.payload);
         }
         
     }

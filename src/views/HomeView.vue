@@ -7,10 +7,10 @@
 		  </div>
 		</div>
 	</div>
-	<h2>Popular Rooms & Suites:</h2>
+	<h2 class="mt-5">Popular Rooms & Suites:</h2>
 	<div id="event">
 	<div class="mt-3 events row">
-		<div class="col-lg-4 col-md-4 col-sm-12 px-5 mt-2">
+		<div class="place-items-center col-lg-4 col-md-4 col-sm-12 px-5 mt-2 mx-auto">
 			<div class="card">
 				<img src="https://c0dingforfun.github.io/capstone-images/Home/fireworks.jpeg" class="card-img-top" alt="..." loading="lazy">
 				<div class="card-body">

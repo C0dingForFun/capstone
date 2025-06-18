@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row info">
-           <div class="col-lg-6 col-md-5 col-sm-12 about">
+           <div class="col-lg-6 col-md-6 col-sm-12 about">
                 <img src="https://c0dingforfun.github.io/capstone-images/Logo/Capstone_Logo.png" loading="lazy"/>
                 <p>You may also follow us on our socials to keep up with the availability of rooms and new events.</p>
                 <div>
@@ -27,7 +27,7 @@
                     <a><i class="lab la-twitter"></i></a>
                 </div>
            </div> 
-           <div class="col-lg-6 col-md-5 col-sm-12 pages pb-2 text-center">
+           <div class="col-lg-6 col-md-6 col-sm-12 pages pb-2 text-center">
                 <div class="row">
                     <div class="col-lg-4">
                         <h5>About</h5>               
@@ -133,7 +133,7 @@ export default {
         height:auto;
     }
     .newsletter .link a{
-        color:whitesmoke;
+        color:black;
         text-decoration: none;
         transition:1s;
     }
@@ -156,7 +156,7 @@ export default {
         border-radius:5px;
         padding:1px;
         transition:1s;
-        color:whitesmoke;
+        color:black;
         background-color: gray;
     }
     .newsletter button:hover{
@@ -176,7 +176,7 @@ export default {
     }
     .about{
         background-color: #93C572;
-        color:whitesmoke;
+        color:black;
         text-align: center;
     }
     .info a i{
@@ -193,11 +193,11 @@ export default {
         /* width:49vw; */
     }
     .pages h5{
-        color:whitesmoke;
-        text-shadow:2px 2px black;
+        color:black;
+        text-shadow:2px 2px whitesmoke;
     }
     .pages a{
-        color:whitesmoke;
+        color:black;
         text-decoration: none;
         transition:0.6s;
     }
@@ -212,6 +212,6 @@ export default {
         align-items: center;
         width:100vw;
         background: #cbf4af;
-        color:whitesmoke;
+        color:black;
     }
 </style>
