@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-center mt-5 gap-3 " id="filter" >
             <input type="text" placeholder="Search..." id="mySearch" v-model="searchQuery">
           <select v-model="searchProduct" class="text-center text-white">
-            <option value="" >All Categories</option>
+            <option value="">All Categories</option>
             <option :value="$store.state.room_package" >{{ $store.state.room_package }} Single</option>
           </select>
       </div>
